@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/etLugarRegLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="Nombre lugar"
+        android:maxLength="30">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etDireccionRegLugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress" 
+        android:hint="Direccion"
+        android:maxLength="50"/>
+
+    <EditText
+        android:id="@+id/etDescripcionRegLugar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:inputType="textMultiLine" 
+        android:hint="Descripcion"
+        android:gravity="left|top"/>
+
+    <Button
+        android:id="@+id/btnAceptarRegLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar" 
+        android:layout_gravity="right"/>
+
+</LinearLayout>
