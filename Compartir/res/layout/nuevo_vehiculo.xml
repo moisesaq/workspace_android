@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/ivImagenVehiculo"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_car" 
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="Placa"
+        android:maxLength="10">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="Marca"
+        android:maxLength="20"/>
+
+    <EditText
+        android:id="@+id/etColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="Color"
+        android:maxLength="15"/>
+
+    <Button
+        android:id="@+id/btnListo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Listo" />
+
+</LinearLayout>

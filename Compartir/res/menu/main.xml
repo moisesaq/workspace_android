@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/action_images"
+        android:orderInCategory="1" 
+        android:showAsAction="never"
+        android:title="Pruebas Imagenes"
+        android:icon="@drawable/ic_camera_alt_white_48dp" />
+    
+    <item 
+        android:id="@+id/actin_update"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="Actualizar"
+        android:icon="@drawable/ic_loop_white_36dp"/>
+    
+    <item 
+        android:id="@+id/action_dialog_saludo"
+        android:orderInCategory="3"
+        android:showAsAction="never"
+        android:title="@string/saludar"
+        android:icon="@drawable/ic_launcher"/>
+
+</menu>
