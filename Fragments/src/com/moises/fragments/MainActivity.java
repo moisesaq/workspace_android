@@ -3,7 +3,6 @@ package com.moises.fragments;
 import com.moises.fragments.FragmentA.SeleccionarPersonaClickListener;
 import com.moises.fragments.FragmentB.PersonaSeleccionadoClickListener;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -21,7 +20,7 @@ public class MainActivity extends FragmentActivity implements SeleccionarPersona
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		//new FragmentA();
-		cargarFrag(FragmentA.newInstance(getResources().getColor(R.color.turquoise), "Aca van los datos seleccionado en el fragment B"), null);
+		cargarFrag(FragmentA.newInstance(getResources().getColor(R.color.turquoise), "Aca van los datos seleccionado en el fragment B"), "tagFragA");
 	}
 	
 	
@@ -37,7 +36,7 @@ public class MainActivity extends FragmentActivity implements SeleccionarPersona
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()) {
 		case R.id.action_ver_lista:
-			Intent intent = new Intent(this, SecondActivity.class);
+			//Intent intent = new Intent(this, SecondActivity.class);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -55,7 +54,7 @@ public class MainActivity extends FragmentActivity implements SeleccionarPersona
 
 	@Override
 	public void SeleccionarClick() {
-		cargarFrag(new FragmentB(), null);
+		cargarFrag(new FragmentB(), "tagFragB");
 	}
 
 
@@ -64,4 +63,17 @@ public class MainActivity extends FragmentActivity implements SeleccionarPersona
 	public void seleccionadoClick(Persona per) {
 		cargarFrag(FragmentA.newInstance(getResources().getColor(R.color.spring_green), "DNI: "+per.getDni()+" Nombre: "+per.getNombre()), null);
 	}
+
+
+
+	@Override
+	public void onBackPressed() {
+		if(getFragmentManager().getBackStackEntryCount()>1){
+			getFragmentManager().popBackStack();
+		}else{
+			this.finish();
+		}
+	}
+	
+	
 }
