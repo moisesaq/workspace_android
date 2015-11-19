@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.moises.connectiontoserver.R;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,20 +14,24 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class ListaLugares extends Fragment{
+public class ListaLugares extends Fragment implements OnItemClickListener{
 
 	View view;
 	protected ListView lvListaLugares;
 	protected LinearLayout lyVistaAviso;
 	protected ProgressBar pbCargar;
 	protected TextView tvAviso;
+	
+	OnLugarSeleccionadoClickListener mCallBack;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		super.onCreateView(inflater, container, savedInstanceState);
@@ -37,7 +42,9 @@ public class ListaLugares extends Fragment{
 	}
 	
 	private void inicializarComponentes(View v) {
+		getActivity().getActionBar().setTitle("HttpUrlConnection");
 		lvListaLugares = (ListView)v.findViewById(R.id.lvListaLugares);
+		lvListaLugares.setOnItemClickListener(this);
 		lyVistaAviso = (LinearLayout)v.findViewById(R.id.lyVistaAviso);
 		pbCargar = (ProgressBar)v.findViewById(R.id.pbCargarLugares);
 		tvAviso = (TextView)v.findViewById(R.id.tvAvisoListaLugares);
@@ -129,5 +136,25 @@ public class ListaLugares extends Fragment{
 			}
 		}
 	}
+
 	
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long arg3) {
+		Lugar lugar = (Lugar)parent.getAdapter().getItem(position);
+		mCallBack.onLugarSeleccionadoClick(lugar);
+	}
+	
+	public interface OnLugarSeleccionadoClickListener{
+		public void onLugarSeleccionadoClick(Lugar lugar);
+	}
+	
+	@Override
+	public void onAttach(Activity activity){
+		super.onAttach(activity);
+		try {
+			mCallBack = (OnLugarSeleccionadoClickListener)activity;
+		} catch (ClassCastException e) {
+			throw new ClassCastException(e.toString()+" Debe implementar OnLugarSeleccionadoClickListener");
+		}
+	}
 }

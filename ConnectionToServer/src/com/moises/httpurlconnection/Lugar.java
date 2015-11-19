@@ -1,6 +1,9 @@
 package com.moises.httpurlconnection;
 
-public class Lugar {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Lugar implements Serializable{
 
 	String idlugar, nombre_lugar, direccion, descripcion;
 	

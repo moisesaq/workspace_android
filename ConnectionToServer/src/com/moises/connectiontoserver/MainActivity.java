@@ -3,7 +3,10 @@ package com.moises.connectiontoserver;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.moises.httpurlconnection.DatosLugar;
 import com.moises.httpurlconnection.ListaLugares;
+import com.moises.httpurlconnection.ListaLugares.OnLugarSeleccionadoClickListener;
+import com.moises.httpurlconnection.Lugar;
 import com.moises.volley.ListaLugaresVolley;
 
 import android.os.Bundle;
@@ -23,7 +26,7 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements OnItemClickListener{
+public class MainActivity extends Activity implements OnItemClickListener, OnLugarSeleccionadoClickListener{
 
 	ActionBarDrawerToggle drawerToogle;
 	DrawerLayout menu_izq;
@@ -39,7 +42,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
 		iniciarMenuIzq();
-		cargarFrament(new ListaLugares());
+		cargarFrament(new ListaLugares(), "tagLista1");
 	}
 
 	@Override
@@ -63,9 +66,12 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void cargarFrament(Fragment frag){
+	public void cargarFrament(Fragment frag, String tag){
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
+		if(tag!=null){
+			ft.addToBackStack(tag);
+		}
 		ft.replace(R.id.miContenedor, frag);
 		ft.commit();
 	}
@@ -114,11 +120,11 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		switch (item.getCodigo()) {
 			case 1:
 				ListaLugares lista_http = new ListaLugares();
-				cargarFrament(lista_http);
+				cargarFrament(lista_http, "tagL1");
 				break;
 			case 2:
 				ListaLugaresVolley lista_volley = new ListaLugaresVolley();
-				cargarFrament(lista_volley);
+				cargarFrament(lista_volley, "tagL2");
 				break;
 		}
 		menu_izq.closeDrawers();
@@ -128,6 +134,22 @@ public class MainActivity extends Activity implements OnItemClickListener{
 	public void onPostCreate(Bundle savedInstanceState){
 		super.onPostCreate(savedInstanceState);
 		drawerToogle.syncState();
+	}
+
+	@Override
+	public void onLugarSeleccionadoClick(Lugar lugar) {
+		DatosLugar datos = new DatosLugar();
+		DatosLugar.newInstance(lugar);
+		cargarFrament(DatosLugar.newInstance(lugar), "tagDatosLugar");
+	}
+
+	@Override
+	public void onBackPressed() {
+		if(getFragmentManager().getBackStackEntryCount()>1){
+			getFragmentManager().popBackStack();
+		}else{
+			finish();
+		}
 	}
 
 }
