@@ -1,0 +1,21 @@
+
+git clone "direcion_repositorio.git" como "nombre_del_local" --> Sirve para clonar repositorio
+
+git st(status) --> Muestra el estado del branch y los cambios
+
+git add "nombre del archivo" --> Agrega a la lista
+
+git commit -m --> Prepara para subir con el comentario directo
+           -m --> Prepara para subir y abre un editor para poner comentario
+
+git checkout "Otro branch"--> Sirve para cambiar a otro branch o otro master
+
+git checkout -b "Nuevo branch"--> Sirve para crear y cambiarse de brench
+
+git reset HEAD --> Borra todo lo que esta agregado git add
+
+git branch -D "nombre branch" --> Elimina un branch en local
+
+git pull origin "branch o master" --> Sirve para actualizar mi local
+
+git push origin "branch o master" --> Sirve para actualizar el remoto
