@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutTest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondomenu"
+    android:orientation="horizontal">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" 
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/ivGA"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ga" />
+
+            <ImageView
+                android:id="@+id/ivGB"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gb" />
+
+            <ImageView
+                android:id="@+id/ivGC"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gc" />
+
+            <ImageView
+                android:id="@+id/ivGD"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gd" />
+
+            <ImageView
+                android:id="@+id/ivGE"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ge" />
+
+            <ImageView
+                android:id="@+id/ivGF"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gf" />
+
+            <ImageView
+                android:id="@+id/ivGG"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gg" />
+
+            <ImageView
+                android:id="@+id/ivGH"
+                android:layout_width="@dimen/tamanio_icono_menu"
+                android:layout_height="@dimen/tamanio_icono_menu"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/gh" />
+        </LinearLayout>
+    </ScrollView>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal">
+        
+        <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical">
+	        
+	        <EditText
+	            android:id="@+id/etFechaPartido"
+	            android:layout_width="185dp"
+	            android:layout_height="wrap_content"
+	            android:background="@android:color/white"
+	            android:ems="10"
+	            android:hint="Seleccione fecha"
+	            android:inputType="date" >
+		       
+			    </EditText>
+		
+		    <ImageView
+		        android:id="@+id/ivBuscarFechaPartido"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/calendar" />
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical">
+	        
+	        <AutoCompleteTextView
+	            android:id="@+id/actvBuscadorPais"
+	            android:layout_width="185dp"
+	            android:layout_height="wrap_content"
+	            android:background="@android:color/white"
+	            android:ems="10"
+	            android:hint="Ingrese equipo" />
+		
+		    <ImageView
+		        android:id="@+id/ivBuscarPais"
+		        android:layout_width="35dp"
+		        android:layout_height="35dp"
+		        android:src="@drawable/buscar"/>
+        
+	    </LinearLayout>
+	
+	    <HorizontalScrollView
+	        android:id="@+id/horizontalScrollView1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="15dp" 
+	        android:layout_gravity="center_horizontal">
+	
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="horizontal" >
+	
+	            <ImageView
+	                android:id="@+id/ivOctavos"
+	                android:layout_width="@dimen/tamanio_icono_menu"
+                	android:layout_height="@dimen/tamanio_icono_menu"
+	                android:src="@drawable/octavos" />
+	
+	            <ImageView
+	                android:id="@+id/ivCuartos"
+	                android:layout_width="@dimen/tamanio_icono_menu"
+                	android:layout_height="@dimen/tamanio_icono_menu"
+	                android:layout_marginLeft="10dp"
+	                android:src="@drawable/cuartos" />
+	
+	            <ImageView
+	                android:id="@+id/ivSemis"
+	                android:layout_width="@dimen/tamanio_icono_menu"
+                	android:layout_height="@dimen/tamanio_icono_menu"
+	                android:layout_marginLeft="10dp"
+	                android:src="@drawable/semis" />
+	
+	            <ImageView
+	                android:id="@+id/ivFinales"
+	                android:layout_width="@dimen/tamanio_icono_menu"
+                	android:layout_height="@dimen/tamanio_icono_menu"
+	                android:layout_marginLeft="10dp"
+	                android:src="@drawable/finales" />
+	        </LinearLayout>
+	    </HorizontalScrollView>
+        
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

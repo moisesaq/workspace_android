@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <AutoCompleteTextView
+        android:id="@+id/actvEquipo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:completionThreshold="2"
+        android:ems="10"
+        android:hint="Equipo 1"
+        android:textColor="@android:color/black" >
+     	<requestFocus />
+    </AutoCompleteTextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/actvEquipo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/actvEquipo1"
+        android:layout_below="@+id/actvEquipo1"
+        android:layout_marginTop="21dp"
+        android:completionThreshold="2"
+        android:ems="10"
+        android:hint="Equipo 2"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:id="@+id/etHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/actvEquipo2"
+        android:layout_below="@+id/actvEquipo2"
+        android:layout_marginTop="39dp"
+        android:ems="10"
+        android:hint="Hora (Ej. 18:30:00)"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/etFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etHora"
+        android:layout_below="@+id/etHora"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Fecha (Ej. 2014-06-20)"
+        android:inputType="date" />
+
+    <Button
+        android:id="@+id/btRegistrarPartido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFecha"
+        android:layout_marginRight="34dp"
+        android:layout_marginTop="67dp"
+        android:layout_toLeftOf="@+id/btBuscarPartidos"
+        android:text="Registrar" />
+
+    <ImageView
+        android:id="@+id/ivFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/etFecha"
+        android:layout_toRightOf="@+id/etFecha"
+        android:src="@drawable/calendar" />
+
+    <ImageView
+        android:id="@+id/ivHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFecha"
+        android:layout_alignTop="@+id/etHora"
+        android:src="@drawable/time" />
+
+    <Button
+        android:id="@+id/btBuscarPartidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btRegistrarPartido"
+        android:layout_alignBottom="@+id/btRegistrarPartido"
+        android:layout_alignRight="@+id/ivFecha"
+        android:text="Buscar partidos" />
+
+    <TextView
+        android:id="@+id/tvTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btRegistrarPartido"
+        android:layout_below="@+id/btRegistrarPartido"
+        android:layout_marginTop="20dp"
+        android:text="Respuesta" />
+
+</RelativeLayout>

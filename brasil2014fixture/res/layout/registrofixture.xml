@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TabHost
+        android:id="@+id/thRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/btBuscarEquipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/btRegistrarEquipo"
+                        android:layout_alignBottom="@+id/btRegistrarEquipo"
+                        android:layout_marginLeft="30dp"
+                        android:layout_toRightOf="@+id/btRegistrarEquipo"
+                        android:text="Buscar equipo" />
+
+                    <Spinner
+                        android:id="@+id/spinnerGrupo"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/etPais"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="52dp"
+                        android:soundEffectsEnabled="true" 
+                        android:scrollbars="vertical"/>
+
+                    <TextView
+                        android:id="@+id/tvResultado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/btRegistrarEquipo"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="48dp"
+                        android:text="Resultado" />
+
+                    <Button
+                        android:id="@+id/btRegistrarEquipo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvResultado"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="40dp"
+                        android:layout_marginLeft="49dp"
+                        android:text="Registrar" />
+
+                    <EditText
+                        android:id="@+id/etPais"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/btBuscarEquipo"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="74dp"
+                        android:ems="10"
+                        android:hint="Pais" />
+
+                    <ImageView
+                        android:id="@+id/imgvBandera"
+                        android:layout_width="120dp"
+                        android:layout_height="80dp"
+                        android:layout_above="@+id/spinnerGrupo"
+                        android:layout_alignRight="@+id/btRegistrarEquipo"
+                        android:src="@drawable/bandera" />
+
+                    <SlidingDrawer
+                        android:id="@+id/slidingDrawerBanderas"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/etPais"
+                        android:layout_centerHorizontal="true"
+                        android:content="@+id/content"
+                        android:handle="@+id/handle" >
+
+                        <Button
+                            android:id="@+id/handle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Elegir bandera" 
+                            android:textSize="12dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <GridView
+                                android:id="@+id/gvBanderas"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:numColumns="3" >
+                            </GridView>
+
+                        </RelativeLayout>
+                    </SlidingDrawer>
+
+                </RelativeLayout>
+                
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                    <EditText
+                        android:id="@+id/etGrupo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:ems="10"
+                        android:hint="Grupo" />
+
+                    <Button
+                        android:id="@+id/btAceptar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/etGrupo"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Aceptar" />
+
+                    <Button
+                        android:id="@+id/btBuscarGrupo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvRespuesta"
+                        android:layout_marginLeft="33dp"
+                        android:layout_toRightOf="@+id/btAceptar"
+                        android:text="Buscar grupo" />
+
+                    <TextView
+                        android:id="@+id/tvRespuesta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/btAceptar"
+                        android:layout_below="@+id/btAceptar"
+                        android:layout_marginTop="60dp"
+                        android:text="Respuesta" />
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

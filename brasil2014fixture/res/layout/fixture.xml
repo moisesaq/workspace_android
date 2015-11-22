@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="GRUPO"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tvGrupoF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="X"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        
+    </LinearLayout>
+
+<TabHost
+    android:id="@+id/tabhostFixture"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </TabWidget>
+
+       <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tabPartidos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:orientation="vertical"
+                android:background="@drawable/fondogrupos2">
+
+                <ListView
+                    android:id="@+id/lvPartidosFixtu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </ListView>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabPosiciones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:orientation="vertical"
+                android:background="@drawable/fondogrupos6">
+                
+                <ListView
+                    android:id="@+id/lvPosicionesFixtu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </ListView>
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
+
+</LinearLayout>

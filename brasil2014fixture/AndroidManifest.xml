@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.brasil2014fixture"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.brasil2014fixture.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.MenuFixture"
+            android:label="Menu Fixture" >
+            <intent-filter>
+                <action android:name="android.intent.action.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.RegistroFixture"
+            android:label="Registro Fixture" >
+            <intent-filter>
+                <action android:name="android.intent.action.Registro" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.RegistroPartidos"
+            android:label="Registro partido" >
+            <intent-filter>
+                <action android:name="android.intent.action.NuevoPartido" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.ListaEquipos"
+            android:label="Registro partido" >
+            <intent-filter>
+                <action android:name="android.intent.action.LISTAEQUIPOS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.DemoOctavos"
+            android:label="Demo octavos" >
+            <intent-filter>
+                <action android:name="android.intent.action.DemoOctavos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Posiciones"
+            android:label="Fixture Posiciones" >
+            <intent-filter>
+                <action android:name="android.intent.action.Posiciones" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Fixture"
+            android:label="Fixture Brasil 2014" >
+            <intent-filter>
+                <action android:name="android.intent.action.FIXTU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Octavos"
+            android:label="Octavos de final" >
+            <intent-filter>
+                <action android:name="android.intent.action.Octavos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Cuartos"
+            android:label="Cuartos de final" >
+            <intent-filter>
+                <action android:name="android.intent.action.Cuartos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Semis"
+            android:label="Semifinal" >
+            <intent-filter>
+                <action android:name="android.intent.action.Semis" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Finales"
+            android:label="Finales" >
+            <intent-filter>
+                <action android:name="android.intent.action.Finales" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.brasil2014fixture.Campeon"
+            android:label="Campeon Brasil 2014" >
+            <intent-filter>
+                <action android:name="android.intent.action.Campeon" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
