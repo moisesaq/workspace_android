@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivImageVehiculo"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_car" 
+            android:layout_gravity="center"
+            android:contentDescription="@string/imagen_vehiculo"
+            android:background="@drawable/custom_imageview_white"/>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical|center_horizontal">
+                    
+            <ProgressBar
+                android:id="@+id/pbVericarPlacaVehiculo"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_imageview_white"
+                android:visibility="gone"/>
+                    
+            <EditText
+	            android:id="@+id/etPlacaVehiculo"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:hint="@string/placa"
+	            android:maxLength="7"
+	            android:inputType="none"
+	            android:drawableRight="@drawable/ic_no_value_24">
+	
+	            <requestFocus />
+	        </EditText>
+
+        </LinearLayout>
+        
+
+        <EditText
+            android:id="@+id/etMarcaVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:hint="@string/marca"
+            android:inputType="textCapWords"
+            android:maxLength="25"/>
+
+        <EditText
+            android:id="@+id/etColorVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/color"
+            android:inputType="textCapWords"
+            android:layout_marginTop="1dp"
+            android:maxLength="15"/>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical|center_horizontal">
+            
+            <ImageView 
+                android:id="@+id/ivImagePropietarioVehiculo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_client"
+                android:background="@drawable/custom_imageview_white"/>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+              	<AutoCompleteTextView
+		            android:id="@+id/actvCIPropietarioVehiculo"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="@string/ci_propietario"
+		            android:maxLength="8"/>
+
+              	<TextView
+              	    android:id="@+id/tvNombrePropVehiculo"
+              	    android:layout_width="wrap_content"
+              	    android:layout_height="wrap_content"
+              	    android:text="Nombre: Moises"
+              	    android:layout_marginLeft="5dp"
+              	    android:textSize="11dp"
+              	    android:visibility="gone"
+              	    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnListoVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@string/listo" 
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            style="?android:attr/buttonStyleSmall"
+            android:textColor="@android:color/white"
+            android:background="@drawable/custom_imageview"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="10dp">
+
+    <TimePicker
+        android:id="@+id/timePickerDefinirHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"/>
+    
+	<Button
+        android:id="@+id/btnCancelarTimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@android:string/cancel" 
+        android:gravity="right|center"
+		android:layout_marginTop="5dp"
+		style="?android:attr/buttonStyleSmall"
+	    android:textColor="@android:color/white"
+	    android:background="@drawable/custom_button"
+	    android:drawableEnd="@drawable/ic_highlight_remove_white_36dp"/>
+    
+    <Button
+        android:id="@+id/btnAceptarTimePicker"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="@android:string/ok" 
+        android:gravity="right|center"
+		android:layout_marginTop="5dp"
+		style="?android:attr/buttonStyleSmall"
+		android:textColor="@android:color/white"
+		android:background="@drawable/custom_button"
+		android:drawableEnd="@drawable/ic_done_white_36dp"/>
+</LinearLayout>

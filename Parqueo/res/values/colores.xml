@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="VERDE_CLARO">#00FF00</color>
+    <color name="ROJO">#FF0000</color>
+    <color name="GRIS_ASFALTO">#242829</color>
+    <color name="GRIS_BLANCO">#D5D8DC</color>
+    <color name="AMARRILLO_FUERTE">#FFE618</color>
+    <color name="LINEAS_AMARILLOS_PARKING">#FFA92B</color>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="3dp">
+
+        <ImageView
+            android:id="@+id/ivImageVehiculoLVehiculo"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_car" 
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/custom_imageview_white"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/tvPlacaLVehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Placa: 092kiu"
+                android:textSize="13dp" 
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+            <TextView
+                android:id="@+id/tvPropLVehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Prop.: Moises Apaza Q."
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+            <TextView
+                android:id="@+id/tvTipoPropLVehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:text="Tipo: Cliente con contrato dia completo"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

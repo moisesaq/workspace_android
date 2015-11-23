@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:padding="5dp">
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_horizontal">
+	
+	        <ImageView
+	            android:id="@+id/ivVehiculoDetalleResguardo"
+	            android:layout_width="120dp"
+	            android:layout_height="60dp"
+	            android:adjustViewBounds="true"
+            	android:scaleType="centerCrop"
+	            android:src="@drawable/ic_car"
+            	android:background="@drawable/custom_imageview_white" />
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical"
+	            android:layout_marginLeft="5dp" 
+	            android:gravity="center_vertical">
+	
+	            <TextView
+	                android:id="@+id/tvNumCarrilDetalleResguardo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Carril No. 0"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvPlacaDetalleResguardo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Placa: moi123"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	        </LinearLayout>
+	
+	    </LinearLayout>
+	    
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:orientation="vertical"
+	        android:layout_marginLeft="20dp"
+	        android:padding="5dp">
+	        
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="2dp">
+	            
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Costo dia:"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+		            android:id="@+id/tvCostoDiaDetalleResguardo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="0 Bs."
+		            android:layout_marginLeft="35dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="2dp">
+                
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Costo noche:"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+		            android:id="@+id/tvCostoNocheDetalleResguardo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="0 Bs."
+		            android:layout_marginLeft="19dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="2dp">
+                
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Costo total:"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+				<TextView
+	                android:id="@+id/tvCostoTotalDetalleResguardo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="0 Bs."
+	                android:layout_marginLeft="29dp"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp">
+                
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Hora ingreso:"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+		            android:id="@+id/tvHoraEntradaDetalleResguardo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="00:00:00"
+		            android:layout_gravity="center_horizontal|center_vertical"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp">
+                
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Hora salida:"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+		            android:id="@+id/tvHoraSalidaDetalleResguardo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="00:00:00"
+		            android:layout_gravity="center_horizontal|center_vertical"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp">
+                
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Fecha de ingreso"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+		            android:id="@+id/tvFechaEntradaDetalleResguardo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="12/02/2015"
+		            android:layout_gravity="center_horizontal|center_vertical"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="2dp">
+                
+                <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Fecha de salida"
+		            android:textSize="12dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+		            android:id="@+id/tvFechaSalidaDetalleResguardo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="12/02/2015"
+		            android:layout_gravity="center_horizontal|center_vertical"
+		           	android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+	
+	    </LinearLayout>
+	    
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <Button 
+		        android:id="@+id/btnVerPropDetalleResguardo"
+		        android:layout_width="fill_parent"
+		        android:layout_height="35dp"
+		        android:text="Ver propietario"
+		        android:gravity="right|center"
+				android:layout_marginTop="5dp"
+				style="?android:attr/buttonStyleSmall"
+				android:textColor="@android:color/white"
+				android:background="@drawable/custom_button"
+				android:drawableEnd="@drawable/ic_person_white_36dp"
+				android:visibility="gone"/>
+		    
+		    <Button 
+		        android:id="@+id/btnOkDetalleResguardo"
+		        android:layout_width="fill_parent"
+		        android:layout_height="35dp"
+		        android:text="@android:string/ok"
+		        android:gravity="right|center"
+				android:layout_marginTop="5dp"
+				style="?android:attr/buttonStyleSmall"
+				android:textColor="@android:color/white"
+				android:background="@drawable/custom_button"
+				android:drawableEnd="@drawable/ic_thumb_up_white_36dp"
+				android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+	    
+    </LinearLayout>
+</ScrollView>

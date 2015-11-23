@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:id="@+id/ivSalidaVehiculo"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+           		android:scaleType="centerCrop"
+                android:src="@drawable/ic_car" 
+                android:background="@drawable/custom_imageview_white"/>
+            
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+                <TextView
+	                android:id="@+id/tvPlacaSalidaVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="8dp"
+	                android:text="Placa del vehiculo"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+                <TextView
+	                android:id="@+id/tvNombrePropSalidaVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="8dp"
+	                android:text="Prop.: Moises"
+	                android:textSize="12dp" 
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+                <TextView
+	                android:id="@+id/tvCIPropSalidaVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="8dp"
+	                android:text="CI: 5684210"
+	                android:textSize="11dp" 
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+                <TextView
+	                android:id="@+id/tvTipoPropSalidaVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="8dp"
+	                android:text="Cliente con contrato dia completo"
+	                android:textSize="10dp"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+
+            
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha y hora de Ingreso"
+            android:layout_marginTop="3dp"
+            android:textSize="11dp"
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+            
+            <TextView
+	            android:id="@+id/tvFechaIngresoSalidaVehiculo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="05/05/2015,"
+	            android:typeface="monospace"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+            <TextView
+	            android:id="@+id/tvHoraIngresoSalidaVehiculo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Hrs. 13:00:00"
+	            android:typeface="monospace"
+	            android:layout_marginLeft="5dp"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+	       
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha y hora de Salida"
+            android:textSize="11dp"
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp">
+            
+            <TextView
+	            android:id="@+id/tvFechaSalidaVehiculo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="05/05/2015,"
+	            android:typeface="monospace"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+             <TextView
+	            android:id="@+id/tvHoraSalidaVehiculo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Hrs. 15:21:00"
+	            android:typeface="monospace"
+	            android:layout_marginLeft="5dp"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+	        
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyPermanenciaSalidaVehiculo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Tiempo de permanencia:"
+	            android:textSize="11dp"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+            <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" 
+	            android:layout_marginLeft="20dp">
+	            <TextView
+	                android:id="@+id/tvTiempoPermanenciaDia"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Dia: 1 Hrs."
+	                android:typeface="monospace"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvCantPermanenciaNoche"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Parking Noches: "
+	                android:typeface="monospace"
+	                android:visibility="gone"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvTiempoParking"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Total: 1 hora y 23 min."
+	                android:typeface="monospace"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+            </LinearLayout>
+        </LinearLayout>
+
+        
+
+        <LinearLayout
+            android:id="@+id/lyCostosSalidaVehiculo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+			
+			<TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Costo a pagar:"
+	            android:textSize="11dp"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+			
+			<LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" 
+	            android:layout_marginLeft="20dp">
+	            
+	            <TextView
+	                android:id="@+id/tvCostoPermanenciaDia"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Dia: 5 Bs."
+	                android:typeface="monospace"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+	
+	            <TextView
+	                android:id="@+id/tvCostoPermanenciaNoche"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Noche: 10 Bs."
+	                android:typeface="monospace"
+	                android:visibility="gone"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvCostoParking"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Total:  15 Bs."
+	                android:typeface="monospace"
+	                android:visibility="gone"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nota"
+            android:textSize="11dp"
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="3dp">
+			
+            <ImageView
+                android:id="@+id/ivEditarNotaSalidaVehiculo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/custom_imageview"
+                android:src="@drawable/ic_mode_edit_white_36dp" />
+            
+            <TextView
+                android:id="@+id/tvNotaSalidaVehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aqui va la nota del resguardo"
+                android:typeface="sans"
+                android:textSize="12dp"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="right|center_vertical"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btnCancelarSalidaVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@android:string/cancel" 
+            android:gravity="right|center"
+			android:layout_marginTop="5dp"
+			style="?android:attr/buttonStyleSmall"
+			android:textColor="@android:color/white"
+			android:background="@drawable/custom_button"
+			android:drawableEnd="@drawable/ic_highlight_remove_white_36dp"/>
+
+        <Button
+            android:id="@+id/btnOKSalidaVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="@android:string/ok" 
+            android:gravity="right|center"
+			android:layout_marginTop="5dp"
+			style="?android:attr/buttonStyleSmall"
+			android:textColor="@android:color/white"
+			android:background="@drawable/custom_button"
+			android:drawableEnd="@drawable/ic_done_white_36dp"/>
+    </LinearLayout>
+
+</ScrollView>

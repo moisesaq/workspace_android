@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/ivImageVehiculoLVehiculoEliminado"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/custom_imageview_white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_car" />
+
+    <TextView
+        android:id="@+id/tvPlacaLVehiculoEliminado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/ivImageVehiculoLVehiculoEliminado"
+        android:text="Placa: 092kiu"
+        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+    <Button
+        android:id="@+id/btnRestaurarLVehiculoEliminado"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_button"
+        android:text="Restaurar"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

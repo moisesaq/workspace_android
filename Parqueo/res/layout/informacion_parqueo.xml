@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:padding="5dp">
+
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" 
+	    android:padding="5dp">
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_horizontal">
+	
+	        <ImageView
+	            android:id="@+id/ivImageInfoParqueo"
+	            android:layout_width="80dp"
+	            android:layout_height="80dp"
+	            android:src="@drawable/ic_local_parking_white_48dp"
+            	android:background="@drawable/custom_imageview_white" />
+	        
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical" 
+	            android:gravity="center_vertical"
+	            android:layout_marginLeft="7dp">
+	            
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Parqueo"
+	                android:textSize="11dp"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+		            android:id="@+id/tvNombreParqueoInfoParqueo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Don ramon"
+		            android:layout_marginLeft="10dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Telefono"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		        
+		        <TextView
+		            android:id="@+id/tvTelfInfoParqueo"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="6429432"
+		            android:layout_marginLeft="10dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+	        </LinearLayout>
+	
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" 
+	        android:layout_marginLeft="20dp"
+	        android:padding="5dp"> 
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Direccion"
+	            android:textSize="11dp"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	        
+	        <TextView
+	            android:id="@+id/tvDireccionInfoParqueo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Av. Jaime Mendoza 100"
+	            android:layout_marginLeft="35dp"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+			    
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Tiempo de tolerancia"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvToleranciaInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="10 Min."
+			        android:layout_marginLeft="25dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Cantidad carriles"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvCapacidadInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="15"
+			        android:layout_marginLeft="47dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Precio por hora de dia"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+	            <TextView
+			        android:id="@+id/tvPrecioDiaInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="10 Bs."
+			        android:layout_marginLeft="20dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Precio toda la noche"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		        
+			    <TextView
+			        android:id="@+id/tvPrecioNocheInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="70 Bs."
+			        android:layout_marginLeft="28dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+	        </LinearLayout>
+		
+	        
+			
+		    <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Contratos nocturnos"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvContratoNocturnoInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="NO"
+			        android:layout_marginLeft="28dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+		    <LinearLayout 
+		        android:id="@+id/lyVistaContratoNocturnoInfoParqueo"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_marginLeft="15dp"
+	            android:visibility="gone">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Precio de contraro"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvPrecioContratoNocturnoInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="600 Bs."
+			        android:layout_marginLeft="15dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+		    <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Contratos diurnos"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvContratoDiurnoInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="NO"
+			        android:layout_marginLeft="42dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+		    <LinearLayout
+		        android:id="@+id/lyVistaContratoDiurnoInfoParqueo"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_marginLeft="15dp"
+	            android:visibility="gone">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Precio de contrato"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvPrecioContratoDiurnoInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="400 Bs."
+			        android:layout_marginLeft="15dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+		    <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="2dp">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Contratos dia completo"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvContratoDiaCompletoInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="NO"
+			        android:layout_marginLeft="15dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+		    <LinearLayout 
+		        android:id="@+id/lyVistaContratoDiaCompletoInfoParqueo"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_marginLeft="15dp"
+	            android:visibility="gone">
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Precio de contrato"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			    
+	            <TextView
+			        android:id="@+id/tvPrecioContratoDiaCompletoInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="800 Bs."
+			        android:layout_marginLeft="15dp"
+			        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+			</LinearLayout>
+			
+		    <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="2dp">
+	            
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Horario diurno"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+		        <LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+		            
+		            <TextView
+				        android:id="@+id/tvInicioDiaInfoParqueo"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="08:00:00"
+				        android:layout_marginLeft="15dp"
+				        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+		             <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="A"
+			            android:textStyle="bold"
+			            android:layout_marginLeft="15dp"
+			            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+		            <TextView
+				        android:id="@+id/tvFinDiaInfoParqueo"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="19:00:00"
+				        android:layout_marginLeft="15dp"
+				        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+		        </LinearLayout>
+	            
+	            
+			</LinearLayout>
+			
+		    <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:padding="2dp">
+	            
+		        <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Horario nocturno"
+		            android:textSize="11dp"
+		            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+		        <LinearLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal">
+		            
+		            <TextView
+				        android:id="@+id/tvInicioNocheInfoParqueo"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="19:01:00"
+				        android:layout_marginLeft="15dp"
+				        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+		             <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="A"
+			            android:textStyle="bold"
+			            android:layout_marginLeft="15dp"
+			            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+		            <TextView
+				        android:id="@+id/tvFinNocheInfoParqueo"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="7:59:00"
+				        android:layout_marginLeft="15dp"
+				        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+		            
+		        </LinearLayout>
+	            
+	            
+			</LinearLayout>
+		    
+	    </LinearLayout>
+
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="7dp"
+	        android:orientation="horizontal"
+	        android:gravity="right|center_vertical">
+	        
+		        <Button
+			        android:id="@+id/btnEditarInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="35dp"
+			        android:text="Config. parqueo " 
+			        android:gravity="right|center"
+				    style="?android:attr/buttonStyleSmall"
+				    android:textColor="@android:color/white"
+				    android:background="@drawable/custom_button"
+				    android:drawableEnd="@drawable/ic_config_parqueo"/>
+			
+			    <Button
+			        android:id="@+id/btnOKInfoParqueo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="35dp"
+			        android:text="@android:string/yes" 
+			        android:gravity="right|center"
+				    android:layout_marginLeft="3dp"
+				    style="?android:attr/buttonStyleSmall"
+				    android:textColor="@android:color/white"
+				    android:background="@drawable/custom_button"
+				    android:drawableEnd="@drawable/ic_thumb_up_white_36dp"/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>

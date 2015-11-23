@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center_horizontal"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tvPlacaCarril"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carril 0"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+    <ImageView
+        android:id="@+id/ivVehiculoCarril"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_carril_parking" 
+        android:scaleType="centerCrop"/>
+
+</LinearLayout>

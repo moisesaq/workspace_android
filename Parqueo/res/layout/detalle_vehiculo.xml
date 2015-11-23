@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal" 
+	        android:padding="5dp">
+	
+	        <ImageView
+	            android:id="@+id/ivImageVehiculoDetalleVehiculo"
+	            android:layout_width="160dp"
+	            android:layout_height="80dp"
+	            android:adjustViewBounds="true"
+	            android:background="@drawable/custom_imageview_white"
+	            android:scaleType="centerCrop"
+	            android:src="@drawable/ic_car" />
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_marginLeft="7dp"
+	            android:gravity="center_vertical"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Placa"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+	                android:textSize="11dp" />
+	
+	            <TextView
+	                android:id="@+id/tvPlacaDetalleVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="10dp"
+	                android:text="1230SIK"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:padding="2dp">
+            
+            <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Marca"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+	            android:textSize="11dp" />
+	
+	        <TextView
+	            android:id="@+id/tvMarcaDetalleVehiculo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:text="Volvo"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+            
+        </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:orientation="horizontal" 
+	        android:padding="2dp">
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Color"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+	            android:textSize="11dp" />
+	
+	        <TextView
+	            android:id="@+id/tvColorDetalleVehiculo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:text="Rojo"
+	            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	    </LinearLayout>
+		
+	    <TextView
+	        android:id="@+id/tvNotaDetalleVehiculo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginTop="5dp"
+	        android:text="Propietario"
+	        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	    <LinearLayout
+	        android:id="@+id/lyPropietarioDetalleVehiculo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal|center_vertical"
+	        android:padding="10dp" >
+	        
+	        <ImageView
+	            android:id="@+id/ivVerClienteDetalleVehiculo"
+	            android:layout_width="25dp"
+	            android:layout_height="25dp"
+	            android:layout_marginRight="2dp"
+	            android:layout_gravity="top|left"
+	            android:background="@drawable/custom_imageview"
+	            android:src="@drawable/ic_look_client" />
+	
+	        <ImageView
+	            android:id="@+id/ivImageClienteDetalleVehiculo"
+	            android:layout_width="70dp"
+	            android:layout_height="70dp"
+	            android:background="@drawable/custom_imageview_white"
+	            android:src="@drawable/ic_account_circle_white_48dp" />
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:id="@+id/tvCIDetalleVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="CI: 5684210"
+	                android:textSize="13dp"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvNombreDetalleVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Nombre: William"
+	                android:textSize="13dp"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvApellidoDetalleVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Apellido: Walas W."
+	                android:textSize="13dp"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	            
+	            <TextView
+	                android:id="@+id/tvTipoClienteDetalleVehiculo"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textSize="10dp"
+	                android:text="Cliente con contrato dia completo"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	        </LinearLayout>
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:orientation="horizontal"
+	        android:layout_marginRight="2dp"
+	        android:layout_marginBottom="5dp"
+	        android:gravity="right|center_vertical">
+	
+	        <Button
+	            android:id="@+id/btnDarBajaDetalleVehiculo"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="35dp"
+	            android:background="@drawable/custom_button"
+	            android:drawableEnd="@drawable/ic_delete_white_36dp"
+	            android:gravity="right|center"
+	            android:text="Eliminar"
+	            android:textColor="@android:color/white" />
+	
+	        <Button
+	            android:id="@+id/btnEditarDetalleVehiculo"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="35dp"
+	            android:layout_marginLeft="3dp"
+	            android:background="@drawable/custom_button"
+	            android:drawableEnd="@drawable/ic_mode_edit_white_36dp"
+	            android:gravity="right|center"
+	            android:text="Editar"
+	            android:textColor="@android:color/white" />
+	
+	        <Button
+	            android:id="@+id/btnOKDetalleVehiculo"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="35dp"
+	            android:layout_marginLeft="3dp"
+	            android:background="@drawable/custom_button"
+	            android:drawableEnd="@drawable/ic_thumb_up_white_36dp"
+	            android:gravity="right|center"
+	            android:text="@android:string/yes"
+	            android:textColor="@android:color/white" />
+	    </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>
