@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="AMARILLO">#FFFF00</color>
+    <color name="AMARILLO_GOLD">#FFD700</color>
+    <color name="GRIS_BLANCO">#D5D8DC</color>
+    <color name="GRIS_FUERTE">#333333</color>
+    <color name="AZUL_CLARO">#00BFFF</color>
+    <color name="VERDE_LIME">#32CD32</color>
+    <color name="ROJO">#FF0000</color>
+</resources>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:padding="5dp">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center"
+            android:background="@drawable/custom_view_layout">
+            
+            <ImageView 
+                android:id="@+id/ivImagenDetalleCliente"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                android:src="@drawable/ic_client_128"
+        	    android:background="@drawable/custom_imageview"/>
+
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+                
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Carnet de Identidad"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+	
+	            <TextView
+	                android:id="@+id/tvCIDetalleCliente"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="5684210" 
+	                android:textStyle="bold"
+	                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvNombreDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Silvia" 
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apellido"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvApellidoDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vargas Vera"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direccion"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvDireccionDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buenos Aires 42" 
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefono o celular"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvTelfDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="71175807"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvEmailDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="silvitavargas90@gmail.com"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sexo"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+
+            <TextView
+                android:id="@+id/tvSexoDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha de nacimiento"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvFechaNacDetallaCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08 de octubre 1990"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" 
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/custom_view_layout"
+            android:divider="@drawable/custom_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha de registro"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+            <TextView
+                android:id="@+id/tvFechaRegDetalleCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02 de junio 2015"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+            
+        </LinearLayout>
+ 
+    </LinearLayout>
+
+</ScrollView>

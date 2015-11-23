@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/ivImageLMaq"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_excavator_128" 
+            android:scaleType="centerCrop"
+            android:padding="40dp"
+            android:background="@drawable/custom_imageview"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Placa: "
+	                android:textStyle="bold" 
+	                android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+                <TextView
+	                android:id="@+id/tvPlacaLMaq"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="9889VAR" 
+	                android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+            </LinearLayout>
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Descripcion: "
+	                android:textStyle="bold" 
+	                android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+                <TextView
+	                android:id="@+id/tvDescripcionLMaq"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Volqueta grande" 
+	                android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Capacidad: "
+	                android:textStyle="bold" 
+	                android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+                <TextView
+                    android:id="@+id/tvCapacidadLMaq"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="4 Cubos"
+	                android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

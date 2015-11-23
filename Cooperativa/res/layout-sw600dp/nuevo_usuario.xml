@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp">
+            
+            <ImageView
+	            android:id="@+id/ivImagenNuevoUsuario"
+	            android:layout_width="100dp"
+	            android:layout_height="100dp"
+	            android:layout_gravity="center_horizontal"
+	            android:src="@drawable/ic_supervisor_account_white_48dp"
+	            android:background="@drawable/custom_imageview" />
+	
+	        <EditText
+	            android:id="@+id/etCIPersonalNuevoUsuario"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:hint="CI personal"
+	            android:maxLength="8"
+	            android:layout_gravity="center|center_vertical"
+	            
+		        android:textSize="@dimen/letter_tablet_normal"
+				android:textAppearance="?android:attr/textAppearanceMedium" >
+	
+	            <requestFocus />
+	        </EditText>
+        
+        </LinearLayout>
+        
+
+        <EditText
+            android:id="@+id/etNombreUserNuevoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario" 
+            android:maxLength="12"
+            android:drawableRight="@drawable/ic_no_value_24"
+            android:padding="15dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginTop="5dp"
+	        android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+        
+        <EditText
+            android:id="@+id/etClaveActualNuevoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clave Actual"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:visibility="gone"
+            android:padding="15dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginTop="5dp"
+	        android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/etClaveNuevoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clave"
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:padding="15dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginTop="5dp"
+	        android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/etRepetirClaveNuevoUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repetir clave" 
+            android:inputType="textPassword"
+            android:maxLength="12"
+            android:padding="15dp"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginRight="15dp"
+	        android:layout_marginTop="5dp"
+	        android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right|center_vertical"
+            android:layout_marginRight="15dp">
+            
+            <Button
+	            android:id="@+id/btnCancelarNuevoUsuario"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/cancelar"
+	            android:textColor="@android:color/black"
+	            android:padding="15dp"
+	            android:background="@drawable/custom_view_button" 
+	            android:layout_marginRight="3dp"
+	            android:textSize="@dimen/letter_tablet_normal"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+	
+	        <Button
+	            android:id="@+id/btnAceptarNuevoUsuario"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/aceptar"
+	            android:textColor="@android:color/black"
+	            android:padding="15dp"
+	            android:background="@drawable/custom_view_button"
+	            android:textSize="@dimen/letter_tablet_normal"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+            
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+       		android:layout_gravity="center_horizontal|center"
+            android:src="@drawable/ic_icon_coop_256" 
+            android:background="@drawable/custom_imageview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido a Cooperativa Duraznillo SUCRE"
+            android:layout_marginTop="5dp" 
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal|center"/>
+        
+        <EditText
+            android:id="@+id/etCIAutenticacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Carnet de Identidad"
+            android:inputType="number"
+            android:layout_marginTop="2dp"
+            android:maxLength="8">
+        </EditText>
+        
+        <EditText
+            android:id="@+id/etNombreAutenticacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:hint="Nombre"
+            android:layout_marginTop="2dp"
+            android:maxLength="15">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etUsuarioAutenticacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:layout_marginTop="2dp"
+            android:maxLength="12">
+        </EditText>
+
+        <EditText
+            android:id="@+id/etClaveAutenticacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Clave"
+            android:layout_marginTop="2dp"
+            android:maxLength="12"/>
+        
+        <EditText
+            android:id="@+id/etClave2Autenticacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Repetir clave"
+            android:layout_marginTop="2dp"
+            android:maxLength="12">
+        </EditText>
+
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right|center_vertical"
+            android:layout_marginTop="2dp">
+            
+            <Button
+	            android:id="@+id/btnCancelarAutenticacion"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/cancelar"
+	            android:textColor="@android:color/black"
+	            android:padding="5dp"
+	            android:background="@drawable/custom_view_button" 
+	            android:layout_marginRight="3dp"/>
+            
+            <Button
+	            android:id="@+id/btnAceptarAtenticacion"
+	            style="?android:attr/buttonStyleSmall"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/aceptar"
+	            android:textColor="@android:color/black"
+	            android:padding="5dp"
+	            android:background="@drawable/custom_view_button" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

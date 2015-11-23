@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="10dp">
+
+    <DatePicker
+        android:id="@+id/datepickerFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="center_horizontal"/>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="5dp">
+        
+        <Button
+	        android:id="@+id/btnCancelarDatePicker"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/cancelar" 
+	        android:gravity="right|center"
+			android:textSize="@dimen/letter_tablet_normal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="@android:color/black"
+			android:layout_marginRight="3dp"
+			android:padding="15dp"
+			android:background="@drawable/custom_view_button"/>
+	    
+	    <Button
+	        android:id="@+id/btnAceptarDatePicker"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/aceptar" 
+	        android:gravity="right|center"
+			android:textColor="@android:color/black"
+			android:textSize="@dimen/letter_tablet_normal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+			android:padding="15dp"
+			android:background="@drawable/custom_view_button"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

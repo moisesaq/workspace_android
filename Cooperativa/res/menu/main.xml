@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/action_search"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="@string/buscar"
+        android:icon="@drawable/ic_search_white_48dp"
+        android:actionViewClass="android.widget.SearchView"/>
+    
+    <item 
+        android:id="@+id/action_ventas_de_la_semana"
+        android:orderInCategory="2"
+        android:showAsAction="never"
+        android:title="@string/ventas_de_la_semana"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_ventas_mes_actual"
+        android:orderInCategory="3"
+        android:showAsAction="never"
+        android:title="@string/ventas_mes_actual"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_ventas_fecha_especifico"
+        android:orderInCategory="4"
+        android:showAsAction="never"
+        android:title="@string/ventas_fecha_especifico"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_ventas_mes_especifico"
+        android:orderInCategory="5"
+        android:showAsAction="never"
+        android:title="@string/ventas_mes_especifico"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_ventas_por_cliente"
+        android:orderInCategory="6"
+        android:showAsAction="never"
+        android:title="@string/ventas_por_cliente"
+        android:visible="false"/>
+        
+</menu>

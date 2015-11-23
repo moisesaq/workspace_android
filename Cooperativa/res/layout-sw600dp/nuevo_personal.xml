@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:padding="5dp">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+			android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="10dp">
+            
+            <ImageView 
+                android:id="@+id/ivImagenNuevoPersonal"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_employees_128"
+                android:background="@drawable/custom_imageview"/>
+            
+            <LinearLayout 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:layout_marginLeft="2dp">
+	            
+                <EditText 
+                    android:id="@+id/etCINuevoPersonal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Carnet Ident."
+                	android:inputType="number" 
+                    android:maxLength="8"
+                    android:drawableRight="@drawable/ic_no_value_24"
+                    android:padding="10dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="5dp"
+		            android:textSize="@dimen/letter_tablet_normal"
+					android:textAppearance="?android:attr/textAppearanceMedium">
+                	<requestFocus />  
+                </EditText>
+                
+                <EditText 
+                    android:id="@+id/etNombreNuevoPersonal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    android:layout_weight="1"
+              		android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:padding="10dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginRight="10dp"
+		            android:layout_marginTop="5dp"
+		            android:textSize="@dimen/letter_tablet_normal"
+					android:textAppearance="?android:attr/textAppearanceMedium">
+                </EditText>
+                
+	        </LinearLayout>
+            
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etApellidoNuevoPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido"
+            android:inputType="textCapWords"
+            android:maxLength="20"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/etDireccionNuevoPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            android:inputType="textCapSentences"
+            android:maxLength="35"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etTelfNuevoPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telf. o Cel."
+            android:inputType="phone" 
+            android:maxLength="10"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/etEmailNuevoPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" 
+            android:maxLength="35"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha de nacimiento"
+                android:textSize="@dimen/letter_tablet_small"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center">
+	            
+                <TextView
+	                android:id="@+id/tvFechaNanNuevoPersonal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Sin especificar"
+	                android:textSize="@dimen/letter_tablet_normal"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <ImageView
+	                android:id="@+id/ivFechaNacNuevoPersonal"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_marginLeft="5dp"
+	                android:src="@drawable/ic_event_white_24dp" 
+	                android:background="@drawable/custom_view_button"/>
+	            
+	        </LinearLayout>
+	        
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha de ingreso"
+                android:textSize="@dimen/letter_tablet_small"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center">
+	            
+                <TextView
+	                android:id="@+id/tvFechaIngresoNuevoPersonal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Fecha de ingreso"
+	                android:textSize="@dimen/letter_tablet_normal"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <ImageView
+	                android:id="@+id/ivFechaIngresoNuevoPersonal"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_marginLeft="5dp"
+	                android:src="@drawable/ic_event_white_24dp" 
+	                android:background="@drawable/custom_view_button"/>
+	            
+	        </LinearLayout>
+	        
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargo"
+                android:textSize="@dimen/letter_tablet_small"
+				android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <LinearLayout 
+                android:id="@+id/lyVistaCargoNuevoPersonal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+            	android:gravity="center_vertical|center"
+            	android:visibility="gone">
+            	 
+                <TextView
+	                android:id="@+id/tvOcupacionCargoNuevoPersonal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Fecha de nacimiento"
+	                android:textSize="@dimen/letter_tablet_normal"
+					android:textAppearance="?android:attr/textAppearanceMedium" />
+	                
+	            <ImageView
+	                android:id="@+id/ivEditarCargoNuevoPersonal"
+	                android:layout_width="50dp"
+	                android:layout_height="50dp"
+	                android:layout_marginLeft="5dp"
+	                android:src="@drawable/ic_mode_edit_white_24dp" 
+	                android:background="@drawable/custom_view_button"/>
+                
+            </LinearLayout>
+            
+            <Spinner
+	            android:id="@+id/spCargoNuevoPersonal"
+	            android:layout_width="match_parent"
+	            android:layout_height="40dp" 
+	            android:gravity="center_horizontal|center"/>
+
+        </LinearLayout>
+        
+        <CheckBox 
+            android:id="@+id/cbMaquinariaNuevoPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maquinaria"
+            android:padding="5dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="2dp"
+            android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:id="@+id/lyVistaMaqNuevoPersonal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+		    android:layout_marginLeft="25dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal|center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivMaquinariaNuevoPersonal"
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+         		android:scaleType="centerCrop"
+         		android:padding="30dp"
+                android:src="@drawable/ic_local_shipping_white_48dp" 
+                android:background="@drawable/custom_imageview"/>
+            
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp">
+                
+                <TextView
+	                android:id="@+id/tvPlacaMaqNuevoPersonal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Seleccione maquinaria"
+	                android:textSize="@dimen/letter_tablet_normal"
+					android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+                <TextView
+	                android:id="@+id/tvDescripcionMaqNuevoPersonal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="Descripcion" 
+	                android:visibility="gone"
+	                android:textSize="@dimen/letter_tablet_small"
+					android:textAppearance="?android:attr/textAppearanceMedium"/>
+                
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAceptarNuevoPersonal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aceptar" 
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/custom_view_button"
+            android:padding="15dp"
+            android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+            android:textSize="@dimen/letter_tablet_small"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </LinearLayout>
+
+</ScrollView>

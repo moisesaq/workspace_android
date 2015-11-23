@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivImageProdLDetallePedido"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/custom_imageview"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_product_plant_128"
+            android:padding="5dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_small"
+                    android:textStyle="bold"
+                    android:text="Producto: " 
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+                <TextView
+                    android:id="@+id/tvNombreProdLDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_normal"
+                    android:text="ARENA COMUN"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_small"
+                    android:textStyle="bold"
+                    android:text="Precio: " 
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+
+                <TextView
+                    android:id="@+id/tvPrecioProdLDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_normal"
+                    android:text="120Bs."
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_small"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:text="Cant. cubos: "
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+                <TextView
+                    android:id="@+id/tvCantLDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_normal"
+                    android:layout_marginLeft="10dp"
+                    android:text="3" 
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_small"
+                    android:textStyle="bold"               
+                    android:text="C. entrega: "
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+                
+                <TextView
+                    android:id="@+id/tvCostoEntregaLDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_normal"                    
+                    android:text="100 Bs."
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_small"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:text="Costo: " 
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
+                
+                <TextView
+                    android:id="@+id/tvCostoLDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/letter_normal"
+                    android:layout_marginLeft="10dp"
+                    android:text="300Bs."
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <ImageButton 
+            android:id="@+id/ibtnMasDetallePedido"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@android:color/transparent"
+	        android:layout_alignParentRight="true"
+	        android:clickable="false"
+	        android:focusable="false"
+	        android:src="@drawable/ic_more_vert_black_24dp"
+	        android:visibility="gone"/>
+    
+</RelativeLayout>

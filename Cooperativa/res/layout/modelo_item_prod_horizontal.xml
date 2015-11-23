@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="3dp"
+    android:background="@color/GRIS_BLANCO">
+
+    <TextView
+        android:id="@+id/tvNombreHorizontalLProd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pierdra blanco"
+        android:textSize="@dimen/letter_small"
+        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+    
+    <ImageView
+        android:id="@+id/ivImageProdHorizontalLProd"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_imageview"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_product_plant_128"
+        android:padding="5dp" />
+    
+    <TextView
+        android:id="@+id/tvPrecioHorizontalLProd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio: 200 Bs."
+        android:textSize="@dimen/letter_small"
+        android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
+    
+</LinearLayout>

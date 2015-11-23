@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivImagenNuevoProd"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_imageview"
+            android:src="@drawable/ic_product_plant_128"
+            android:layout_marginTop="35dp" />
+
+        <EditText
+            android:id="@+id/etNombreProdNuevoProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:hint="Producto" 
+            android:maxLength="25"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/etPrecioNuevoProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio"
+            android:inputType="numberDecimal" 
+            android:maxLength="8"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/etUnidadNuevoProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Unidad"
+            android:maxLength="10" 
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/etDescripcionNuevoProd"
+            android:layout_width="match_parent"
+	        android:layout_height="70dp"
+	        android:hint="Descripcion"
+	        android:gravity="left|top"
+	        android:maxLines="4"
+	        android:ems="10" 
+	        android:inputType="textCapSentences"
+	        android:maxLength="120"
+	        android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="5dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <Button
+            android:id="@+id/btnAceptarNuevoProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aceptar" 
+            android:textColor="@android:color/black"
+            android:background="@drawable/custom_view_button"
+            android:padding="15dp"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:layout_marginTop="10dp"
+		    android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+    
+</ScrollView>

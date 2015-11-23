@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" >
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_imageview"
+            android:src="@drawable/ic_icon_coop_256" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textStyle="bold"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <FrameLayout
+                android:id="@+id/FrameLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvNombreDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COOPERATIVA DURAZNILLO"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/letter_tablet_normal"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarNombreDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_36dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyEditarNombreDatosCoop"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/etNombreDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10" 
+                    android:maxLength="35"
+                    android:textSize="@dimen/letter_tablet_normal"
+                    android:hint="Nombre Cooperativa"
+                    android:inputType="textCapWords">
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/ibtnOKEditarNombreDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_check_black_48dp"
+                    android:padding="7dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIT"
+                android:textStyle="bold"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvNITDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5566778899"
+                    android:layout_gravity="center_horizontal"
+               	 	android:textSize="@dimen/letter_tablet_normal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarNITDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_36dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyEditarNITDatosCoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/etNITDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10" 
+                    android:inputType="number"
+                    android:textSize="@dimen/letter_tablet_normal"
+                    android:hint="Ej. 5544332211"
+                    android:maxLength="10">
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/ibtnOKEditarNITDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_check_black_48dp"
+                    android:padding="7dp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefono/Celular"
+                android:textStyle="bold"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <FrameLayout
+                android:id="@+id/FrameLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvTelfDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="46429432 - 71122333"
+                    android:layout_gravity="center_horizontal"
+                	android:textSize="@dimen/letter_tablet_normal"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarTelfDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_36dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyEditarTelfDatosCoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/etTelfDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Ej. 46456677 - 71122333"
+                    android:inputType="phone"
+                	android:textSize="@dimen/letter_tablet_normal"
+                    android:maxLength="20" >
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/ibtnOKEditarTelfDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_check_black_48dp"
+                    android:padding="7dp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvEmailDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="coop_agregados_duraznillo@gmail.com"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                	android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarEmailDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_36dp"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyEditarEmailDatosCoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/etEmailDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Ej. mi_email@gmail.com"
+                	android:textSize="@dimen/letter_tablet_normal"
+                    android:maxLength="30">
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/ibtnOKEditarEmailDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_check_black_48dp"
+                    android:padding="7dp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direccion"
+                android:textStyle="bold"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvDireccionDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comunidad de Duraznillo"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                	android:textSize="@dimen/letter_tablet_normal"	
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarDireccionDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_36dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyEditarDireccionDatosCoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/etDireccionDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10" 
+                    android:hint="Ej. Buenos Aires 43"
+                    android:maxLength="35"
+                	android:textSize="@dimen/letter_tablet_normal"
+                    android:inputType="textCapSentences">
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/ibtnOKEditarDireccionDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_check_black_48dp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciudad"
+                android:textStyle="bold"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvCiudadDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sucre"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                	android:textSize="@dimen/letter_tablet_small"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarCiudadDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_36dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/lyEditarCiudadDatosCoop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/etCiudadDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Ej. Sucre" 
+                    android:maxLength="15"
+                	android:textSize="@dimen/letter_tablet_normal"
+                    android:inputType="textCapWords">
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/ibtnOKEditarCiudadDatosCoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_view_button"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_check_black_48dp" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

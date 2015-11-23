@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cooperativa</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nuevo_cargo">Nuevo cargo</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="agregar">Agregar</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="listo">Listo</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="buscar">Buscar</string>
+    <string name="configurar">Config.</string>
+    <string name="ver_imprimir_info">Ver e Imprimir</string>
+    <string name="enviar_info">Enviar</string>
+    <string name="editar_pedido">Editar</string>
+    <string name="confirmar_entrega">Confirmar entrega</string>
+    <string name="ok_info">OK</string>
+    <string name="nada">Nada</string>
+    <string name="informe_pdf"> Informe PDF</string>
+    
+    <string name="ventas_de_la_semana">Ventas de la semana</string>
+    <string name="ventas_mes_actual">Ventas del mes actual</string>
+    <string name="ventas_fecha_especifico">Buscar ventas por fecha</string>
+    <string name="ventas_mes_especifico">Buscar ventas por mes</string>
+    <string name="ventas_por_cliente">Buscar ventas por cliente</string>
+    <string name="ventas_todas">Ventas todas</string>
+    <string name="ventas_directas">Ventas directas</string>
+    <string name="ventas_a_domicilio">Ventas a domicilio</string>
+    <string name="nuevo_pedido">Nuevo Pedido</string>
+    <string name="pedidos_entregados">Entregados</string>
+    <string name="pedidos_pendientes">Pendientes</string>
+    <string name="pedidos_todos">Todos</string>
+    <string name="registrar_pedido">Registrar pedido</string>
+    <string name="cancelar_pedido">Cancelar pedido</string>
+    <string name="registrar_venta">Registrar venta</string>
+    <string name="cancelar_venta">Cancelar venta</string>
+    
+    <string name="dni">DNI</string>
+
+</resources>

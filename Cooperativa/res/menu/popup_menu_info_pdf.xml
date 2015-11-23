@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/action_ver_imprimir_info_pdf"
+        android:title="@string/ver_imprimir_info"/>
+    
+    <item
+        android:id="@+id/action_enviar_info_pdf"
+        android:title="@string/enviar_info"/>
+    
+</menu>

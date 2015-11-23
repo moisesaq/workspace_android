@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:padding="5dp">
+
+    <EditText
+        android:id="@+id/etOcupacionNuevoCargo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre cargo"
+        android:inputType="textCapCharacters"
+        android:maxLength="35"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/letter_tablet_normal"
+		android:textAppearance="?android:attr/textAppearanceMedium">
+		
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etSalarioNuevoCargo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Salario"
+        android:inputType="numberDecimal" 
+        android:maxLength="10"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/letter_tablet_normal"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <EditText
+        android:id="@+id/etDescripcionNuevoCargo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Descripcion"
+        android:gravity="left|top"
+        android:maxLines="4"
+        android:ems="10" 
+        android:inputType="textCapSentences"
+        android:maxLength="120"
+        android:padding="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/letter_tablet_normal"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="5dp">
+        
+        <Button
+	        android:id="@+id/btnCancelarNuevoCargo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/cancelar"
+	        android:textColor="@android:color/black"
+	        android:background="@drawable/custom_view_button"
+	        android:layout_marginRight="3dp"
+	        android:padding="15dp"
+	        android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+	    
+	    <Button
+	        android:id="@+id/btnAceptarNuevoCargo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/aceptar"
+	        android:textColor="@android:color/black" 
+	        android:background="@drawable/custom_view_button"
+	     	android:padding="15dp"
+	        android:textSize="@dimen/letter_tablet_normal"
+			android:textAppearance="?android:attr/textAppearanceMedium"/>
+        
+    </LinearLayout>
+</LinearLayout>

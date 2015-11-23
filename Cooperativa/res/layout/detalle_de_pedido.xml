@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollViewParentDetallePedido"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="1dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="3dp"
+                android:text="Datos cliente"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="1dp" >
+
+                <TextView
+                    android:id="@+id/tvEstadoDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="PENDIENTE"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="@dimen/letter_small"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/ibtnConfirmarEntregaDetallePedido"
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/custom_view_button"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_done_white_24dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/ivImageClienteDetallePedido"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custom_imageview"
+                android:padding="3dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_client_128" />
+
+            <TextView
+                android:id="@+id/tvNombreClienteDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="Nombre: Silvia Vargas V."
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_normal" />
+
+            <TextView
+                android:id="@+id/tvCIClienteDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="CI/NIT: 5544332"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAtendidoPorDetallePedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="Atendido por: silvia"
+            android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+            android:textColor="@android:color/background_dark"
+            android:textSize="@dimen/letter_small"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha pedido:"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFechaPedidoDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="09 de octubre 2015"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_normal" />
+
+            <TextView
+                android:id="@+id/tvHoraVentaDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Hrs. 12:22:14"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_normal" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/FrameLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Fecha entrega:"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFechaEntregaDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="35pt"
+                android:text="09 de octubre 2015"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textSize="@dimen/letter_normal" />
+
+            <ImageButton
+                android:id="@+id/ibtnEditarFechaEntregaDetallePedido"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:background="@drawable/custom_view_button"
+                android:src="@drawable/ic_edit_black_24dp"
+                android:visibility="gone" >
+            </ImageButton>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_view_layout"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Entregar en: "
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDireccionDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="32pt"
+                    android:text="Av. Jaime Mendoza 120"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarDirEntregaDetallePedido"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/etEditarDirEntregaDetallePedido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:maxLength="35"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Personal encargado de la entrega"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarPersonalEntregaDetallePedido"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ivImagePersonalDetallePedido"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/custom_imageview"
+                    android:padding="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_employees_128" />
+
+                <TextView
+                    android:id="@+id/tvNombrePersonalDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Nombre: Silvia Vargas V."
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal" />
+
+                <TextView
+                    android:id="@+id/tvCIPersonalDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="CI: 5544332"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ivImageMaqDetallePedido"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_imageview"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_local_shipping_white_48dp" />
+
+                <TextView
+                    android:id="@+id/tvPlacaMaqDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="Placa: 1234ABC"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal" />
+
+                <TextView
+                    android:id="@+id/tvCapacidadMaqDetallePedido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Cap.: 4 cubos"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textSize="@dimen/letter_normal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/ibtnEditarNotaDetallePedido"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/custom_view_button"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_edit_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Nota"
+                    android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/letter_normal"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvNotaDetallePedido"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Hola esto es una nota"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textColor="@android:color/background_dark"
+                android:textSize="@dimen/letter_normal" />
+
+            <EditText
+                android:id="@+id/etEditarNotaPedido"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:gravity="left|top"
+                android:hint="Escriba nota aqui"
+                android:maxLength="250"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="2dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="2dp"
+                android:text="Lista de productos"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSeleccionarProdDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="right"
+                android:background="@drawable/custom_view_button"
+                android:drawableRight="@drawable/ic_shopping_cart_white_24dp"
+                android:text="Agregar productos"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/letter_small"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <ListView
+            android:id="@+id/lvListaDetallePedido"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/custom_view_layout" >
+        </ListView>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <Button
+                android:id="@+id/btnVerPdfDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/custom_view_button"
+                android:drawableLeft="@drawable/ic_pdf_24"
+                android:padding="3dp"
+                android:text=" Ver/Imprimir"
+                android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/letter_small"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvCostoTotalDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:text="Costo total: 300Bs."
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold|italic" />
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

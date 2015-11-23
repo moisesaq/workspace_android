@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/action_nuevo_cargo"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/nuevo_cargo"
+        android:icon="@drawable/ic_add_circle_outline_white_36dp"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_nueva_maq"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/agregar"
+        android:icon="@drawable/ic_add_circle_outline_white_36dp"
+        android:visible="false"/>
+   	
+    <item
+        android:id="@+id/action_nuevo_personal"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/agregar"
+        android:icon="@drawable/ic_person_add_white_24dp"
+        android:visible="false"/>"
+    
+    <item 
+        android:id="@+id/action_editar_personal"
+        android:orderInCategory="4"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/editar"
+        android:icon="@drawable/ic_mode_edit_white_24dp"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_eliminar_personal"
+        android:orderInCategory="5"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/eliminar"
+        android:icon="@drawable/ic_delete_white_24dp"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_listo_personal"
+        android:orderInCategory="6"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/listo"
+        android:icon="@drawable/ic_done_white_24dp"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_config_clave"
+        android:orderInCategory="7"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/configurar"
+        android:icon="@drawable/ic_config_password"
+        android:visible="false"/>
+
+</menu>

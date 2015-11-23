@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginTop="15dp" >
+
+        <ImageView
+            android:id="@+id/ivImagenDetalleProd"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:background="@drawable/custom_imageview"
+            android:src="@drawable/ic_product_plant_128" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+          	android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_view_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="Producto"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvNombreProdDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" 
+                android:text="Arena"
+                android:textSize="@dimen/letter_tablet_normal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+        
+       	<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+          	android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_view_layout">
+            
+       	    <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="Precio"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvPrecioDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" 
+                android:text="300 Bs"
+                android:textSize="@dimen/letter_tablet_normal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+       	</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+          	android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_view_layout">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="Unidad"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvUnidadDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" 
+                android:text="M3"
+                android:textSize="@dimen/letter_tablet_normal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+       	</LinearLayout>
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+          	android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_view_layout">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:text="Descripcion"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/tvDescripcionDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" 
+                android:text="Arena de primera calidad"
+                android:textSize="@dimen/letter_tablet_normal"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+       	</LinearLayout>
+            
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" 
+            android:padding="15dp"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/btnEliminarDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:drawableRight="@drawable/ic_delete_white_24dp"
+                android:text="@string/eliminar"
+                android:textColor="@android:color/black"
+                android:background="@drawable/custom_view_button"
+                android:padding="15dp" 
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <Button
+                android:id="@+id/btnEditarDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:drawableRight="@drawable/ic_mode_edit_white_24dp"
+                android:text="@string/editar"
+                android:textColor="@android:color/black"
+                android:background="@drawable/custom_view_button"  
+                android:padding="15dp"
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <Button
+                android:id="@+id/btnOkDetalleProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_done_white_24dp"
+                android:text="@string/ok_info"
+                android:textColor="@android:color/black"
+                android:background="@drawable/custom_view_button"
+                android:padding="15dp"  
+                android:textSize="@dimen/letter_tablet_small"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

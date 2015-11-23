@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/action_ventas_todas"
+        android:title="@string/ventas_todas"/>
+    
+    <item 
+        android:id="@+id/action_ventas_directas"
+        android:title="@string/ventas_directas"/>
+    
+    <item 
+        android:id="@+id/action_ventas_a_domicilio"
+        android:title="@string/ventas_a_domicilio"/>
+</menu>
