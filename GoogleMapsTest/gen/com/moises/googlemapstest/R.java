@@ -1132,12 +1132,15 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f02006c;
         public static final int common_signin_btn_text_pressed_dark=0x7f02006d;
         public static final int common_signin_btn_text_pressed_light=0x7f02006e;
-        public static final int ic_launcher=0x7f02006f;
-        public static final int ic_search_white_48dp=0x7f020070;
+        public static final int custom_view_button=0x7f02006f;
+        public static final int ic_keyboard_voice_black_24dp=0x7f020070;
+        public static final int ic_keyboard_voice_black_36dp=0x7f020071;
+        public static final int ic_launcher=0x7f020072;
+        public static final int ic_search_white_48dp=0x7f020073;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f060045;
-        public static final int action_animar_mapa=0x7f06004a;
+        public static final int action_animar_mapa=0x7f06004d;
         public static final int action_bar=0x7f06001d;
         public static final int action_bar_activity_content=0x7f060018;
         public static final int action_bar_container=0x7f06001c;
@@ -1145,17 +1148,17 @@ containing a value of this type.
         public static final int action_bar_root=0x7f06001b;
         public static final int action_bar_subtitle=0x7f060024;
         public static final int action_bar_title=0x7f060023;
-        public static final int action_cambiar_vista=0x7f060048;
+        public static final int action_cambiar_vista=0x7f06004b;
         public static final int action_context_bar=0x7f06001e;
         public static final int action_menu_divider=0x7f060019;
         public static final int action_menu_presenter=0x7f06001a;
         public static final int action_mode_bar=0x7f060032;
         public static final int action_mode_bar_stub=0x7f060031;
         public static final int action_mode_close_button=0x7f060025;
-        public static final int action_mover_vista=0x7f060049;
-        public static final int action_position=0x7f06004c;
-        public static final int action_search=0x7f060047;
-        public static final int action_ver_3d=0x7f06004b;
+        public static final int action_mover_vista=0x7f06004c;
+        public static final int action_position=0x7f06004f;
+        public static final int action_search=0x7f06004a;
+        public static final int action_ver_3d=0x7f06004e;
         public static final int activity_chooser_view_content=0x7f060026;
         public static final int always=0x7f06000f;
         public static final int beginning=0x7f060014;
@@ -1175,11 +1178,12 @@ containing a value of this type.
         public static final int icon=0x7f06002b;
         public static final int ifRoom=0x7f06000e;
         public static final int image=0x7f060028;
+        public static final int ivMic=0x7f060046;
         public static final int left_icon=0x7f060034;
         public static final int listMode=0x7f060005;
         public static final int list_item=0x7f06002a;
         public static final int middle=0x7f060015;
-        public static final int myGoogleMap=0x7f060046;
+        public static final int myGoogleMap=0x7f060049;
         public static final int never=0x7f06000d;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
@@ -1210,6 +1214,8 @@ containing a value of this type.
         public static final int title=0x7f06002c;
         public static final int title_container=0x7f060033;
         public static final int top_action_bar=0x7f060021;
+        public static final int tvAddress=0x7f060047;
+        public static final int tvAddressDescription=0x7f060048;
         public static final int up=0x7f060022;
         public static final int useLogo=0x7f060007;
         public static final int withText=0x7f060010;
