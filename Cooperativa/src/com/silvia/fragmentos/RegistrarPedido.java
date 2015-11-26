@@ -50,7 +50,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 	
 	public String idusuario;
 	public ScrollView scrollParent;
-	public ImageView ivImageCliente, ivImagePersonal, ivImageMaq, ivFechaEntrega;
+	public ImageView ivImageCliente, ivImagePersonal, ivImageMaq, ivFechaEntrega, ivSeeGoogleMaps;
 	public AutoCompleteTextView actvCICliente;
 	public TextView tvNombreCliente, tvFechaPedido, tvHoraPedido, tvCIPersonal, tvNombrePersonal, tvPlacaMaq, tvCapacidadMaq, tvAviso, 
 						tvCostoTotal, tvFechaEntrega;
@@ -105,6 +105,8 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		ivFechaEntrega = (ImageView)v.findViewById(R.id.ivFechaEntregaPedido);
 		ivFechaEntrega.setOnClickListener(this);
 		etDireccionEntrega = (EditText)v.findViewById(R.id.etDireccionEntregaPedido);
+		ivSeeGoogleMaps = (ImageView)v.findViewById(R.id.ivSeeGoogleMaps);
+		ivSeeGoogleMaps.setOnClickListener(this);
 		ivImagePersonal = (ImageView)v.findViewById(R.id.ivSeleccionarPersonalPedido);
 		ivImagePersonal.setOnClickListener(this);
 		tvCIPersonal = (TextView)v.findViewById(R.id.tvCIPersonalPedido);
@@ -178,29 +180,38 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 	
 	@Override
 	public void onClick(View v){
-		if(v.getId()==btnAgregarProd.getId()){
-			iniciarAgregarProductosParaPedido();
-		}else if (v.getId()==ivImagePersonal.getId()) {
-			DialogAsignarPersonalEntrega dAsignar = new DialogAsignarPersonalEntrega(ivImagePersonal, tvCIPersonal, tvNombrePersonal, 
-															lyVistaMaq, ivImageMaq, tvPlacaMaq, tvCapacidadMaq);
-			dAsignar.show(getFragmentManager(), "tagDAsignarPersonal");
-		}else if (v.getId()==btnRegistrar.getId()) {
-			if(this.nuevo_pedido!=null && this.tvCostoTotal.getTag()!=null){
-				String ci_cliente = actvCICliente.getText().toString().trim();
-				if(!ci_cliente.equals("")){
-					iniciarValidacionParaRegistroVenta(ci_cliente);
+		switch (v.getId()) {
+			case R.id.btnSeleccionarProdPedido:
+				iniciarAgregarProductosParaPedido();
+				break;
+			case R.id.ivSeleccionarPersonalPedido:
+				DialogAsignarPersonalEntrega dAsignar = new DialogAsignarPersonalEntrega(ivImagePersonal, tvCIPersonal, tvNombrePersonal, 
+						lyVistaMaq, ivImageMaq, tvPlacaMaq, tvCapacidadMaq);
+				dAsignar.show(getFragmentManager(), "tagDAsignarPersonal");
+				break;
+			case R.id.btnRegistrarPedido:
+				if(this.nuevo_pedido!=null && this.tvCostoTotal.getTag()!=null){
+					String ci_cliente = actvCICliente.getText().toString().trim();
+					if(!ci_cliente.equals("")){
+						iniciarValidacionParaRegistroVenta(ci_cliente);
+					}else{
+						actvCICliente.requestFocus();
+						actvCICliente.setError("Introduzca CI del cliente");
+					}
 				}else{
-					actvCICliente.requestFocus();
-					actvCICliente.setError("Introduzca CI del cliente");
+					Toast.makeText(getActivity(), "Faltan datos para el pedido, verifique por favor", Toast.LENGTH_LONG).show();
 				}
-			}else{
-				Toast.makeText(getActivity(), "Faltan datos para el pedido, verifique por favor", Toast.LENGTH_LONG).show();
-			}
-		}else if(v.getId()==btnCancelar.getId()){
-			limpiarCampos();
-		}else if(v.getId()==ivFechaEntrega.getId()){
-			DialogFecha df = new DialogFecha(tvFechaEntrega);
-			df.show(getFragmentManager(), "tagDFE");
+				break;
+			case R.id.btnCancelarPedido:
+				limpiarCampos();
+				break;
+			case R.id.ivFechaEntregaPedido:
+				DialogFecha df = new DialogFecha(tvFechaEntrega);
+				df.show(getFragmentManager(), "tagDFE");
+				break;
+			case R.id.ivSeeGoogleMaps:
+				//Car
+				break;
 		}
 	}
 	

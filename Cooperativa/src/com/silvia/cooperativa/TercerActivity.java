@@ -10,6 +10,7 @@ import com.silvia.fragmentos.ListaPedidos;
 import com.silvia.fragmentos.ListaPedidos.OnListaPedidosClickListener;
 import com.silvia.fragmentos.ListaProductos;
 import com.silvia.fragmentos.ListaUsuarios;
+import com.silvia.fragmentos.MapSucre;
 import com.silvia.fragmentos.NuevoCliente;
 import com.silvia.fragmentos.RegistrarPedido;
 import com.silvia.fragmentos.NuevoCliente.OnBackFromNuevoClienteClickListener;
@@ -36,6 +37,7 @@ public class TercerActivity extends Activity implements OnBackFromNuevoClienteCl
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tercer_activity);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		
 		Bundle cajon = getIntent().getExtras();
 		this.ACCION = cajon.getInt("accion");
 		if(ACCION==Variables.ACCION_CARGAR_NUEVO_CLIENTE){
@@ -45,7 +47,7 @@ public class TercerActivity extends Activity implements OnBackFromNuevoClienteCl
 			nuevoCliente.setArguments(msjNC);
 			cargarFragmento(nuevoCliente, "tagNCliente");
 		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_CLIENTES) {
-			cargarFragmento(new ListaClientes(), "tagListaC");
+			cargarFragmento(new MapSucre(), "tagListaC");
 		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_PRODUCTOS) {
 			cargarFragmento(new ListaProductos(), "tagListaProd");
 		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_USUARIOS) {

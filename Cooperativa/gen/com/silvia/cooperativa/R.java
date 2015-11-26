@@ -9,15 +9,147 @@ package com.silvia.cooperativa;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraBearing=0x7f010001;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLat=0x7f010002;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTargetLng=0x7f010003;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraTilt=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cameraZoom=0x7f010005;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+         */
+        public static final int mapType=0x7f010000;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiCompass=0x7f010006;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiRotateGestures=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiScrollGestures=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiTiltGestures=0x7f010009;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomControls=0x7f01000a;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uiZoomGestures=0x7f01000b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int useViewLifecycle=0x7f01000c;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int zOrderOnTop=0x7f01000d;
     }
     public static final class color {
-        public static final int AMARILLO=0x7f040000;
-        public static final int AMARILLO_GOLD=0x7f040001;
-        public static final int AZUL_CLARO=0x7f040004;
-        public static final int GRIS_BLANCO=0x7f040002;
-        public static final int GRIS_FUERTE=0x7f040003;
-        public static final int ROJO=0x7f040006;
-        public static final int VERDE_LIME=0x7f040005;
+        public static final int AMARILLO=0x7f04000a;
+        public static final int AMARILLO_GOLD=0x7f04000b;
+        public static final int AZUL_CLARO=0x7f04000e;
+        public static final int GRIS_BLANCO=0x7f04000c;
+        public static final int GRIS_FUERTE=0x7f04000d;
+        public static final int ROJO=0x7f040010;
+        public static final int VERDE_LIME=0x7f04000f;
+        public static final int common_action_bar_splitter=0x7f040009;
+        /**  Sign-in Button Colors 
+         */
+        public static final int common_signin_btn_dark_text_default=0x7f040000;
+        public static final int common_signin_btn_dark_text_disabled=0x7f040002;
+        public static final int common_signin_btn_dark_text_focused=0x7f040003;
+        public static final int common_signin_btn_dark_text_pressed=0x7f040001;
+        public static final int common_signin_btn_default_background=0x7f040008;
+        public static final int common_signin_btn_light_text_default=0x7f040004;
+        public static final int common_signin_btn_light_text_disabled=0x7f040006;
+        public static final int common_signin_btn_light_text_focused=0x7f040007;
+        public static final int common_signin_btn_light_text_pressed=0x7f040005;
+        public static final int common_signin_btn_text_dark=0x7f040011;
+        public static final int common_signin_btn_text_light=0x7f040012;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -26,17 +158,17 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
-        public static final int letter_normal=0x7f050003;
-        public static final int letter_small=0x7f050002;
-        public static final int letter_tablet_normal=0x7f050005;
+        public static final int activity_horizontal_margin=0x7f080000;
+        public static final int activity_vertical_margin=0x7f080001;
+        public static final int letter_normal=0x7f080003;
+        public static final int letter_small=0x7f080002;
+        public static final int letter_tablet_normal=0x7f080005;
         /** 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw600dp devices (e.g. 7" tablets) here.
     
          */
-        public static final int letter_tablet_small=0x7f050004;
+        public static final int letter_tablet_small=0x7f080004;
     }
     public static final class drawable {
         public static final int ab_background_textured_caterpillar=0x7f020000;
@@ -51,466 +183,504 @@ public final class R {
         public static final int btn_cab_done_pressed_caterpillar=0x7f020009;
         public static final int cab_background_bottom_caterpillar=0x7f02000a;
         public static final int cab_background_top_caterpillar=0x7f02000b;
-        public static final int custom_divider=0x7f02000c;
-        public static final int custom_imageview=0x7f02000d;
-        public static final int custom_layout=0x7f02000e;
-        public static final int custom_separator_listview=0x7f02000f;
-        public static final int custom_view_button=0x7f020010;
-        public static final int custom_view_layout=0x7f020011;
-        public static final int hello_android=0x7f020012;
-        public static final int ic_add_circle_outline_white_36dp=0x7f020013;
-        public static final int ic_cashier_32=0x7f020014;
-        public static final int ic_check_black_24dp=0x7f020015;
-        public static final int ic_check_black_36dp=0x7f020016;
-        public static final int ic_check_black_48dp=0x7f020017;
-        public static final int ic_client_128=0x7f020018;
-        public static final int ic_close_white_36dp=0x7f020019;
-        public static final int ic_config_password=0x7f02001a;
-        public static final int ic_create_grey600_24dp=0x7f02001b;
-        public static final int ic_delete_white_24dp=0x7f02001c;
-        public static final int ic_done_white_24dp=0x7f02001d;
-        public static final int ic_edit_black_24dp=0x7f02001e;
-        public static final int ic_edit_black_36dp=0x7f02001f;
-        public static final int ic_employees_128=0x7f020020;
-        public static final int ic_event_white_24dp=0x7f020021;
-        public static final int ic_excavator_128=0x7f020022;
-        public static final int ic_expand_more_white_24dp=0x7f020023;
-        public static final int ic_good_22=0x7f020024;
-        public static final int ic_history_white_18dp=0x7f020025;
-        public static final int ic_icon_coop_256=0x7f020026;
-        public static final int ic_icon_duraznillo=0x7f020027;
-        public static final int ic_insert_emoticon_white_48dp=0x7f020028;
-        public static final int ic_launcher=0x7f020029;
-        public static final int ic_list_white_36dp=0x7f02002a;
-        public static final int ic_local_shipping_black_48dp=0x7f02002b;
-        public static final int ic_local_shipping_grey600_48dp=0x7f02002c;
-        public static final int ic_local_shipping_white_48dp=0x7f02002d;
-        public static final int ic_menu_black_24dp=0x7f02002e;
-        public static final int ic_menu_black_32=0x7f02002f;
-        public static final int ic_mode_edit_white_24dp=0x7f020030;
-        public static final int ic_more_vert_black_24dp=0x7f020031;
-        public static final int ic_more_vert_grey600_24dp=0x7f020032;
-        public static final int ic_more_vert_grey600_36dp=0x7f020033;
-        public static final int ic_more_vert_white_24dp=0x7f020034;
-        public static final int ic_my_menu_32=0x7f020035;
-        public static final int ic_no_value_24=0x7f020036;
-        public static final int ic_ocupation_128=0x7f020037;
-        public static final int ic_order_service_128=0x7f020038;
-        public static final int ic_pdf_24=0x7f020039;
-        public static final int ic_person_add_white_24dp=0x7f02003a;
-        public static final int ic_person_add_white_36dp=0x7f02003b;
-        public static final int ic_person_white_48dp=0x7f02003c;
-        public static final int ic_product_plant_128=0x7f02003d;
-        public static final int ic_report_32=0x7f02003e;
-        public static final int ic_report_black_32=0x7f02003f;
-        public static final int ic_search_white_48dp=0x7f020040;
-        public static final int ic_sell_black_32=0x7f020041;
-        public static final int ic_shopping_cart_white_24dp=0x7f020042;
-        public static final int ic_smiling_face_128dp=0x7f020043;
-        public static final int ic_supervisor_account_white_48dp=0x7f020044;
-        public static final int list_focused_caterpillar=0x7f020045;
-        public static final int list_pressed_caterpillar=0x7f020046;
-        public static final int menu_dropdown_panel_caterpillar=0x7f020047;
-        public static final int progress_bg_caterpillar=0x7f020048;
-        public static final int progress_horizontal_caterpillar=0x7f020049;
-        public static final int progress_primary_caterpillar=0x7f02004a;
-        public static final int progress_secondary_caterpillar=0x7f02004b;
-        public static final int selectable_background_caterpillar=0x7f02004c;
-        public static final int spinner_ab_default_caterpillar=0x7f02004d;
-        public static final int spinner_ab_disabled_caterpillar=0x7f02004e;
-        public static final int spinner_ab_focused_caterpillar=0x7f02004f;
-        public static final int spinner_ab_pressed_caterpillar=0x7f020050;
-        public static final int spinner_background_ab_caterpillar=0x7f020051;
-        public static final int tab_indicator_ab_caterpillar=0x7f020052;
-        public static final int tab_selected_caterpillar=0x7f020053;
-        public static final int tab_selected_focused_caterpillar=0x7f020054;
-        public static final int tab_selected_pressed_caterpillar=0x7f020055;
-        public static final int tab_unselected_caterpillar=0x7f020056;
-        public static final int tab_unselected_focused_caterpillar=0x7f020057;
-        public static final int tab_unselected_pressed_caterpillar=0x7f020058;
+        public static final int common_signin_btn_icon_dark=0x7f02000c;
+        public static final int common_signin_btn_icon_disabled_dark=0x7f02000d;
+        public static final int common_signin_btn_icon_disabled_focus_dark=0x7f02000e;
+        public static final int common_signin_btn_icon_disabled_focus_light=0x7f02000f;
+        public static final int common_signin_btn_icon_disabled_light=0x7f020010;
+        public static final int common_signin_btn_icon_focus_dark=0x7f020011;
+        public static final int common_signin_btn_icon_focus_light=0x7f020012;
+        public static final int common_signin_btn_icon_light=0x7f020013;
+        public static final int common_signin_btn_icon_normal_dark=0x7f020014;
+        public static final int common_signin_btn_icon_normal_light=0x7f020015;
+        public static final int common_signin_btn_icon_pressed_dark=0x7f020016;
+        public static final int common_signin_btn_icon_pressed_light=0x7f020017;
+        public static final int common_signin_btn_text_dark=0x7f020018;
+        public static final int common_signin_btn_text_disabled_dark=0x7f020019;
+        public static final int common_signin_btn_text_disabled_focus_dark=0x7f02001a;
+        public static final int common_signin_btn_text_disabled_focus_light=0x7f02001b;
+        public static final int common_signin_btn_text_disabled_light=0x7f02001c;
+        public static final int common_signin_btn_text_focus_dark=0x7f02001d;
+        public static final int common_signin_btn_text_focus_light=0x7f02001e;
+        public static final int common_signin_btn_text_light=0x7f02001f;
+        public static final int common_signin_btn_text_normal_dark=0x7f020020;
+        public static final int common_signin_btn_text_normal_light=0x7f020021;
+        public static final int common_signin_btn_text_pressed_dark=0x7f020022;
+        public static final int common_signin_btn_text_pressed_light=0x7f020023;
+        public static final int custom_divider=0x7f020024;
+        public static final int custom_imageview=0x7f020025;
+        public static final int custom_layout=0x7f020026;
+        public static final int custom_separator_listview=0x7f020027;
+        public static final int custom_view_button=0x7f020028;
+        public static final int custom_view_layout=0x7f020029;
+        public static final int hello_android=0x7f02002a;
+        public static final int ic_add_circle_outline_white_36dp=0x7f02002b;
+        public static final int ic_cashier_32=0x7f02002c;
+        public static final int ic_check_black_24dp=0x7f02002d;
+        public static final int ic_check_black_36dp=0x7f02002e;
+        public static final int ic_check_black_48dp=0x7f02002f;
+        public static final int ic_client_128=0x7f020030;
+        public static final int ic_close_white_36dp=0x7f020031;
+        public static final int ic_config_password=0x7f020032;
+        public static final int ic_create_grey600_24dp=0x7f020033;
+        public static final int ic_delete_white_24dp=0x7f020034;
+        public static final int ic_done_white_24dp=0x7f020035;
+        public static final int ic_edit_black_24dp=0x7f020036;
+        public static final int ic_edit_black_36dp=0x7f020037;
+        public static final int ic_employees_128=0x7f020038;
+        public static final int ic_event_white_24dp=0x7f020039;
+        public static final int ic_excavator_128=0x7f02003a;
+        public static final int ic_expand_more_white_24dp=0x7f02003b;
+        public static final int ic_good_22=0x7f02003c;
+        public static final int ic_history_white_18dp=0x7f02003d;
+        public static final int ic_icon_coop_256=0x7f02003e;
+        public static final int ic_icon_duraznillo=0x7f02003f;
+        public static final int ic_insert_emoticon_white_48dp=0x7f020040;
+        public static final int ic_launcher=0x7f020041;
+        public static final int ic_list_white_36dp=0x7f020042;
+        public static final int ic_local_shipping_black_48dp=0x7f020043;
+        public static final int ic_local_shipping_grey600_48dp=0x7f020044;
+        public static final int ic_local_shipping_white_48dp=0x7f020045;
+        public static final int ic_location_on_black_24dp=0x7f020046;
+        public static final int ic_menu_black_24dp=0x7f020047;
+        public static final int ic_menu_black_32=0x7f020048;
+        public static final int ic_mode_edit_white_24dp=0x7f020049;
+        public static final int ic_more_vert_black_24dp=0x7f02004a;
+        public static final int ic_more_vert_grey600_24dp=0x7f02004b;
+        public static final int ic_more_vert_grey600_36dp=0x7f02004c;
+        public static final int ic_more_vert_white_24dp=0x7f02004d;
+        public static final int ic_my_menu_32=0x7f02004e;
+        public static final int ic_no_value_24=0x7f02004f;
+        public static final int ic_ocupation_128=0x7f020050;
+        public static final int ic_order_service_128=0x7f020051;
+        public static final int ic_pdf_24=0x7f020052;
+        public static final int ic_person_add_white_24dp=0x7f020053;
+        public static final int ic_person_add_white_36dp=0x7f020054;
+        public static final int ic_person_white_48dp=0x7f020055;
+        public static final int ic_product_plant_128=0x7f020056;
+        public static final int ic_report_32=0x7f020057;
+        public static final int ic_report_black_32=0x7f020058;
+        public static final int ic_search_white_48dp=0x7f020059;
+        public static final int ic_sell_black_32=0x7f02005a;
+        public static final int ic_shopping_cart_white_24dp=0x7f02005b;
+        public static final int ic_smiling_face_128dp=0x7f02005c;
+        public static final int ic_supervisor_account_white_48dp=0x7f02005d;
+        public static final int list_focused_caterpillar=0x7f02005e;
+        public static final int list_pressed_caterpillar=0x7f02005f;
+        public static final int menu_dropdown_panel_caterpillar=0x7f020060;
+        public static final int progress_bg_caterpillar=0x7f020061;
+        public static final int progress_horizontal_caterpillar=0x7f020062;
+        public static final int progress_primary_caterpillar=0x7f020063;
+        public static final int progress_secondary_caterpillar=0x7f020064;
+        public static final int selectable_background_caterpillar=0x7f020065;
+        public static final int spinner_ab_default_caterpillar=0x7f020066;
+        public static final int spinner_ab_disabled_caterpillar=0x7f020067;
+        public static final int spinner_ab_focused_caterpillar=0x7f020068;
+        public static final int spinner_ab_pressed_caterpillar=0x7f020069;
+        public static final int spinner_background_ab_caterpillar=0x7f02006a;
+        public static final int tab_indicator_ab_caterpillar=0x7f02006b;
+        public static final int tab_selected_caterpillar=0x7f02006c;
+        public static final int tab_selected_focused_caterpillar=0x7f02006d;
+        public static final int tab_selected_pressed_caterpillar=0x7f02006e;
+        public static final int tab_unselected_caterpillar=0x7f02006f;
+        public static final int tab_unselected_focused_caterpillar=0x7f020070;
+        public static final int tab_unselected_pressed_caterpillar=0x7f020071;
     }
     public static final class id {
-        public static final int FrameLayout1=0x7f090009;
-        public static final int FrameLayout2=0x7f090086;
-        public static final int LinearLayout1=0x7f09007d;
-        public static final int ScrollView1=0x7f090001;
-        public static final int ScrollViewParent=0x7f09012f;
-        public static final int ScrollViewParentDetallePedido=0x7f090032;
-        public static final int action_config_clave=0x7f090173;
-        public static final int action_editar_cliente=0x7f090175;
-        public static final int action_editar_detalle_venta=0x7f090166;
-        public static final int action_editar_personal=0x7f090170;
-        public static final int action_eliminar_cliente=0x7f090176;
-        public static final int action_eliminar_detalle_venta=0x7f090167;
-        public static final int action_eliminar_personal=0x7f090171;
-        public static final int action_enviar_info_pdf=0x7f09016c;
-        public static final int action_listo_cliente=0x7f090177;
-        public static final int action_listo_personal=0x7f090172;
-        public static final int action_nueva_maq=0x7f09016e;
-        public static final int action_nuevo_cargo=0x7f09016d;
-        public static final int action_nuevo_cliente=0x7f090174;
-        public static final int action_nuevo_pedido=0x7f090179;
-        public static final int action_nuevo_personal=0x7f09016f;
-        public static final int action_nuevo_prod=0x7f090178;
-        public static final int action_pedidos_entregados=0x7f09017b;
-        public static final int action_pedidos_pendientes=0x7f09017c;
-        public static final int action_pedidos_todos=0x7f09017a;
-        public static final int action_search=0x7f090160;
-        public static final int action_ventas_a_domicilio=0x7f09016a;
-        public static final int action_ventas_de_la_semana=0x7f090161;
-        public static final int action_ventas_directas=0x7f090169;
-        public static final int action_ventas_fecha_especifico=0x7f090163;
-        public static final int action_ventas_mes_actual=0x7f090162;
-        public static final int action_ventas_mes_especifico=0x7f090164;
-        public static final int action_ventas_por_cliente=0x7f090165;
-        public static final int action_ventas_todas=0x7f090168;
-        public static final int action_ver_imprimir_info_pdf=0x7f09016b;
-        public static final int actvCIClientePedido=0x7f090131;
-        public static final int actvCIClienteVenta=0x7f090149;
-        public static final int actvCIClienteVentaPorCliente=0x7f0900ea;
-        public static final int btnAceptarAgregarProd=0x7f0900a0;
-        public static final int btnAceptarAtenticacion=0x7f090008;
-        public static final int btnAceptarDatePicker=0x7f0900a3;
-        public static final int btnAceptarEnviarInformeVentas=0x7f0900af;
-        public static final int btnAceptarNuevaMaquinaria=0x7f0900f7;
-        public static final int btnAceptarNuevoCargo=0x7f0900fc;
-        public static final int btnAceptarNuevoCliente=0x7f09010b;
-        public static final int btnAceptarNuevoPersonal=0x7f090120;
-        public static final int btnAceptarNuevoProd=0x7f090126;
-        public static final int btnAceptarNuevoUsuario=0x7f09012e;
-        public static final int btnAceptarVentaPorCliente=0x7f0900ed;
-        public static final int btnAceptarVentaPorFecha=0x7f0900f0;
-        public static final int btnCancelarAutenticacion=0x7f090007;
-        public static final int btnCancelarDatePicker=0x7f0900a2;
-        public static final int btnCancelarEnviarInformeVentas=0x7f0900ae;
-        public static final int btnCancelarNuevoCargo=0x7f0900fb;
-        public static final int btnCancelarNuevoUsuario=0x7f09012d;
-        public static final int btnCancelarPedido=0x7f090145;
-        public static final int btnCancelarVenta=0x7f09015c;
-        public static final int btnCancelarVentaPorCliente=0x7f0900ec;
-        public static final int btnCancelarVentaPorFecha=0x7f0900ef;
-        public static final int btnEditarDetalleMaquinaria=0x7f090064;
-        public static final int btnEditarDetalleProd=0x7f09007b;
-        public static final int btnEliminarDetalleMaquinaria=0x7f090063;
-        public static final int btnEliminarDetalleProd=0x7f09007a;
-        public static final int btnFinalizarAgregarProd=0x7f09009f;
-        public static final int btnInfoPdfInformeVentas=0x7f090081;
-        public static final int btnOkDetalleMaquinaria=0x7f090065;
-        public static final int btnOkDetalleProd=0x7f09007c;
-        public static final int btnRegistrarPedido=0x7f090146;
-        public static final int btnRegistrarVenta=0x7f09015d;
-        public static final int btnSeleccionarProdDetallePedido=0x7f09004a;
-        public static final int btnSeleccionarProdPedido=0x7f09013f;
-        public static final int btnSeleccionarProdVenta=0x7f090156;
-        public static final int btnVerPdfDetallePedido=0x7f09004c;
-        public static final int cbMaquinariaNuevoPersonal=0x7f09011b;
-        public static final int cbVerIngresosInformeVentas=0x7f09007f;
-        public static final int datepickerFecha=0x7f0900a1;
-        public static final int descriptionMiMenu=0x7f0900e6;
-        public static final int dpVentaPorFecha=0x7f0900ee;
-        public static final int etApellidoNuevoCliente=0x7f090100;
-        public static final int etApellidoNuevoPersonal=0x7f09010f;
-        public static final int etCIAutenticacion=0x7f090002;
-        public static final int etCINuevoCliente=0x7f0900fe;
-        public static final int etCINuevoPersonal=0x7f09010d;
-        public static final int etCIPersonalNuevoUsuario=0x7f090128;
-        public static final int etCantidadAgregarProd=0x7f09009b;
-        public static final int etCantidadEditarDetalleVenta=0x7f0900a7;
-        public static final int etCapacidadNuevaMaquinaria=0x7f0900f4;
-        public static final int etCiudadDatosCoop=0x7f090026;
-        public static final int etClave2Autenticacion=0x7f090006;
-        public static final int etClaveActualNuevoUsuario=0x7f09012a;
-        public static final int etClaveAutenticacion=0x7f090005;
-        public static final int etClaveNuevoUsuario=0x7f09012b;
-        public static final int etColorNuevaMaquinaria=0x7f0900f6;
-        public static final int etCostoAgregarProd=0x7f09009e;
-        public static final int etCostoEditarDetalleVenta=0x7f0900aa;
-        public static final int etCostoEntregaAgregarProd=0x7f09009d;
-        public static final int etCostoEntregaEditarDetalleVenta=0x7f0900a9;
-        public static final int etDescripcionNuevaMaquinaria=0x7f0900f3;
-        public static final int etDescripcionNuevoCargo=0x7f0900fa;
-        public static final int etDescripcionNuevoProd=0x7f090125;
-        public static final int etDireccionDatosCoop=0x7f090021;
-        public static final int etDireccionEntregaPedido=0x7f090137;
-        public static final int etDireccionEntregaVenta=0x7f09014e;
-        public static final int etDireccionNuevoCliente=0x7f090101;
-        public static final int etDireccionNuevoPersonal=0x7f090110;
-        public static final int etEditarDirEntregaDetallePedido=0x7f09003f;
-        public static final int etEditarNotaPedido=0x7f090049;
-        public static final int etEmailDatosCoop=0x7f09001c;
-        public static final int etEmailEnviarInformeVentas=0x7f0900ac;
-        public static final int etEmailNuevoCliente=0x7f090103;
-        public static final int etEmailNuevoPersonal=0x7f090112;
-        public static final int etMarcaNuevaMaquinaria=0x7f0900f5;
-        public static final int etNITDatosCoop=0x7f090012;
-        public static final int etNombreAutenticacion=0x7f090003;
-        public static final int etNombreDatosCoop=0x7f09000d;
-        public static final int etNombreNuevoCliente=0x7f0900ff;
-        public static final int etNombreNuevoPersonal=0x7f09010e;
-        public static final int etNombreProdNuevoProd=0x7f090122;
-        public static final int etNombreRegRapidoCliente=0x7f0900e8;
-        public static final int etNombreUserNuevoUsuario=0x7f090129;
-        public static final int etNotaPedido=0x7f090144;
-        public static final int etNotaVenta=0x7f09015b;
-        public static final int etOcupacionNuevoCargo=0x7f0900f8;
-        public static final int etPlacaNuevaMaquinaria=0x7f0900f2;
-        public static final int etPrecioNuevoProd=0x7f090123;
-        public static final int etRepetirClaveNuevoUsuario=0x7f09012c;
-        public static final int etSalarioNuevoCargo=0x7f0900f9;
-        public static final int etTelfDatosCoop=0x7f090017;
-        public static final int etTelfNuevoCliente=0x7f090102;
-        public static final int etTelfNuevoPersonal=0x7f090111;
-        public static final int etUnidadNuevoProd=0x7f090124;
-        public static final int etUsuarioAutenticacion=0x7f090004;
-        public static final int gProductosAgregarProd=0x7f090099;
-        public static final int ibtnAgregarEmailEnviarInformeVentas=0x7f0900ad;
-        public static final int ibtnConfirmarEntregaDetallePedido=0x7f090034;
-        public static final int ibtnEditarCiudadDatosCoop=0x7f090024;
-        public static final int ibtnEditarDirEntregaDetallePedido=0x7f09003e;
-        public static final int ibtnEditarDireccionDatosCoop=0x7f09001f;
-        public static final int ibtnEditarEmailDatosCoop=0x7f09001a;
-        public static final int ibtnEditarFechaEntregaDetallePedido=0x7f09003c;
-        public static final int ibtnEditarNITDatosCoop=0x7f090010;
-        public static final int ibtnEditarNombreDatosCoop=0x7f09000b;
-        public static final int ibtnEditarNotaDetallePedido=0x7f090047;
-        public static final int ibtnEditarPersonalEntregaDetallePedido=0x7f090040;
-        public static final int ibtnEditarTelfDatosCoop=0x7f090015;
-        public static final int ibtnMasDetallePedido=0x7f0900b6;
-        public static final int ibtnMasDetalleVenta=0x7f0900bd;
-        public static final int ibtnMasInformeVentas=0x7f090082;
-        public static final int ibtnOKEditarCiudadDatosCoop=0x7f090027;
-        public static final int ibtnOKEditarDireccionDatosCoop=0x7f090022;
-        public static final int ibtnOKEditarEmailDatosCoop=0x7f09001d;
-        public static final int ibtnOKEditarNITDatosCoop=0x7f090013;
-        public static final int ibtnOKEditarNombreDatosCoop=0x7f09000e;
-        public static final int ibtnOKEditarTelfDatosCoop=0x7f090018;
-        public static final int imageMiMenu=0x7f0900e4;
-        public static final int ivEditarCargoNuevoPersonal=0x7f090119;
-        public static final int ivFechaEntregaPedido=0x7f090136;
-        public static final int ivFechaIngresoNuevoPersonal=0x7f090116;
-        public static final int ivFechaNacNuevoCliente=0x7f090108;
-        public static final int ivFechaNacNuevoPersonal=0x7f090114;
-        public static final int ivFechaRegNuevoCliente=0x7f09010a;
-        public static final int ivImageClienteDetallePedido=0x7f090035;
-        public static final int ivImageClienteDetalleVenta=0x7f09004e;
-        public static final int ivImageClienteLCliente=0x7f0900c2;
-        public static final int ivImageClienteLPedido=0x7f0900d2;
-        public static final int ivImageClienteLVenta=0x7f0900df;
-        public static final int ivImageLCargo=0x7f0900be;
-        public static final int ivImageLMaq=0x7f0900c6;
-        public static final int ivImageLPersonal=0x7f0900ca;
-        public static final int ivImageLUser=0x7f0900cf;
-        public static final int ivImageMaqDetallePedido=0x7f090044;
-        public static final int ivImagePersonalDetallePedido=0x7f090041;
-        public static final int ivImagePersonalDetalleVenta=0x7f090056;
-        public static final int ivImageProdHorizontalLProd=0x7f0900dd;
-        public static final int ivImageProdLDetallePedido=0x7f0900b0;
-        public static final int ivImageProdLDetalleVenta=0x7f0900b7;
-        public static final int ivImageProdLProd=0x7f0900d9;
-        public static final int ivImagenClientePedido=0x7f090130;
-        public static final int ivImagenClienteVenta=0x7f090148;
-        public static final int ivImagenClienteVentaPorCliente=0x7f0900e9;
-        public static final int ivImagenDetalleCliente=0x7f090028;
-        public static final int ivImagenDetalleMaquinaria=0x7f09005d;
-        public static final int ivImagenDetallePersonal=0x7f090066;
-        public static final int ivImagenDetalleProd=0x7f090075;
-        public static final int ivImagenMaqDetallePersonal=0x7f090072;
-        public static final int ivImagenMaqPedido=0x7f09013c;
-        public static final int ivImagenMaqVenta=0x7f090153;
-        public static final int ivImagenNuevaMaquinaria=0x7f0900f1;
-        public static final int ivImagenNuevoCliente=0x7f0900fd;
-        public static final int ivImagenNuevoPersonal=0x7f09010c;
-        public static final int ivImagenNuevoProd=0x7f090121;
-        public static final int ivImagenNuevoUsuario=0x7f090127;
-        public static final int ivImagenProdEditarDetalleVenta=0x7f0900a4;
-        public static final int ivMaquinariaNuevoPersonal=0x7f09011d;
-        public static final int ivSeleccionarPersonalPedido=0x7f090138;
-        public static final int ivSeleccionarPersonalVenta=0x7f09014f;
-        public static final int lvInformeVentas=0x7f090089;
-        public static final int lvListaCargos=0x7f09008b;
-        public static final int lvListaClientes=0x7f09008d;
-        public static final int lvListaDetallePedido=0x7f09004b;
-        public static final int lvListaDetalleVenta=0x7f090059;
-        public static final int lvListaMaquinaria=0x7f09008f;
-        public static final int lvListaPedidos=0x7f090091;
-        public static final int lvListaPersonal=0x7f090093;
-        public static final int lvListaProdPedido=0x7f090141;
-        public static final int lvListaProdVenta=0x7f090158;
-        public static final int lvListaProductos=0x7f090095;
-        public static final int lvMiMenu=0x7f090097;
-        public static final int lyCostoEntregaAgregarProd=0x7f09009c;
-        public static final int lyCostoEntregaEditarDetalleVenta=0x7f0900a8;
-        public static final int lyDatosInformeVentas=0x7f090083;
-        public static final int lyEditarCiudadDatosCoop=0x7f090025;
-        public static final int lyEditarDireccionDatosCoop=0x7f090020;
-        public static final int lyEditarEmailDatosCoop=0x7f09001b;
-        public static final int lyEditarNITDatosCoop=0x7f090011;
-        public static final int lyEditarNombreDatosCoop=0x7f09000c;
-        public static final int lyEditarTelfDatosCoop=0x7f090016;
-        public static final int lyInputAgregarProd=0x7f09009a;
-        public static final int lyMasInformeVentas=0x7f090080;
-        public static final int lyPersonalDetalleVenta=0x7f090054;
-        public static final int lyVistaCargoNuevoPersonal=0x7f090117;
-        public static final int lyVistaCostoTotalPedido=0x7f090142;
-        public static final int lyVistaCostoTotalVenta=0x7f090159;
-        public static final int lyVistaMaqDetallePersonal=0x7f090071;
-        public static final int lyVistaMaqNuevoPersonal=0x7f09011c;
-        public static final int lyVistaMaqPedido=0x7f09013b;
-        public static final int lyVistaMaqVenta=0x7f090152;
-        public static final int lyVistaNotaDetalleVenta=0x7f09005b;
-        public static final int lyVistaPersonalDeEntregaVenta=0x7f09014d;
-        public static final int myContenedor=0x7f090000;
-        public static final int myContenedorDos=0x7f09015e;
-        public static final int myTercerContenedor=0x7f09015f;
-        public static final int rdbFemeninoNuevoCliente=0x7f090106;
-        public static final int rdbMasculinoNuevoCliente=0x7f090105;
-        public static final int rdgSexoNuevoCliente=0x7f090104;
-        public static final int spCargoNuevoPersonal=0x7f09011a;
-        public static final int spinnerTipoVenta=0x7f090147;
-        public static final int titleMiMenu=0x7f0900e5;
-        public static final int tvApellidoDetalleCliente=0x7f09002b;
-        public static final int tvApellidoDetallePersonal=0x7f090069;
-        public static final int tvApellidoLCliente=0x7f0900c5;
-        public static final int tvAtendidoPorDetallePedido=0x7f090038;
-        public static final int tvAvisoAgregarProd=0x7f090098;
-        public static final int tvAvisoEnviarInformeVentas=0x7f0900ab;
-        public static final int tvAvisoListaProdPedido=0x7f090140;
-        public static final int tvAvisoListaProdVenta=0x7f090157;
-        public static final int tvCIClienteDetallePedido=0x7f090037;
-        public static final int tvCIClienteDetalleVenta=0x7f090050;
-        public static final int tvCIClienteLPedido=0x7f0900d4;
-        public static final int tvCIClienteLVenta=0x7f0900e1;
-        public static final int tvCIDetalleCliente=0x7f090029;
-        public static final int tvCIDetallePersonal=0x7f090067;
-        public static final int tvCILCliente=0x7f0900c3;
-        public static final int tvCILPersonal=0x7f0900cb;
-        public static final int tvCIPersonalDetallePedido=0x7f090043;
-        public static final int tvCIPersonalDetalleVenta=0x7f090058;
-        public static final int tvCIPersonalPedido=0x7f090139;
-        public static final int tvCIPersonalVenta=0x7f090150;
-        public static final int tvCantLDetallePedido=0x7f0900b3;
-        public static final int tvCantLDetalleVenta=0x7f0900ba;
-        public static final int tvCantVDirectasInformeVentas=0x7f090084;
-        public static final int tvCantVDomicilioInformeVentas=0x7f090085;
-        public static final int tvCantVentasRegistradosInformeVentas=0x7f090087;
-        public static final int tvCapacidadDetalleMaquinaria=0x7f090060;
-        public static final int tvCapacidadLMaq=0x7f0900c9;
-        public static final int tvCapacidadMaqDetallePedido=0x7f090046;
-        public static final int tvCapacidadMaqPedido=0x7f09013e;
-        public static final int tvCapacidadMaqVenta=0x7f090155;
-        public static final int tvCargoDetallePersonal=0x7f09006f;
-        public static final int tvCargoLPersonal=0x7f0900ce;
-        public static final int tvCiudadDatosCoop=0x7f090023;
-        public static final int tvColorDetalleMaquinaria=0x7f090062;
-        public static final int tvCostoEntregaLDetallePedido=0x7f0900b4;
-        public static final int tvCostoEntregaLDetalleVenta=0x7f0900bb;
-        public static final int tvCostoLDetallePedido=0x7f0900b5;
-        public static final int tvCostoLDetalleVenta=0x7f0900bc;
-        public static final int tvCostoTotalDetallePedido=0x7f09004d;
-        public static final int tvCostoTotalDetalleVenta=0x7f09005a;
-        public static final int tvCostoTotalLPedido=0x7f0900d6;
-        public static final int tvCostoTotalLVenta=0x7f0900e3;
-        public static final int tvCostoTotalPedido=0x7f090143;
-        public static final int tvCostoTotalVenta=0x7f09015a;
-        public static final int tvDercripcionMaqDetallePersonal=0x7f090074;
-        public static final int tvDescripcionDetalleMaquinaria=0x7f09005f;
-        public static final int tvDescripcionDetalleProd=0x7f090079;
-        public static final int tvDescripcionLCargo=0x7f0900c1;
-        public static final int tvDescripcionLMaq=0x7f0900c8;
-        public static final int tvDescripcionMaqNuevoPersonal=0x7f09011f;
-        public static final int tvDireccionDatosCoop=0x7f09001e;
-        public static final int tvDireccionDetalleCliente=0x7f09002c;
-        public static final int tvDireccionDetallePedido=0x7f09003d;
-        public static final int tvDireccionDetallePersonal=0x7f09006a;
-        public static final int tvDireccionDetalleVenta=0x7f090055;
-        public static final int tvEmailDatosCoop=0x7f090019;
-        public static final int tvEmailDetalleCliente=0x7f09002e;
-        public static final int tvEmailDetallePersonal=0x7f09006c;
-        public static final int tvEsUsuarioLPersonal=0x7f0900cc;
-        public static final int tvEstadoDetallePedido=0x7f090033;
-        public static final int tvEstadoLPedido=0x7f0900d8;
-        public static final int tvFechaEntregaDetallePedido=0x7f09003b;
-        public static final int tvFechaEntregaLPedido=0x7f0900d7;
-        public static final int tvFechaEntregaPedido=0x7f090135;
-        public static final int tvFechaIngresoDetallePersonal=0x7f09006e;
-        public static final int tvFechaIngresoNuevoPersonal=0x7f090115;
-        public static final int tvFechaNacDetallaCliente=0x7f090030;
-        public static final int tvFechaNacDetallaPersonal=0x7f09006d;
-        public static final int tvFechaNacNuevoCliente=0x7f090107;
-        public static final int tvFechaNanNuevoPersonal=0x7f090113;
-        public static final int tvFechaPedido=0x7f090133;
-        public static final int tvFechaPedidoDetallePedido=0x7f090039;
-        public static final int tvFechaRegDetalleCliente=0x7f090031;
-        public static final int tvFechaRegNuevoCliente=0x7f090109;
-        public static final int tvFechaVenta=0x7f09014b;
-        public static final int tvFechaVentaDetalleVenta=0x7f090052;
-        public static final int tvFechaVentaLPedido=0x7f0900d5;
-        public static final int tvFechaVentaLVenta=0x7f0900e2;
-        public static final int tvHoraPedido=0x7f090134;
-        public static final int tvHoraVenta=0x7f09014c;
-        public static final int tvHoraVentaDetallePedido=0x7f09003a;
-        public static final int tvHoraVentaDetalleVenta=0x7f090053;
-        public static final int tvIngresoTotalInformeVentas=0x7f090088;
-        public static final int tvMAQDetallePersonal=0x7f090070;
-        public static final int tvMarcaDetalleMaquinaria=0x7f090061;
-        public static final int tvNITDatosCoop=0x7f09000f;
-        public static final int tvNombreClienteDetallePedido=0x7f090036;
-        public static final int tvNombreClienteDetalleVenta=0x7f09004f;
-        public static final int tvNombreClienteLPedido=0x7f0900d3;
-        public static final int tvNombreClienteLVenta=0x7f0900e0;
-        public static final int tvNombreClientePedido=0x7f090132;
-        public static final int tvNombreClienteVenta=0x7f09014a;
-        public static final int tvNombreClienteVentaPorCliente=0x7f0900eb;
-        public static final int tvNombreDatosCoop=0x7f09000a;
-        public static final int tvNombreDetalleCliente=0x7f09002a;
-        public static final int tvNombreDetallePersonal=0x7f090068;
-        public static final int tvNombreHorizontalLProd=0x7f0900dc;
-        public static final int tvNombreLCliente=0x7f0900c4;
-        public static final int tvNombreLPersonal=0x7f0900cd;
-        public static final int tvNombreLProd=0x7f0900da;
-        public static final int tvNombrePersonalDetallePedido=0x7f090042;
-        public static final int tvNombrePersonalDetalleVenta=0x7f090057;
-        public static final int tvNombrePersonalLUser=0x7f0900d1;
-        public static final int tvNombrePersonalPedido=0x7f09013a;
-        public static final int tvNombrePersonalVenta=0x7f090151;
-        public static final int tvNombreProdDetalleProd=0x7f090076;
-        public static final int tvNombreProdEditarDetalleVenta=0x7f0900a5;
-        public static final int tvNombreProdLDetallePedido=0x7f0900b1;
-        public static final int tvNombreProdLDetalleVenta=0x7f0900b8;
-        public static final int tvNotaDetallePedido=0x7f090048;
-        public static final int tvNotaDetalleVenta=0x7f09005c;
-        public static final int tvNotaInformeVentas=0x7f09008a;
-        public static final int tvNotaListaCargo=0x7f09008c;
-        public static final int tvNotaListaClientes=0x7f09008e;
-        public static final int tvNotaListaMaquinarias=0x7f090090;
-        public static final int tvNotaListaPedidos=0x7f090092;
-        public static final int tvNotaListaPersonal=0x7f090094;
-        public static final int tvNotaListaProductos=0x7f090096;
-        public static final int tvNotaRegRapidoCliente=0x7f0900e7;
-        public static final int tvOcupacionCargoNuevoPersonal=0x7f090118;
-        public static final int tvOcupacionLCargo=0x7f0900bf;
-        public static final int tvPlacaDetalleMaquinaria=0x7f09005e;
-        public static final int tvPlacaLMaq=0x7f0900c7;
-        public static final int tvPlacaMaqDetallePedido=0x7f090045;
-        public static final int tvPlacaMaqDetallePersonal=0x7f090073;
-        public static final int tvPlacaMaqNuevoPersonal=0x7f09011e;
-        public static final int tvPlacaMaqPedido=0x7f09013d;
-        public static final int tvPlacaMaqVenta=0x7f090154;
-        public static final int tvPrecioDetalleProd=0x7f090077;
-        public static final int tvPrecioHorizontalLProd=0x7f0900de;
-        public static final int tvPrecioLProd=0x7f0900db;
-        public static final int tvPrecioProdEditarDetalleVenta=0x7f0900a6;
-        public static final int tvPrecioProdLDetallePedido=0x7f0900b2;
-        public static final int tvPrecioProdLDetalleVenta=0x7f0900b9;
-        public static final int tvSalarioLCargo=0x7f0900c0;
-        public static final int tvSexoDetalleCliente=0x7f09002f;
-        public static final int tvTelfDatosCoop=0x7f090014;
-        public static final int tvTelfDetalleCliente=0x7f09002d;
-        public static final int tvTelfDetallePersonal=0x7f09006b;
-        public static final int tvTipoVentaDetalleVenta=0x7f090051;
-        public static final int tvTituloInfoInformeVentas=0x7f09007e;
-        public static final int tvUnidadDetalleProd=0x7f090078;
-        public static final int tvUsuarioLUser=0x7f0900d0;
+        public static final int FrameLayout1=0x7f05000e;
+        public static final int FrameLayout2=0x7f05008b;
+        public static final int LinearLayout1=0x7f050082;
+        public static final int ScrollView1=0x7f050006;
+        public static final int ScrollViewParent=0x7f050138;
+        public static final int ScrollViewParentDetallePedido=0x7f050037;
+        public static final int action_config_clave=0x7f05017d;
+        public static final int action_editar_cliente=0x7f05017f;
+        public static final int action_editar_detalle_venta=0x7f050170;
+        public static final int action_editar_personal=0x7f05017a;
+        public static final int action_eliminar_cliente=0x7f050180;
+        public static final int action_eliminar_detalle_venta=0x7f050171;
+        public static final int action_eliminar_personal=0x7f05017b;
+        public static final int action_enviar_info_pdf=0x7f050176;
+        public static final int action_listo_cliente=0x7f050181;
+        public static final int action_listo_personal=0x7f05017c;
+        public static final int action_nueva_maq=0x7f050178;
+        public static final int action_nuevo_cargo=0x7f050177;
+        public static final int action_nuevo_cliente=0x7f05017e;
+        public static final int action_nuevo_pedido=0x7f050183;
+        public static final int action_nuevo_personal=0x7f050179;
+        public static final int action_nuevo_prod=0x7f050182;
+        public static final int action_pedidos_entregados=0x7f050185;
+        public static final int action_pedidos_pendientes=0x7f050186;
+        public static final int action_pedidos_todos=0x7f050184;
+        public static final int action_search=0x7f05016a;
+        public static final int action_ventas_a_domicilio=0x7f050174;
+        public static final int action_ventas_de_la_semana=0x7f05016b;
+        public static final int action_ventas_directas=0x7f050173;
+        public static final int action_ventas_fecha_especifico=0x7f05016d;
+        public static final int action_ventas_mes_actual=0x7f05016c;
+        public static final int action_ventas_mes_especifico=0x7f05016e;
+        public static final int action_ventas_por_cliente=0x7f05016f;
+        public static final int action_ventas_todas=0x7f050172;
+        public static final int action_ver_imprimir_info_pdf=0x7f050175;
+        public static final int actvCIClientePedido=0x7f05013a;
+        public static final int actvCIClienteVenta=0x7f050153;
+        public static final int actvCIClienteVentaPorCliente=0x7f0500f3;
+        public static final int btnAceptarAgregarProd=0x7f0500a9;
+        public static final int btnAceptarAtenticacion=0x7f05000d;
+        public static final int btnAceptarDatePicker=0x7f0500ac;
+        public static final int btnAceptarEnviarInformeVentas=0x7f0500b8;
+        public static final int btnAceptarNuevaMaquinaria=0x7f050100;
+        public static final int btnAceptarNuevoCargo=0x7f050105;
+        public static final int btnAceptarNuevoCliente=0x7f050114;
+        public static final int btnAceptarNuevoPersonal=0x7f050129;
+        public static final int btnAceptarNuevoProd=0x7f05012f;
+        public static final int btnAceptarNuevoUsuario=0x7f050137;
+        public static final int btnAceptarVentaPorCliente=0x7f0500f6;
+        public static final int btnAceptarVentaPorFecha=0x7f0500f9;
+        public static final int btnCancelarAutenticacion=0x7f05000c;
+        public static final int btnCancelarDatePicker=0x7f0500ab;
+        public static final int btnCancelarEnviarInformeVentas=0x7f0500b7;
+        public static final int btnCancelarNuevoCargo=0x7f050104;
+        public static final int btnCancelarNuevoUsuario=0x7f050136;
+        public static final int btnCancelarPedido=0x7f05014f;
+        public static final int btnCancelarVenta=0x7f050166;
+        public static final int btnCancelarVentaPorCliente=0x7f0500f5;
+        public static final int btnCancelarVentaPorFecha=0x7f0500f8;
+        public static final int btnEditarDetalleMaquinaria=0x7f050069;
+        public static final int btnEditarDetalleProd=0x7f050080;
+        public static final int btnEliminarDetalleMaquinaria=0x7f050068;
+        public static final int btnEliminarDetalleProd=0x7f05007f;
+        public static final int btnFinalizarAgregarProd=0x7f0500a8;
+        public static final int btnInfoPdfInformeVentas=0x7f050086;
+        public static final int btnOkDetalleMaquinaria=0x7f05006a;
+        public static final int btnOkDetalleProd=0x7f050081;
+        public static final int btnRegistrarPedido=0x7f050150;
+        public static final int btnRegistrarVenta=0x7f050167;
+        public static final int btnSeleccionarProdDetallePedido=0x7f05004f;
+        public static final int btnSeleccionarProdPedido=0x7f050149;
+        public static final int btnSeleccionarProdVenta=0x7f050160;
+        public static final int btnVerPdfDetallePedido=0x7f050051;
+        public static final int cbMaquinariaNuevoPersonal=0x7f050124;
+        public static final int cbVerIngresosInformeVentas=0x7f050084;
+        public static final int datepickerFecha=0x7f0500aa;
+        public static final int descriptionMiMenu=0x7f0500ef;
+        public static final int dpVentaPorFecha=0x7f0500f7;
+        public static final int etApellidoNuevoCliente=0x7f050109;
+        public static final int etApellidoNuevoPersonal=0x7f050118;
+        public static final int etCIAutenticacion=0x7f050007;
+        public static final int etCINuevoCliente=0x7f050107;
+        public static final int etCINuevoPersonal=0x7f050116;
+        public static final int etCIPersonalNuevoUsuario=0x7f050131;
+        public static final int etCantidadAgregarProd=0x7f0500a4;
+        public static final int etCantidadEditarDetalleVenta=0x7f0500b0;
+        public static final int etCapacidadNuevaMaquinaria=0x7f0500fd;
+        public static final int etCiudadDatosCoop=0x7f05002b;
+        public static final int etClave2Autenticacion=0x7f05000b;
+        public static final int etClaveActualNuevoUsuario=0x7f050133;
+        public static final int etClaveAutenticacion=0x7f05000a;
+        public static final int etClaveNuevoUsuario=0x7f050134;
+        public static final int etColorNuevaMaquinaria=0x7f0500ff;
+        public static final int etCostoAgregarProd=0x7f0500a7;
+        public static final int etCostoEditarDetalleVenta=0x7f0500b3;
+        public static final int etCostoEntregaAgregarProd=0x7f0500a6;
+        public static final int etCostoEntregaEditarDetalleVenta=0x7f0500b2;
+        public static final int etDescripcionNuevaMaquinaria=0x7f0500fc;
+        public static final int etDescripcionNuevoCargo=0x7f050103;
+        public static final int etDescripcionNuevoProd=0x7f05012e;
+        public static final int etDireccionDatosCoop=0x7f050026;
+        public static final int etDireccionEntregaPedido=0x7f050140;
+        public static final int etDireccionEntregaVenta=0x7f050158;
+        public static final int etDireccionNuevoCliente=0x7f05010a;
+        public static final int etDireccionNuevoPersonal=0x7f050119;
+        public static final int etEditarDirEntregaDetallePedido=0x7f050044;
+        public static final int etEditarNotaPedido=0x7f05004e;
+        public static final int etEmailDatosCoop=0x7f050021;
+        public static final int etEmailEnviarInformeVentas=0x7f0500b5;
+        public static final int etEmailNuevoCliente=0x7f05010c;
+        public static final int etEmailNuevoPersonal=0x7f05011b;
+        public static final int etMarcaNuevaMaquinaria=0x7f0500fe;
+        public static final int etNITDatosCoop=0x7f050017;
+        public static final int etNombreAutenticacion=0x7f050008;
+        public static final int etNombreDatosCoop=0x7f050012;
+        public static final int etNombreNuevoCliente=0x7f050108;
+        public static final int etNombreNuevoPersonal=0x7f050117;
+        public static final int etNombreProdNuevoProd=0x7f05012b;
+        public static final int etNombreRegRapidoCliente=0x7f0500f1;
+        public static final int etNombreUserNuevoUsuario=0x7f050132;
+        public static final int etNotaPedido=0x7f05014e;
+        public static final int etNotaVenta=0x7f050165;
+        public static final int etOcupacionNuevoCargo=0x7f050101;
+        public static final int etPlacaNuevaMaquinaria=0x7f0500fb;
+        public static final int etPrecioNuevoProd=0x7f05012c;
+        public static final int etRepetirClaveNuevoUsuario=0x7f050135;
+        public static final int etSalarioNuevoCargo=0x7f050102;
+        public static final int etTelfDatosCoop=0x7f05001c;
+        public static final int etTelfNuevoCliente=0x7f05010b;
+        public static final int etTelfNuevoPersonal=0x7f05011a;
+        public static final int etUnidadNuevoProd=0x7f05012d;
+        public static final int etUsuarioAutenticacion=0x7f050009;
+        public static final int gProductosAgregarProd=0x7f0500a2;
+        public static final int hybrid=0x7f050004;
+        public static final int ibtnAgregarEmailEnviarInformeVentas=0x7f0500b6;
+        public static final int ibtnConfirmarEntregaDetallePedido=0x7f050039;
+        public static final int ibtnEditarCiudadDatosCoop=0x7f050029;
+        public static final int ibtnEditarDirEntregaDetallePedido=0x7f050043;
+        public static final int ibtnEditarDireccionDatosCoop=0x7f050024;
+        public static final int ibtnEditarEmailDatosCoop=0x7f05001f;
+        public static final int ibtnEditarFechaEntregaDetallePedido=0x7f050041;
+        public static final int ibtnEditarNITDatosCoop=0x7f050015;
+        public static final int ibtnEditarNombreDatosCoop=0x7f050010;
+        public static final int ibtnEditarNotaDetallePedido=0x7f05004c;
+        public static final int ibtnEditarPersonalEntregaDetallePedido=0x7f050045;
+        public static final int ibtnEditarTelfDatosCoop=0x7f05001a;
+        public static final int ibtnMasDetallePedido=0x7f0500bf;
+        public static final int ibtnMasDetalleVenta=0x7f0500c6;
+        public static final int ibtnMasInformeVentas=0x7f050087;
+        public static final int ibtnOKEditarCiudadDatosCoop=0x7f05002c;
+        public static final int ibtnOKEditarDireccionDatosCoop=0x7f050027;
+        public static final int ibtnOKEditarEmailDatosCoop=0x7f050022;
+        public static final int ibtnOKEditarNITDatosCoop=0x7f050018;
+        public static final int ibtnOKEditarNombreDatosCoop=0x7f050013;
+        public static final int ibtnOKEditarTelfDatosCoop=0x7f05001d;
+        public static final int imageMiMenu=0x7f0500ed;
+        public static final int ivEditarCargoNuevoPersonal=0x7f050122;
+        public static final int ivFechaEntregaPedido=0x7f05013f;
+        public static final int ivFechaIngresoNuevoPersonal=0x7f05011f;
+        public static final int ivFechaNacNuevoCliente=0x7f050111;
+        public static final int ivFechaNacNuevoPersonal=0x7f05011d;
+        public static final int ivFechaRegNuevoCliente=0x7f050113;
+        public static final int ivImageClienteDetallePedido=0x7f05003a;
+        public static final int ivImageClienteDetalleVenta=0x7f050053;
+        public static final int ivImageClienteLCliente=0x7f0500cb;
+        public static final int ivImageClienteLPedido=0x7f0500db;
+        public static final int ivImageClienteLVenta=0x7f0500e8;
+        public static final int ivImageLCargo=0x7f0500c7;
+        public static final int ivImageLMaq=0x7f0500cf;
+        public static final int ivImageLPersonal=0x7f0500d3;
+        public static final int ivImageLUser=0x7f0500d8;
+        public static final int ivImageMaqDetallePedido=0x7f050049;
+        public static final int ivImagePersonalDetallePedido=0x7f050046;
+        public static final int ivImagePersonalDetalleVenta=0x7f05005b;
+        public static final int ivImageProdHorizontalLProd=0x7f0500e6;
+        public static final int ivImageProdLDetallePedido=0x7f0500b9;
+        public static final int ivImageProdLDetalleVenta=0x7f0500c0;
+        public static final int ivImageProdLProd=0x7f0500e2;
+        public static final int ivImagenClientePedido=0x7f050139;
+        public static final int ivImagenClienteVenta=0x7f050152;
+        public static final int ivImagenClienteVentaPorCliente=0x7f0500f2;
+        public static final int ivImagenDetalleCliente=0x7f05002d;
+        public static final int ivImagenDetalleMaquinaria=0x7f050062;
+        public static final int ivImagenDetallePersonal=0x7f05006b;
+        public static final int ivImagenDetalleProd=0x7f05007a;
+        public static final int ivImagenMaqDetallePersonal=0x7f050077;
+        public static final int ivImagenMaqPedido=0x7f050146;
+        public static final int ivImagenMaqVenta=0x7f05015d;
+        public static final int ivImagenNuevaMaquinaria=0x7f0500fa;
+        public static final int ivImagenNuevoCliente=0x7f050106;
+        public static final int ivImagenNuevoPersonal=0x7f050115;
+        public static final int ivImagenNuevoProd=0x7f05012a;
+        public static final int ivImagenNuevoUsuario=0x7f050130;
+        public static final int ivImagenProdEditarDetalleVenta=0x7f0500ad;
+        public static final int ivMaquinariaNuevoPersonal=0x7f050126;
+        public static final int ivMicMapSucre=0x7f05009e;
+        public static final int ivSeeGoogleMaps=0x7f050141;
+        public static final int ivSeleccionarPersonalPedido=0x7f050142;
+        public static final int ivSeleccionarPersonalVenta=0x7f050159;
+        public static final int lvInformeVentas=0x7f05008e;
+        public static final int lvListaCargos=0x7f050090;
+        public static final int lvListaClientes=0x7f050092;
+        public static final int lvListaDetallePedido=0x7f050050;
+        public static final int lvListaDetalleVenta=0x7f05005e;
+        public static final int lvListaMaquinaria=0x7f050094;
+        public static final int lvListaPedidos=0x7f050096;
+        public static final int lvListaPersonal=0x7f050098;
+        public static final int lvListaProdPedido=0x7f05014b;
+        public static final int lvListaProdVenta=0x7f050162;
+        public static final int lvListaProductos=0x7f05009a;
+        public static final int lvMiMenu=0x7f0500a0;
+        public static final int lyCostoEntregaAgregarProd=0x7f0500a5;
+        public static final int lyCostoEntregaEditarDetalleVenta=0x7f0500b1;
+        public static final int lyDatosInformeVentas=0x7f050088;
+        public static final int lyEditarCiudadDatosCoop=0x7f05002a;
+        public static final int lyEditarDireccionDatosCoop=0x7f050025;
+        public static final int lyEditarEmailDatosCoop=0x7f050020;
+        public static final int lyEditarNITDatosCoop=0x7f050016;
+        public static final int lyEditarNombreDatosCoop=0x7f050011;
+        public static final int lyEditarTelfDatosCoop=0x7f05001b;
+        public static final int lyInputAgregarProd=0x7f0500a3;
+        public static final int lyMasInformeVentas=0x7f050085;
+        public static final int lyPersonalDetalleVenta=0x7f050059;
+        public static final int lyVistaCargoNuevoPersonal=0x7f050120;
+        public static final int lyVistaCostoTotalPedido=0x7f05014c;
+        public static final int lyVistaCostoTotalVenta=0x7f050163;
+        public static final int lyVistaMaqDetallePersonal=0x7f050076;
+        public static final int lyVistaMaqNuevoPersonal=0x7f050125;
+        public static final int lyVistaMaqPedido=0x7f050145;
+        public static final int lyVistaMaqVenta=0x7f05015c;
+        public static final int lyVistaNotaDetalleVenta=0x7f050060;
+        public static final int lyVistaPersonalDeEntregaVenta=0x7f050157;
+        public static final int myContenedor=0x7f050005;
+        public static final int myContenedorDos=0x7f050168;
+        public static final int myGoogleMap=0x7f05009f;
+        public static final int myTercerContenedor=0x7f050169;
+        public static final int none=0x7f050000;
+        public static final int normal=0x7f050001;
+        public static final int rdbFemeninoNuevoCliente=0x7f05010f;
+        public static final int rdbMasculinoNuevoCliente=0x7f05010e;
+        public static final int rdgSexoNuevoCliente=0x7f05010d;
+        public static final int satellite=0x7f050002;
+        public static final int spCargoNuevoPersonal=0x7f050123;
+        public static final int spinnerTipoVenta=0x7f050151;
+        public static final int terrain=0x7f050003;
+        public static final int titleMiMenu=0x7f0500ee;
+        public static final int tvAddressDescriptionMapSucre=0x7f05009d;
+        public static final int tvAddressMapSucre=0x7f05009c;
+        public static final int tvApellidoDetalleCliente=0x7f050030;
+        public static final int tvApellidoDetallePersonal=0x7f05006e;
+        public static final int tvApellidoLCliente=0x7f0500ce;
+        public static final int tvAtendidoPorDetallePedido=0x7f05003d;
+        public static final int tvAvisoAgregarProd=0x7f0500a1;
+        public static final int tvAvisoEnviarInformeVentas=0x7f0500b4;
+        public static final int tvAvisoListaProdPedido=0x7f05014a;
+        public static final int tvAvisoListaProdVenta=0x7f050161;
+        public static final int tvCIClienteDetallePedido=0x7f05003c;
+        public static final int tvCIClienteDetalleVenta=0x7f050055;
+        public static final int tvCIClienteLPedido=0x7f0500dd;
+        public static final int tvCIClienteLVenta=0x7f0500ea;
+        public static final int tvCIDetalleCliente=0x7f05002e;
+        public static final int tvCIDetallePersonal=0x7f05006c;
+        public static final int tvCILCliente=0x7f0500cc;
+        public static final int tvCILPersonal=0x7f0500d4;
+        public static final int tvCIPersonalDetallePedido=0x7f050048;
+        public static final int tvCIPersonalDetalleVenta=0x7f05005d;
+        public static final int tvCIPersonalPedido=0x7f050143;
+        public static final int tvCIPersonalVenta=0x7f05015a;
+        public static final int tvCantLDetallePedido=0x7f0500bc;
+        public static final int tvCantLDetalleVenta=0x7f0500c3;
+        public static final int tvCantVDirectasInformeVentas=0x7f050089;
+        public static final int tvCantVDomicilioInformeVentas=0x7f05008a;
+        public static final int tvCantVentasRegistradosInformeVentas=0x7f05008c;
+        public static final int tvCapacidadDetalleMaquinaria=0x7f050065;
+        public static final int tvCapacidadLMaq=0x7f0500d2;
+        public static final int tvCapacidadMaqDetallePedido=0x7f05004b;
+        public static final int tvCapacidadMaqPedido=0x7f050148;
+        public static final int tvCapacidadMaqVenta=0x7f05015f;
+        public static final int tvCargoDetallePersonal=0x7f050074;
+        public static final int tvCargoLPersonal=0x7f0500d7;
+        public static final int tvCiudadDatosCoop=0x7f050028;
+        public static final int tvColorDetalleMaquinaria=0x7f050067;
+        public static final int tvCostoEntregaLDetallePedido=0x7f0500bd;
+        public static final int tvCostoEntregaLDetalleVenta=0x7f0500c4;
+        public static final int tvCostoLDetallePedido=0x7f0500be;
+        public static final int tvCostoLDetalleVenta=0x7f0500c5;
+        public static final int tvCostoTotalDetallePedido=0x7f050052;
+        public static final int tvCostoTotalDetalleVenta=0x7f05005f;
+        public static final int tvCostoTotalLPedido=0x7f0500df;
+        public static final int tvCostoTotalLVenta=0x7f0500ec;
+        public static final int tvCostoTotalPedido=0x7f05014d;
+        public static final int tvCostoTotalVenta=0x7f050164;
+        public static final int tvDercripcionMaqDetallePersonal=0x7f050079;
+        public static final int tvDescripcionDetalleMaquinaria=0x7f050064;
+        public static final int tvDescripcionDetalleProd=0x7f05007e;
+        public static final int tvDescripcionLCargo=0x7f0500ca;
+        public static final int tvDescripcionLMaq=0x7f0500d1;
+        public static final int tvDescripcionMaqNuevoPersonal=0x7f050128;
+        public static final int tvDireccionDatosCoop=0x7f050023;
+        public static final int tvDireccionDetalleCliente=0x7f050031;
+        public static final int tvDireccionDetallePedido=0x7f050042;
+        public static final int tvDireccionDetallePersonal=0x7f05006f;
+        public static final int tvDireccionDetalleVenta=0x7f05005a;
+        public static final int tvEmailDatosCoop=0x7f05001e;
+        public static final int tvEmailDetalleCliente=0x7f050033;
+        public static final int tvEmailDetallePersonal=0x7f050071;
+        public static final int tvEsUsuarioLPersonal=0x7f0500d5;
+        public static final int tvEstadoDetallePedido=0x7f050038;
+        public static final int tvEstadoLPedido=0x7f0500e1;
+        public static final int tvFechaEntregaDetallePedido=0x7f050040;
+        public static final int tvFechaEntregaLPedido=0x7f0500e0;
+        public static final int tvFechaEntregaPedido=0x7f05013e;
+        public static final int tvFechaIngresoDetallePersonal=0x7f050073;
+        public static final int tvFechaIngresoNuevoPersonal=0x7f05011e;
+        public static final int tvFechaNacDetallaCliente=0x7f050035;
+        public static final int tvFechaNacDetallaPersonal=0x7f050072;
+        public static final int tvFechaNacNuevoCliente=0x7f050110;
+        public static final int tvFechaNanNuevoPersonal=0x7f05011c;
+        public static final int tvFechaPedido=0x7f05013c;
+        public static final int tvFechaPedidoDetallePedido=0x7f05003e;
+        public static final int tvFechaRegDetalleCliente=0x7f050036;
+        public static final int tvFechaRegNuevoCliente=0x7f050112;
+        public static final int tvFechaVenta=0x7f050155;
+        public static final int tvFechaVentaDetalleVenta=0x7f050057;
+        public static final int tvFechaVentaLPedido=0x7f0500de;
+        public static final int tvFechaVentaLVenta=0x7f0500eb;
+        public static final int tvHoraPedido=0x7f05013d;
+        public static final int tvHoraVenta=0x7f050156;
+        public static final int tvHoraVentaDetallePedido=0x7f05003f;
+        public static final int tvHoraVentaDetalleVenta=0x7f050058;
+        public static final int tvIngresoTotalInformeVentas=0x7f05008d;
+        public static final int tvMAQDetallePersonal=0x7f050075;
+        public static final int tvMarcaDetalleMaquinaria=0x7f050066;
+        public static final int tvNITDatosCoop=0x7f050014;
+        public static final int tvNombreClienteDetallePedido=0x7f05003b;
+        public static final int tvNombreClienteDetalleVenta=0x7f050054;
+        public static final int tvNombreClienteLPedido=0x7f0500dc;
+        public static final int tvNombreClienteLVenta=0x7f0500e9;
+        public static final int tvNombreClientePedido=0x7f05013b;
+        public static final int tvNombreClienteVenta=0x7f050154;
+        public static final int tvNombreClienteVentaPorCliente=0x7f0500f4;
+        public static final int tvNombreDatosCoop=0x7f05000f;
+        public static final int tvNombreDetalleCliente=0x7f05002f;
+        public static final int tvNombreDetallePersonal=0x7f05006d;
+        public static final int tvNombreHorizontalLProd=0x7f0500e5;
+        public static final int tvNombreLCliente=0x7f0500cd;
+        public static final int tvNombreLPersonal=0x7f0500d6;
+        public static final int tvNombreLProd=0x7f0500e3;
+        public static final int tvNombrePersonalDetallePedido=0x7f050047;
+        public static final int tvNombrePersonalDetalleVenta=0x7f05005c;
+        public static final int tvNombrePersonalLUser=0x7f0500da;
+        public static final int tvNombrePersonalPedido=0x7f050144;
+        public static final int tvNombrePersonalVenta=0x7f05015b;
+        public static final int tvNombreProdDetalleProd=0x7f05007b;
+        public static final int tvNombreProdEditarDetalleVenta=0x7f0500ae;
+        public static final int tvNombreProdLDetallePedido=0x7f0500ba;
+        public static final int tvNombreProdLDetalleVenta=0x7f0500c1;
+        public static final int tvNotaDetallePedido=0x7f05004d;
+        public static final int tvNotaDetalleVenta=0x7f050061;
+        public static final int tvNotaInformeVentas=0x7f05008f;
+        public static final int tvNotaListaCargo=0x7f050091;
+        public static final int tvNotaListaClientes=0x7f050093;
+        public static final int tvNotaListaMaquinarias=0x7f050095;
+        public static final int tvNotaListaPedidos=0x7f050097;
+        public static final int tvNotaListaPersonal=0x7f050099;
+        public static final int tvNotaListaProductos=0x7f05009b;
+        public static final int tvNotaRegRapidoCliente=0x7f0500f0;
+        public static final int tvOcupacionCargoNuevoPersonal=0x7f050121;
+        public static final int tvOcupacionLCargo=0x7f0500c8;
+        public static final int tvPlacaDetalleMaquinaria=0x7f050063;
+        public static final int tvPlacaLMaq=0x7f0500d0;
+        public static final int tvPlacaMaqDetallePedido=0x7f05004a;
+        public static final int tvPlacaMaqDetallePersonal=0x7f050078;
+        public static final int tvPlacaMaqNuevoPersonal=0x7f050127;
+        public static final int tvPlacaMaqPedido=0x7f050147;
+        public static final int tvPlacaMaqVenta=0x7f05015e;
+        public static final int tvPrecioDetalleProd=0x7f05007c;
+        public static final int tvPrecioHorizontalLProd=0x7f0500e7;
+        public static final int tvPrecioLProd=0x7f0500e4;
+        public static final int tvPrecioProdEditarDetalleVenta=0x7f0500af;
+        public static final int tvPrecioProdLDetallePedido=0x7f0500bb;
+        public static final int tvPrecioProdLDetalleVenta=0x7f0500c2;
+        public static final int tvSalarioLCargo=0x7f0500c9;
+        public static final int tvSexoDetalleCliente=0x7f050034;
+        public static final int tvTelfDatosCoop=0x7f050019;
+        public static final int tvTelfDetalleCliente=0x7f050032;
+        public static final int tvTelfDetallePersonal=0x7f050070;
+        public static final int tvTipoVentaDetalleVenta=0x7f050056;
+        public static final int tvTituloInfoInformeVentas=0x7f050083;
+        public static final int tvUnidadDetalleProd=0x7f05007d;
+        public static final int tvUsuarioLUser=0x7f0500d9;
+    }
+    public static final class integer {
+        public static final int google_play_services_version=0x7f070000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -529,90 +699,168 @@ public final class R {
         public static final int lista_pedidos=0x7f03000d;
         public static final int lista_personal=0x7f03000e;
         public static final int lista_productos=0x7f03000f;
-        public static final int mi_menu=0x7f030010;
-        public static final int modelo_agregar_producto_venta=0x7f030011;
-        public static final int modelo_datepicker=0x7f030012;
-        public static final int modelo_editar_detalle_venta=0x7f030013;
-        public static final int modelo_enviar_informe_ventas=0x7f030014;
-        public static final int modelo_item_detalle_pedido=0x7f030015;
-        public static final int modelo_item_detalle_venta=0x7f030016;
-        public static final int modelo_item_lista_cargo=0x7f030017;
-        public static final int modelo_item_lista_cliente=0x7f030018;
-        public static final int modelo_item_lista_maq=0x7f030019;
-        public static final int modelo_item_lista_personal=0x7f03001a;
-        public static final int modelo_item_lista_usuario=0x7f03001b;
-        public static final int modelo_item_pedido=0x7f03001c;
-        public static final int modelo_item_prod=0x7f03001d;
-        public static final int modelo_item_prod_horizontal=0x7f03001e;
-        public static final int modelo_item_venta=0x7f03001f;
-        public static final int modelo_mi_menu_item=0x7f030020;
-        public static final int modelo_registro_rapido_cliente=0x7f030021;
-        public static final int modelo_venta_por_cliente=0x7f030022;
-        public static final int modelo_venta_por_fecha=0x7f030023;
-        public static final int nueva_maquinaria=0x7f030024;
-        public static final int nuevo_cargo=0x7f030025;
-        public static final int nuevo_cliente=0x7f030026;
-        public static final int nuevo_personal=0x7f030027;
-        public static final int nuevo_producto=0x7f030028;
-        public static final int nuevo_usuario=0x7f030029;
-        public static final int reg_pedido=0x7f03002a;
-        public static final int registrar_venta=0x7f03002b;
-        public static final int segundo_activity=0x7f03002c;
-        public static final int tercer_activity=0x7f03002d;
+        public static final int map_sucre=0x7f030010;
+        public static final int mi_menu=0x7f030011;
+        public static final int modelo_agregar_producto_venta=0x7f030012;
+        public static final int modelo_datepicker=0x7f030013;
+        public static final int modelo_editar_detalle_venta=0x7f030014;
+        public static final int modelo_enviar_informe_ventas=0x7f030015;
+        public static final int modelo_item_detalle_pedido=0x7f030016;
+        public static final int modelo_item_detalle_venta=0x7f030017;
+        public static final int modelo_item_lista_cargo=0x7f030018;
+        public static final int modelo_item_lista_cliente=0x7f030019;
+        public static final int modelo_item_lista_maq=0x7f03001a;
+        public static final int modelo_item_lista_personal=0x7f03001b;
+        public static final int modelo_item_lista_usuario=0x7f03001c;
+        public static final int modelo_item_pedido=0x7f03001d;
+        public static final int modelo_item_prod=0x7f03001e;
+        public static final int modelo_item_prod_horizontal=0x7f03001f;
+        public static final int modelo_item_venta=0x7f030020;
+        public static final int modelo_mi_menu_item=0x7f030021;
+        public static final int modelo_registro_rapido_cliente=0x7f030022;
+        public static final int modelo_venta_por_cliente=0x7f030023;
+        public static final int modelo_venta_por_fecha=0x7f030024;
+        public static final int nueva_maquinaria=0x7f030025;
+        public static final int nuevo_cargo=0x7f030026;
+        public static final int nuevo_cliente=0x7f030027;
+        public static final int nuevo_personal=0x7f030028;
+        public static final int nuevo_producto=0x7f030029;
+        public static final int nuevo_usuario=0x7f03002a;
+        public static final int reg_pedido=0x7f03002b;
+        public static final int registrar_venta=0x7f03002c;
+        public static final int segundo_activity=0x7f03002d;
+        public static final int tercer_activity=0x7f03002e;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
-        public static final int popup_menu_detalle_venta=0x7f080001;
-        public static final int popup_menu_info_mas=0x7f080002;
-        public static final int popup_menu_info_pdf=0x7f080003;
-        public static final int segundo_menu=0x7f080004;
-        public static final int tercer_menu=0x7f080005;
+        public static final int main=0x7f0a0000;
+        public static final int popup_menu_detalle_venta=0x7f0a0001;
+        public static final int popup_menu_info_mas=0x7f0a0002;
+        public static final int popup_menu_info_pdf=0x7f0a0003;
+        public static final int segundo_menu=0x7f0a0004;
+        public static final int tercer_menu=0x7f0a0005;
     }
     public static final class string {
-        public static final int aceptar=0x7f060005;
-        public static final int action_settings=0x7f060001;
-        public static final int agregar=0x7f060006;
-        public static final int app_name=0x7f060000;
-        public static final int buscar=0x7f06000c;
-        public static final int cancelar=0x7f060004;
-        public static final int cancelar_pedido=0x7f060022;
-        public static final int cancelar_venta=0x7f060024;
-        public static final int configurar=0x7f06000d;
-        public static final int confirmar_entrega=0x7f060011;
-        public static final int dni=0x7f060025;
-        public static final int editar=0x7f060007;
-        public static final int editar_pedido=0x7f060010;
-        public static final int eliminar=0x7f060008;
-        public static final int enviar_info=0x7f06000f;
-        public static final int femenino=0x7f06000b;
-        public static final int hello_world=0x7f060002;
-        public static final int informe_pdf=0x7f060014;
-        public static final int listo=0x7f060009;
-        public static final int masculino=0x7f06000a;
-        public static final int nada=0x7f060013;
-        public static final int nuevo_cargo=0x7f060003;
-        public static final int nuevo_pedido=0x7f06001d;
-        public static final int ok_info=0x7f060012;
-        public static final int pedidos_entregados=0x7f06001e;
-        public static final int pedidos_pendientes=0x7f06001f;
-        public static final int pedidos_todos=0x7f060020;
-        public static final int registrar_pedido=0x7f060021;
-        public static final int registrar_venta=0x7f060023;
-        public static final int ventas_a_domicilio=0x7f06001c;
-        public static final int ventas_de_la_semana=0x7f060015;
-        public static final int ventas_directas=0x7f06001b;
-        public static final int ventas_fecha_especifico=0x7f060017;
-        public static final int ventas_mes_actual=0x7f060016;
-        public static final int ventas_mes_especifico=0x7f060018;
-        public static final int ventas_por_cliente=0x7f060019;
-        public static final int ventas_todas=0x7f06001a;
-        public static final int ver_imprimir_info=0x7f06000e;
+        public static final int aceptar=0x7f06001a;
+        public static final int action_settings=0x7f060016;
+        public static final int address=0x7f06003b;
+        public static final int addrres_description=0x7f06003c;
+        public static final int agregar=0x7f06001b;
+        public static final int app_name=0x7f060015;
+        /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=70] 
+         */
+        public static final int auth_client_availability_notification_title=0x7f06000f;
+        /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_play_services_err_notification_msg=0x7f060010;
+        /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
+         */
+        public static final int auth_client_requested_by_msg=0x7f060011;
+        public static final int buscar=0x7f060021;
+        public static final int cancelar=0x7f060019;
+        public static final int cancelar_pedido=0x7f060037;
+        public static final int cancelar_venta=0x7f060039;
+        /**  Button in confirmation dialog to enable Google Play services.  Clicking it
+        will direct user to application settings of Google Play services where they
+        can enable it [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_button=0x7f060006;
+        /**  Message in confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_enable_text=0x7f060005;
+        /**  Title of confirmation dialog informing user they need to enable
+        Google Play services in application settings [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_enable_title=0x7f060004;
+        /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_button=0x7f060003;
+        /**  (For phones) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_phone=0x7f060001;
+        /**  (For tablets) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_install_text_tablet=0x7f060002;
+        /**  Title of confirmation dialog informing user that they need to install
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_install_title=0x7f060000;
+        /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
+        services [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unknown_issue=0x7f060009;
+        /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_unsupported_text=0x7f06000b;
+        /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_unsupported_title=0x7f06000a;
+        /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_button=0x7f06000c;
+        /**  Message in confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=NONE] 
+         */
+        public static final int common_google_play_services_update_text=0x7f060008;
+        /**  Title of confirmation dialog informing user that they need to update
+        Google Play services (from Play Store) [CHAR LIMIT=40] 
+         */
+        public static final int common_google_play_services_update_title=0x7f060007;
+        /**  Sign-in button text [CHAR LIMIT=15] 
+         */
+        public static final int common_signin_button_text=0x7f06000d;
+        /**  Long form sign-in button text [CHAR LIMIT=30] 
+         */
+        public static final int common_signin_button_text_long=0x7f06000e;
+        public static final int configurar=0x7f060022;
+        public static final int confirmar_entrega=0x7f060026;
+        public static final int dni=0x7f06003a;
+        public static final int editar=0x7f06001c;
+        public static final int editar_pedido=0x7f060025;
+        public static final int eliminar=0x7f06001d;
+        public static final int enviar_info=0x7f060024;
+        public static final int femenino=0x7f060020;
+        public static final int hello_world=0x7f060017;
+        public static final int informe_pdf=0x7f060029;
+        public static final int listo=0x7f06001e;
+        /**  Location client code resources (prefix with location_client) 
+
+        Begin strings for location.reporting
+    
+
+        Some InactiveReason names.  See more in OneUp/package/location/res/values/strings.xml
+    
+         */
+        public static final int location_client_ulr_inactive_age_under_13=0x7f060012;
+        public static final int location_client_ulr_inactive_age_unknown=0x7f060013;
+        public static final int location_client_ulr_inactive_unknown_restriction=0x7f060014;
+        public static final int masculino=0x7f06001f;
+        public static final int nada=0x7f060028;
+        public static final int nuevo_cargo=0x7f060018;
+        public static final int nuevo_pedido=0x7f060032;
+        public static final int ok_info=0x7f060027;
+        public static final int pedidos_entregados=0x7f060033;
+        public static final int pedidos_pendientes=0x7f060034;
+        public static final int pedidos_todos=0x7f060035;
+        public static final int registrar_pedido=0x7f060036;
+        public static final int registrar_venta=0x7f060038;
+        public static final int ventas_a_domicilio=0x7f060031;
+        public static final int ventas_de_la_semana=0x7f06002a;
+        public static final int ventas_directas=0x7f060030;
+        public static final int ventas_fecha_especifico=0x7f06002c;
+        public static final int ventas_mes_actual=0x7f06002b;
+        public static final int ventas_mes_especifico=0x7f06002d;
+        public static final int ventas_por_cliente=0x7f06002e;
+        public static final int ventas_todas=0x7f06002f;
+        public static final int ver_imprimir_info=0x7f060023;
     }
     public static final class style {
-        public static final int ActionBar_Solid_Caterpillar=0x7f07000d;
-        public static final int ActionBar_Transparent_Caterpillar=0x7f07000e;
-        public static final int ActionBarTabStyle_Caterpillar=0x7f070011;
-        public static final int ActionButton_CloseMode_Caterpillar=0x7f070014;
+        public static final int ActionBar_Solid_Caterpillar=0x7f09000d;
+        public static final int ActionBar_Transparent_Caterpillar=0x7f09000e;
+        public static final int ActionBarTabStyle_Caterpillar=0x7f090011;
+        public static final int ActionButton_CloseMode_Caterpillar=0x7f090014;
         /** 
         <item name="android:windowBackground">@android:color/darker_gray</item>
 		<item name="android:buttonBarStyle">@drawable/custom_view_button</item>
@@ -623,7 +871,7 @@ public final class R {
         <item name="android:borderlessButtonStyle">@android:style/ButtonBar</item> 
         
          */
-        public static final int AlertDialogCustom=0x7f07000a;
+        public static final int AlertDialogCustom=0x7f09000a;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -645,31 +893,277 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070008;
+        public static final int AppBaseTheme=0x7f090008;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070009;
-        public static final int CAT_ButtonBar_AlertDialog=0x7f070007;
-        public static final int DialogWindowTitle_CAT=0x7f070003;
-        public static final int DialogWindowTitle_Holo=0x7f070001;
-        public static final int DropDownListView_Caterpillar=0x7f070010;
-        public static final int DropDownNav_Caterpillar=0x7f070012;
-        public static final int PopupMenu_Caterpillar=0x7f07000f;
-        public static final int ProgressBar_Caterpillar=0x7f070013;
-        public static final int TextAppearance_CAT_DialogButton=0x7f070006;
+        public static final int AppTheme=0x7f090009;
+        public static final int CAT_ButtonBar_AlertDialog=0x7f090007;
+        public static final int DialogWindowTitle_CAT=0x7f090003;
+        public static final int DialogWindowTitle_Holo=0x7f090001;
+        public static final int DropDownListView_Caterpillar=0x7f090010;
+        public static final int DropDownNav_Caterpillar=0x7f090012;
+        public static final int PopupMenu_Caterpillar=0x7f09000f;
+        public static final int ProgressBar_Caterpillar=0x7f090013;
+        public static final int TextAppearance_CAT_DialogButton=0x7f090006;
         /** 
     	<item name="android:textStyle">bold</item> 
     	 
          */
-        public static final int TextAppearance_CAT_DialogWindowTitle=0x7f070004;
-        public static final int Theme_Caterpillar=0x7f07000c;
+        public static final int TextAppearance_CAT_DialogWindowTitle=0x7f090004;
+        public static final int Theme_Caterpillar=0x7f09000c;
         /**  this style is only referenced in a Light.DarkActionBar based theme 
          */
-        public static final int Theme_Caterpillar_Widget=0x7f070015;
-        public static final int Theme_CAT_Alert_Dialog=0x7f070002;
-        public static final int Theme_Holo_Dialog_Alert=0x7f070000;
-        public static final int TitleStyle=0x7f07000b;
-        public static final int Widget_CAT_Button_Borderless=0x7f070005;
+        public static final int Theme_Caterpillar_Widget=0x7f090015;
+        public static final int Theme_CAT_Alert_Dialog=0x7f090002;
+        public static final int Theme_Holo_Dialog_Alert=0x7f090000;
+        public static final int TitleStyle=0x7f09000b;
+        public static final int Widget_CAT_Button_Borderless=0x7f090005;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a MapAttrs.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.silvia.cooperativa:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.silvia.cooperativa:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.silvia.cooperativa:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.silvia.cooperativa:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.silvia.cooperativa:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.silvia.cooperativa:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.silvia.cooperativa:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.silvia.cooperativa:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.silvia.cooperativa:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.silvia.cooperativa:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.silvia.cooperativa:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.silvia.cooperativa:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.silvia.cooperativa:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.silvia.cooperativa:zOrderOnTop}</code></td><td></td></tr>
+           </table>
+           @see #MapAttrs_cameraBearing
+           @see #MapAttrs_cameraTargetLat
+           @see #MapAttrs_cameraTargetLng
+           @see #MapAttrs_cameraTilt
+           @see #MapAttrs_cameraZoom
+           @see #MapAttrs_mapType
+           @see #MapAttrs_uiCompass
+           @see #MapAttrs_uiRotateGestures
+           @see #MapAttrs_uiScrollGestures
+           @see #MapAttrs_uiTiltGestures
+           @see #MapAttrs_uiZoomControls
+           @see #MapAttrs_uiZoomGestures
+           @see #MapAttrs_useViewLifecycle
+           @see #MapAttrs_zOrderOnTop
+         */
+        public static final int[] MapAttrs = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
+            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
+            0x7f01000c, 0x7f01000d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#cameraBearing}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:cameraBearing
+        */
+        public static final int MapAttrs_cameraBearing = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#cameraTargetLat}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:cameraTargetLat
+        */
+        public static final int MapAttrs_cameraTargetLat = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#cameraTargetLng}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:cameraTargetLng
+        */
+        public static final int MapAttrs_cameraTargetLng = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#cameraTilt}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:cameraTilt
+        */
+        public static final int MapAttrs_cameraTilt = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#cameraZoom}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:cameraZoom
+        */
+        public static final int MapAttrs_cameraZoom = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#mapType}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>normal</code></td><td>1</td><td></td></tr>
+<tr><td><code>satellite</code></td><td>2</td><td></td></tr>
+<tr><td><code>terrain</code></td><td>3</td><td></td></tr>
+<tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
+</table>
+          @attr name com.silvia.cooperativa:mapType
+        */
+        public static final int MapAttrs_mapType = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#uiCompass}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:uiCompass
+        */
+        public static final int MapAttrs_uiCompass = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#uiRotateGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:uiRotateGestures
+        */
+        public static final int MapAttrs_uiRotateGestures = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#uiScrollGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:uiScrollGestures
+        */
+        public static final int MapAttrs_uiScrollGestures = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#uiTiltGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:uiTiltGestures
+        */
+        public static final int MapAttrs_uiTiltGestures = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#uiZoomControls}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:uiZoomControls
+        */
+        public static final int MapAttrs_uiZoomControls = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#uiZoomGestures}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:uiZoomGestures
+        */
+        public static final int MapAttrs_uiZoomGestures = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#useViewLifecycle}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:useViewLifecycle
+        */
+        public static final int MapAttrs_useViewLifecycle = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.silvia.cooperativa.R.attr#zOrderOnTop}
+          attribute's value can be found in the {@link #MapAttrs} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.silvia.cooperativa:zOrderOnTop
+        */
+        public static final int MapAttrs_zOrderOnTop = 13;
+    };
 }

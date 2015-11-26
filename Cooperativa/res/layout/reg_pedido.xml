@@ -121,13 +121,30 @@
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
-            <EditText
-                android:id="@+id/etDireccionEntregaPedido"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Dirección de entrega"
-                android:ems="10" >
-            </EditText>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" 
+                android:orientation="horizontal">
+	            
+                <EditText
+	                android:id="@+id/etDireccionEntregaPedido"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:hint="Dirección de entrega"
+	                android:layout_weight="50">
+	            </EditText>
+	            
+                <ImageView 
+                    android:id="@+id/ivSeeGoogleMaps"
+	                android:layout_width="30dp"
+	                android:layout_height="30dp"
+	                android:layout_weight="1"
+	                android:layout_marginLeft="5dp"
+	                android:src="@drawable/ic_location_on_black_24dp" 
+	                android:background="@drawable/custom_view_button"/>
+                
+            </LinearLayout>
+            
 
             <TextView
                 android:layout_width="wrap_content"

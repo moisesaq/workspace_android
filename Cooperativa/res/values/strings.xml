@@ -41,5 +41,6 @@
     <string name="cancelar_venta">Cancelar venta</string>
     
     <string name="dni">DNI</string>
-
+	<string name="address">Direccion</string>
+	<string name="addrres_description">Descripcion de la direccion</string>
 </resources>

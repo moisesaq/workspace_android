@@ -17,9 +17,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.FragmentActivity;
 import android.text.InputType;
+import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.widget.SearchView;
 import android.widget.Toast;
 import android.widget.SearchView.OnQueryTextListener;
@@ -70,8 +72,6 @@ public class MainActivity extends FragmentActivity{
 		actionBar.addTab(tab1);
 		actionBar.addTab(tab2);
 		actionBar.addTab(tab3);
-		
-		
 	}
 
 	@Override
@@ -152,6 +152,5 @@ public class MainActivity extends FragmentActivity{
 			ft.remove(myFragmento);
 		}
 	}
-
-
+	
 }
