@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/action_search_address"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/buscar"
+        android:icon="@drawable/ic_search_white_48dp"
+        android:actionViewClass="android.widget.SearchView"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_nuevo_pedido"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/nuevo_pedido"
+        android:icon="@drawable/ic_add_circle_outline_white_36dp"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_pedidos_todos"
+        android:orderInCategory="3"
+        android:showAsAction="never"
+        android:title="@string/pedidos_todos"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_pedidos_entregados"
+        android:orderInCategory="4"
+        android:showAsAction="never"
+        android:title="@string/pedidos_entregados"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_pedidos_pendientes"
+        android:orderInCategory="5"
+        android:showAsAction="never"
+        android:title="@string/pedidos_pendientes"
+        android:visible="false"/>
+
+</menu>

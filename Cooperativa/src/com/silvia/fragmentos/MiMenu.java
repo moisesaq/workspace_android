@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.silvia.adapters.MiMenuAdapter;
 import com.silvia.basedatos.DBDuraznillo;
+import com.silvia.cooperativa.CuartoActivity;
 import com.silvia.cooperativa.SegudoActivity;
 import com.silvia.cooperativa.R;
 import com.silvia.cooperativa.TercerActivity;
@@ -148,7 +149,7 @@ public class MiMenu extends Fragment implements OnItemClickListener{
 				Bundle msjPedidos = new Bundle();
 				msjPedidos.putInt("accion", Variables.ACCION_CARGAR_LISTA_PEDIDO);
 				msjPedidos.putString("idusuario", idusuario);
-				Intent intentPedidos = new Intent(getActivity(), TercerActivity.class);
+				Intent intentPedidos = new Intent(getActivity(), CuartoActivity.class);
 				intentPedidos.putExtras(msjPedidos);
 				startActivity(intentPedidos);
 				break;

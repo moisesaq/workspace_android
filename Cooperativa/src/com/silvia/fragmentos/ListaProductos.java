@@ -25,6 +25,7 @@ public class ListaProductos extends Fragment implements OnItemClickListener{
 
 	private ListView lvListaProductos;
 	private TextView tvNota;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);

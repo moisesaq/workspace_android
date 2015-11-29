@@ -34,23 +34,28 @@ public class SegudoActivity extends Activity implements OnEditarMaquinariaClickL
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		Bundle cajon = getIntent().getExtras();
 		this.ACCION = cajon.getInt("accion");
-		if(ACCION==Variables.ACCION_CARGAR_LISTA_CARGOS){
-			cargarFragmento(new ListaCargos(), "tagListaCargos");
-		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_MAQ) {
-			cargarFragmento(new ListaMaquinaria(), "tagListaMaq");
-		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_PERSONAL) {
-			Bundle msjID = new Bundle();
-			msjID.putString("idusuario", cajon.getString("idusuario"));
-			ListaPersonal listaP = new ListaPersonal();
-			listaP.setArguments(msjID);
-			cargarFragmento(listaP, "tagListaPer");
-		}else if (ACCION==Variables.ACCION_CARGAR_PERFIL) {
-			Bundle msjIDPersonal = new Bundle();
-			msjIDPersonal.putString("idpersonal", cajon.getString("idpersonal"));
-			msjIDPersonal.putInt("proviene", Variables.ACCION_CARGAR_PERFIL);
-			DetallePersonal detallePerfil = new DetallePersonal();
-			detallePerfil.setArguments(msjIDPersonal);
-			cargarFragmento(detallePerfil, "tagDetallePerfil");
+		switch (ACCION) {
+			case Variables.ACCION_CARGAR_LISTA_CARGOS:
+				cargarFragmento(new ListaCargos(), "tagListaCargos");
+				break;
+			case Variables.ACCION_CARGAR_LISTA_MAQ:
+				cargarFragmento(new ListaMaquinaria(), "tagListaMaq");
+				break;
+			case Variables.ACCION_CARGAR_LISTA_PERSONAL:
+				Bundle msjID = new Bundle();
+				msjID.putString("idusuario", cajon.getString("idusuario"));
+				ListaPersonal listaP = new ListaPersonal();
+				listaP.setArguments(msjID);
+				cargarFragmento(listaP, "tagListaPer");
+				break;
+			case Variables.ACCION_CARGAR_PERFIL:
+				Bundle msjIDPersonal = new Bundle();
+				msjIDPersonal.putString("idpersonal", cajon.getString("idpersonal"));
+				msjIDPersonal.putInt("proviene", Variables.ACCION_CARGAR_PERFIL);
+				DetallePersonal detallePerfil = new DetallePersonal();
+				detallePerfil.setArguments(msjIDPersonal);
+				cargarFragmento(detallePerfil, "tagDetallePerfil");
+				break;
 		}
 	}
 	
@@ -84,7 +89,7 @@ public class SegudoActivity extends Activity implements OnEditarMaquinariaClickL
 				onBackPressed();
 				return true;
 			case android.R.id.home:
-				finish();
+				onBackPressed();
 				return true;
 		}
 		return super.onOptionsItemSelected(item);

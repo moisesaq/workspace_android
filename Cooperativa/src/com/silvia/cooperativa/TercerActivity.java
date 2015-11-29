@@ -1,18 +1,14 @@
 package com.silvia.cooperativa;
 
-import com.silvia.dialogos.DialogDetallePedido.OnDetallePedidoClickListener;
 import com.silvia.dialogos.DialogDetalleProd.OnEditarProdClickListener;
 import com.silvia.fragmentos.DetalleCliente;
 import com.silvia.fragmentos.DetalleCliente.OnDetalleClienteClickListener;
 import com.silvia.fragmentos.ListaClientes;
 import com.silvia.fragmentos.ListaClientes.OnListaClienteClickListener;
 import com.silvia.fragmentos.ListaPedidos;
-import com.silvia.fragmentos.ListaPedidos.OnListaPedidosClickListener;
 import com.silvia.fragmentos.ListaProductos;
 import com.silvia.fragmentos.ListaUsuarios;
-import com.silvia.fragmentos.MapSucre;
 import com.silvia.fragmentos.NuevoCliente;
-import com.silvia.fragmentos.RegistrarPedido;
 import com.silvia.fragmentos.NuevoCliente.OnBackFromNuevoClienteClickListener;
 import com.silvia.fragmentos.NuevoProducto;
 import com.silvia.fragmentos.NuevoProducto.OnBackToListaProdClickListener;
@@ -24,11 +20,9 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class TercerActivity extends Activity implements OnBackFromNuevoClienteClickListener, OnDetalleClienteClickListener,
-														OnListaClienteClickListener, OnBackToListaProdClickListener, OnEditarProdClickListener,
-														OnListaPedidosClickListener, OnDetallePedidoClickListener{
+														OnListaClienteClickListener, OnBackToListaProdClickListener, OnEditarProdClickListener{
 
 	public int ACCION;
 	
@@ -37,30 +31,36 @@ public class TercerActivity extends Activity implements OnBackFromNuevoClienteCl
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tercer_activity);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		
 		Bundle cajon = getIntent().getExtras();
 		this.ACCION = cajon.getInt("accion");
-		if(ACCION==Variables.ACCION_CARGAR_NUEVO_CLIENTE){
-			Bundle msjNC = new Bundle();
-			msjNC.putInt("accion", Variables.ACCION_NUEVO_CLIENTE);
-			NuevoCliente nuevoCliente = new NuevoCliente();
-			nuevoCliente.setArguments(msjNC);
-			cargarFragmento(nuevoCliente, "tagNCliente");
-		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_CLIENTES) {
-			cargarFragmento(new MapSucre(), "tagListaC");
-		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_PRODUCTOS) {
-			cargarFragmento(new ListaProductos(), "tagListaProd");
-		}else if (ACCION==Variables.ACCION_CARGAR_LISTA_USUARIOS) {
-			cargarFragmento(new ListaUsuarios(), "tagListaUsers");
-		}else if(ACCION==Variables.ACCION_CARGAR_DETALLE_CLIENTE){
-			String idcliente = cajon.getString("idcliente");
-			onVerDetalleClienteClick(idcliente);
-		}else if(ACCION==Variables.ACCION_CARGAR_LISTA_PEDIDO){
-			Bundle msjIDUsuario = new Bundle();
-			msjIDUsuario.putString("idusuario", cajon.getString("idusuario"));
-			ListaPedidos listaPedidos = new ListaPedidos();
-			listaPedidos.setArguments(msjIDUsuario);
-			cargarFragmento(listaPedidos, "tagListaPedidos");
+		switch (ACCION) {
+			case Variables.ACCION_CARGAR_NUEVO_CLIENTE:
+				Bundle msjNC = new Bundle();
+				msjNC.putInt("accion", Variables.ACCION_NUEVO_CLIENTE);
+				NuevoCliente nuevoCliente = new NuevoCliente();
+				nuevoCliente.setArguments(msjNC);
+				cargarFragmento(nuevoCliente, "tagNCliente");
+				break;
+			case Variables.ACCION_CARGAR_LISTA_CLIENTES:
+				cargarFragmento(new ListaClientes(), "tagListaC");		
+				break;
+			case Variables.ACCION_CARGAR_LISTA_PRODUCTOS:
+				cargarFragmento(new ListaProductos(), "tagListaProd");
+				break;
+			case Variables.ACCION_CARGAR_LISTA_USUARIOS:
+				cargarFragmento(new ListaUsuarios(), "tagListaUsers");
+				break;
+			case Variables.ACCION_CARGAR_DETALLE_CLIENTE:
+				String idcliente = cajon.getString("idcliente");
+				onVerDetalleClienteClick(idcliente);
+				break;
+			case Variables.ACCION_CARGAR_LISTA_PEDIDO:
+				Bundle msjIDUsuario = new Bundle();
+				msjIDUsuario.putString("idusuario", cajon.getString("idusuario"));
+				ListaPedidos listaPedidos = new ListaPedidos();
+				listaPedidos.setArguments(msjIDUsuario);
+				cargarFragmento(listaPedidos, "tagListaPedidos");
+				break;
 		}
 	}
 	
@@ -98,7 +98,7 @@ public class TercerActivity extends Activity implements OnBackFromNuevoClienteCl
 			cargarFragmento(nuevoP, "tagNProd");
 			return true;
 		case android.R.id.home:
-			this.finish();
+			onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -168,20 +168,4 @@ public class TercerActivity extends Activity implements OnBackFromNuevoClienteCl
 		dCliente.setArguments(msjIdCliente);
 		cargarFragmento(dCliente, "tagDCliente");
 	}
-
-	@Override
-	public void onNuevoPedidoClick(String idusuario) {
-		Bundle msjIDU = new Bundle();
-		msjIDU.putString("idusuario", idusuario);
-		RegistrarPedido reg_pedido = new RegistrarPedido();
-		reg_pedido.setArguments(msjIDU);
-		cargarFragmento(reg_pedido, "tagRegPedido");
-	}
-
-	@Override
-	public void onEditarDetallePedidoClick(int accion) {
-		Toast.makeText(this, "Ir a editarrrrr", Toast.LENGTH_SHORT).show();
-	}
-
-	
 }

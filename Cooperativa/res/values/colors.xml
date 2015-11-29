@@ -7,4 +7,6 @@
     <color name="AZUL_CLARO">#00BFFF</color>
     <color name="VERDE_LIME">#32CD32</color>
     <color name="ROJO">#FF0000</color>
+    <color name="transparentGrayLight">#BFD3D3D3</color>
+    <color name="transparentGray">#B4C0C0C0</color>
 </resources>

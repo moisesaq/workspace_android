@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Locale;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.DialogInterface;
@@ -41,6 +42,7 @@ import com.silvia.cooperativa.Variables;
 import com.silvia.dialogos.DialogAgregarProdPedido;
 import com.silvia.dialogos.DialogAsignarPersonalEntrega;
 import com.silvia.dialogos.DialogFecha;
+import com.silvia.dialogos.DialogMapSucre;
 import com.silvia.modelo.Cliente;
 import com.silvia.modelo.DetallePedido;
 import com.silvia.modelo.Pedido;
@@ -65,10 +67,12 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 	public Personal personal;
 	public ListaDetallePedidoAdapter my_adapter;
 	
+	OnRegistrarPedidoClickListener callback;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
-		View v = inflater.inflate(R.layout.reg_pedido, container, false);
+		View v = inflater.inflate(R.layout.registrar_pedido, container, false);
 		setHasOptionsMenu(true);
 		inicializarComponentes(v);
 		return v;
@@ -210,7 +214,10 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 				df.show(getFragmentManager(), "tagDFE");
 				break;
 			case R.id.ivSeeGoogleMaps:
-				//Car
+				//callback.selectAddressOnMap();
+				DialogMapSucre dialogMap = new DialogMapSucre(etDireccionEntrega, getActivity());
+				dialogMap.show(getFragmentManager(), "tagDMS");
+				Toast.makeText(getActivity(), "Seleccione direccion en la mapa", Toast.LENGTH_LONG).show();
 				break;
 		}
 	}
@@ -503,6 +510,20 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		tvCostoTotal.setTag(null);
 		lyVistaCostoTotal.setVisibility(View.GONE);
 		etNota.getText().clear();
+	}
+	
+	public interface OnRegistrarPedidoClickListener{
+		public void selectAddressOnMap();
+	}
+	
+	@Override
+	public void onAttach(Activity activity){
+		super.onAttach(activity);
+		try {
+			callback = (OnRegistrarPedidoClickListener)activity;
+		} catch (ClassCastException e) {
+			throw new ClassCastException(activity.toString()+" debe implementar metodo de OnRegistrarPedidoClickListener");
+		}
 	}
 	
 }
