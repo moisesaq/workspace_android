@@ -1,12 +1,14 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/action_search"
+        android:id="@+id/action_buscar"
         android:orderInCategory="1"
-        android:showAsAction="ifRoom|withText"
         android:icon="@drawable/ic_search_white_48dp"
         android:title="@string/search"
-        android:actionViewClass="android.support.v7.widget.SearchView"/>
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"/>
     
     <item 
         android:id="@+id/action_cambiar_vista"
@@ -35,4 +37,12 @@
         android:orderInCategory="6"
         android:showAsAction="never"
         android:title="@string/menu_position"/>
+    
+    <item 
+        android:id="@+id/action_voice"
+        android:orderInCategory="7"
+        android:showAsAction="never"
+        android:title="@string/google_voice"/>
+    <group android:id="@+id/group1"></group>
+    
 </menu>

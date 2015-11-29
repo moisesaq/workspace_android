@@ -10,5 +10,6 @@
     <string name="menu_3d">Mapa 3d</string>
     <string name="menu_position">Posicion</string>
     <string name="search">Buscar</string>
+    <string name="google_voice">Voice mic</string>
 
 </resources>
