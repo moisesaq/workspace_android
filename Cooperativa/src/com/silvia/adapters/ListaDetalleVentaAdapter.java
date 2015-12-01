@@ -163,8 +163,8 @@ public class ListaDetalleVentaAdapter extends ArrayAdapter<DetalleVenta> impleme
 
 		case R.id.action_eliminar_detalle_venta:
 			//Toast.makeText(activity, "Eliminar "+detalle_seleccionado.getIdproducto(), Toast.LENGTH_SHORT).show();
-			double costo_reducido_actual = reg_venta.nueva_venta.getCosto_total()-detalle_seleccionado.getCosto();
-			reg_venta.nueva_venta.setCosto_total(costo_reducido_actual);
+			double costo_reducido_actual = reg_venta.nuevaVenta.getCosto_total()-detalle_seleccionado.getCosto();
+			reg_venta.nuevaVenta.setCosto_total(costo_reducido_actual);
 			reg_venta.tvCostoTotal.setText(new StringBuilder().append(costo_reducido_actual).append(" Bs."));
 			this.remove(detalle_seleccionado);
 			this.notifyDataSetChanged();
@@ -255,9 +255,9 @@ public class ListaDetalleVentaAdapter extends ArrayAdapter<DetalleVenta> impleme
 		etCantidad.setText(String.valueOf(detalle_seleccionado.getCantidad()));
 		LinearLayout lyCostoEntrega = (LinearLayout)dialogView.findViewById(R.id.lyCostoEntregaEditarDetalleVenta);
 		etCostoEntrega = (EditText)dialogView.findViewById(R.id.etCostoEntregaEditarDetalleVenta);
-		if(reg_venta.nueva_venta.getTipo_venta()==Variables.VENTA_DIRECTA){
+		if(reg_venta.nuevaVenta.getTipo_venta()==Variables.VENTA_DIRECTA){
 			etCantidad.addTextChangedListener(CalcVentaDirectaWatcher);
-		}else if(reg_venta.nueva_venta.getTipo_venta()==Variables.VENTA_A_DOMICILIO){
+		}else if(reg_venta.nuevaVenta.getTipo_venta()==Variables.VENTA_A_DOMICILIO){
 			lyCostoEntrega.setVisibility(View.VISIBLE);
 			etCostoEntrega.setText(String.valueOf(detalle_seleccionado.getCosto_entrega()));
 			etCostoEntrega.addTextChangedListener(CalcVentaDomicilioWatcher);
@@ -275,34 +275,34 @@ public class ListaDetalleVentaAdapter extends ArrayAdapter<DetalleVenta> impleme
 			public void onClick(DialogInterface dialog, int which) {
 				String txtCantidad = etCantidad.getText().toString().trim();
 				String txtCosto =etCosto.getText().toString().trim();
-				if(reg_venta.nueva_venta.getTipo_venta()==Variables.VENTA_DIRECTA){
+				if(reg_venta.nuevaVenta.getTipo_venta()==Variables.VENTA_DIRECTA){
 					if(!txtCosto.equals("") && !txtCantidad.equals("")){
-						double costo_anterior_venta = reg_venta.nueva_venta.getCosto_total() - detalle_seleccionado.getCosto();
+						double costo_anterior_venta = reg_venta.nuevaVenta.getCosto_total() - detalle_seleccionado.getCosto();
 						int cant = Integer.valueOf(txtCantidad);
 						double costo = Double.parseDouble(txtCosto);
 						detalle_seleccionado.setCantidad(cant);
 						detalle_seleccionado.setCosto(costo);
-						reg_venta.nueva_venta.setCosto_total(costo_anterior_venta+costo);
-						reg_venta.tvCostoTotal.setText(new StringBuilder().append(reg_venta.nueva_venta.getCosto_total()).append(" Bs."));
-						reg_venta.tvCostoTotal.setTag(reg_venta.nueva_venta.getCosto_total());
+						reg_venta.nuevaVenta.setCosto_total(costo_anterior_venta+costo);
+						reg_venta.tvCostoTotal.setText(new StringBuilder().append(reg_venta.nuevaVenta.getCosto_total()).append(" Bs."));
+						reg_venta.tvCostoTotal.setTag(reg_venta.nuevaVenta.getCosto_total());
 						ListaDetalleVentaAdapter.super.notifyDataSetChanged();
 						Toast.makeText(activity, "Editado", Toast.LENGTH_SHORT).show();
 					}else{
 						Toast.makeText(activity, "Sin editar por falta de datos", Toast.LENGTH_SHORT).show();
 					}
-				}else if(reg_venta.nueva_venta.getTipo_venta()==Variables.VENTA_A_DOMICILIO){
+				}else if(reg_venta.nuevaVenta.getTipo_venta()==Variables.VENTA_A_DOMICILIO){
 					String txtCostoEntrega = etCostoEntrega.getText().toString().trim();
 					if(!txtCosto.equals("") && !txtCantidad.equals("") && !txtCostoEntrega.equals("")){
-						double costo_anterior_venta = reg_venta.nueva_venta.getCosto_total() - detalle_seleccionado.getCosto();
+						double costo_anterior_venta = reg_venta.nuevaVenta.getCosto_total() - detalle_seleccionado.getCosto();
 						int cant = Integer.valueOf(txtCantidad);
 						double costo_entrega = Double.parseDouble(txtCostoEntrega);
 						double costo = Double.parseDouble(txtCosto);
 						detalle_seleccionado.setCantidad(cant);
 						detalle_seleccionado.setCosto_entrega(costo_entrega);
 						detalle_seleccionado.setCosto(costo);
-						reg_venta.nueva_venta.setCosto_total(costo_anterior_venta+costo);
-						reg_venta.tvCostoTotal.setText(new StringBuilder().append(reg_venta.nueva_venta.getCosto_total()).append(" Bs."));
-						reg_venta.tvCostoTotal.setTag(reg_venta.nueva_venta.getCosto_total());
+						reg_venta.nuevaVenta.setCosto_total(costo_anterior_venta+costo);
+						reg_venta.tvCostoTotal.setText(new StringBuilder().append(reg_venta.nuevaVenta.getCosto_total()).append(" Bs."));
+						reg_venta.tvCostoTotal.setTag(reg_venta.nuevaVenta.getCosto_total());
 						ListaDetalleVentaAdapter.super.notifyDataSetChanged();
 						Toast.makeText(activity, "Editado", Toast.LENGTH_SHORT).show();
 					}else{

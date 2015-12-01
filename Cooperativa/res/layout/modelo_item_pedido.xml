@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:text="17/06/2015"
                     android:textSize="@dimen/letter_normal"
-                    android:layout_marginLeft="35pt" />
+                    android:layout_marginLeft="37pt" />
 
                 <TextView
                     android:id="@+id/tvEstadoLPedido"

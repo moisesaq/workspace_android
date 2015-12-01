@@ -84,6 +84,10 @@ public class Variables {
 	public static final int PEDIDO_PENDIENTE = 0;
 	public static final int PEDIDO_ENTREGADO = 1;
 	
+	public static final double COSTO_TOTAL_DEFAULT = 0;
+	public static final double LATITUDE_DEFAULT = 0;
+	public static final double LONGITUDE_DEFAULT = 0;
+	
 	public static boolean isLetter(Character c){
 		if(Character.isLetter(c)){
 			return true;

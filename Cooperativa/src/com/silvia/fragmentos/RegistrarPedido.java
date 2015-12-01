@@ -35,6 +35,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.silvia.adapters.ListaDetallePedidoAdapter;
 import com.silvia.basedatos.DBDuraznillo;
 import com.silvia.cooperativa.R;
@@ -61,7 +62,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 	public Button btnAgregarProd, btnRegistrar, btnCancelar;
 	public ListView lvListaProd;
 	
-	public Pedido nuevo_pedido;
+	public Pedido nuevoPedido;
 	public List<DetallePedido> lista_detalle_pedido;
 	public Cliente cliente;
 	public Personal personal;
@@ -194,7 +195,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 				dAsignar.show(getFragmentManager(), "tagDAsignarPersonal");
 				break;
 			case R.id.btnRegistrarPedido:
-				if(this.nuevo_pedido!=null && this.tvCostoTotal.getTag()!=null){
+				if(this.nuevoPedido!=null && this.tvCostoTotal.getTag()!=null){
 					String ci_cliente = actvCICliente.getText().toString().trim();
 					if(!ci_cliente.equals("")){
 						iniciarValidacionParaRegistroVenta(ci_cliente);
@@ -215,7 +216,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 				break;
 			case R.id.ivSeeGoogleMaps:
 				//callback.selectAddressOnMap();
-				DialogMapSucre dialogMap = new DialogMapSucre(etDireccionEntrega, getActivity());
+				DialogMapSucre dialogMap = new DialogMapSucre(etDireccionEntrega, ivSeeGoogleMaps, getActivity());
 				dialogMap.show(getFragmentManager(), "tagDMS");
 				Toast.makeText(getActivity(), "Seleccione direccion en la mapa", Toast.LENGTH_LONG).show();
 				break;
@@ -227,12 +228,13 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		Time hora = Variables.getHoraActual();
 		tvFechaPedido.setText(Variables.FORMAT_FECHA_3.format(fecha));
 		tvHoraPedido.setText(new StringBuilder("Hrs. ").append(hora));
-		if(nuevo_pedido==null){
+		if(nuevoPedido==null){
 			Toast.makeText(getActivity(), "Iniciando nuevo pedido", Toast.LENGTH_SHORT).show();
 			lista_detalle_pedido = new ArrayList<DetallePedido>();
-			nuevo_pedido = new Pedido(generarIdPedido(), this.idusuario, Variables.ID_CLIENTE_DEFAULT, fecha, 
+			nuevoPedido = new Pedido(generarIdPedido(), this.idusuario, Variables.ID_CLIENTE_DEFAULT, fecha, 
 										hora, fecha, Variables.ID_USER_ADMIN,
-										Variables.SIN_ESPECIFICAR, 0, Variables.SIN_ESPECIFICAR, Variables.PEDIDO_PENDIENTE);
+										Variables.SIN_ESPECIFICAR, Variables.LATITUDE_DEFAULT, Variables.LONGITUDE_DEFAULT,
+										Variables.COSTO_TOTAL_DEFAULT, Variables.SIN_ESPECIFICAR, Variables.PEDIDO_PENDIENTE);
 			my_adapter = new ListaDetallePedidoAdapter(getActivity(), lista_detalle_pedido, this);
 			lvListaProd.setAdapter(my_adapter);
 		}
@@ -250,25 +252,31 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		}
 		if(this.cliente!=null){
 			if(tvNombrePersonal.getTag()!=null){
-				String direccion_entrega = etDireccionEntrega.getText().toString();
-				if(!direccion_entrega.equals("")){
-					Date fecha_entrega = (Date)tvFechaEntrega.getTag();
-					if(fecha_entrega!=null){
+				String direccionEntrega = etDireccionEntrega.getText().toString();
+				if(!direccionEntrega.equals("")){
+					if(etDireccionEntrega.getTag()!=null){
+						double latitude = (Double)etDireccionEntrega.getTag();
+						double longitude = (Double)ivSeeGoogleMaps.getTag();
+						nuevoPedido.setLatitude(latitude);
+						nuevoPedido.setLongitude(longitude);
+					}
+					Date fechaEntrega = (Date)tvFechaEntrega.getTag();
+					if(fechaEntrega!=null){
 						this.personal = (Personal)tvNombrePersonal.getTag();
-						nuevo_pedido.setHora_pedido(hora);
-						nuevo_pedido.setFecha_entrega(fecha_entrega);
-						nuevo_pedido.setIdcliente(this.cliente.getIdcliente());
-						nuevo_pedido.setIdpersonal(this.personal.getIdpersonal());
-						nuevo_pedido.setDireccion(direccion_entrega);
-						nuevo_pedido.setCosto_total((Double)tvCostoTotal.getTag());
-						nuevo_pedido.setNota(txtNota);
+						nuevoPedido.setHora_pedido(hora);
+						nuevoPedido.setFecha_entrega(fechaEntrega);
+						nuevoPedido.setIdcliente(this.cliente.getIdcliente());
+						nuevoPedido.setIdpersonal(this.personal.getIdpersonal());
+						nuevoPedido.setDireccion(direccionEntrega);
+						nuevoPedido.setCosto_total((Double)tvCostoTotal.getTag());
+						nuevoPedido.setNota(txtNota);
 						registrarPedido();
 					}else{
 						Toast.makeText(getActivity(), "Elija una fecha de entrega", Toast.LENGTH_LONG).show();
 					}
 				}else{
 					etDireccionEntrega.requestFocus();
-					etDireccionEntrega.setError("Introduzca dirección para la entrega");
+					etDireccionEntrega.setError("Introduzca dirección de entrega");
 				}
 			}else{
 				Toast.makeText(getActivity(), "Seleccione un personal para la entrega del pedido", Toast.LENGTH_LONG).show();
@@ -287,7 +295,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		DBDuraznillo db = new DBDuraznillo(getActivity());
 		try {
 			db.abrirDB();
-			if(db.insertarPedido(nuevo_pedido)){
+			if(db.insertarPedido(nuevoPedido)){
 				boolean control = false;
 				for (int i = 0; i < my_adapter.getCount(); i++) {
 					if(db.insertarDetallePedido(my_adapter.getItem(i))){
@@ -457,10 +465,10 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 				tvAviso.setVisibility(View.INVISIBLE);
 				lvListaProd.setVisibility(View.VISIBLE);
 				lvListaProd.setAdapter(my_adapter);
-				if(nuevo_pedido.getCosto_total()!=0){
+				if(nuevoPedido.getCosto_total()!=0){
 					lyVistaCostoTotal.setVisibility(View.VISIBLE);
-					tvCostoTotal.setText(new StringBuilder().append(nuevo_pedido.getCosto_total()).append(" Bs."));
-					tvCostoTotal.setTag(nuevo_pedido.getCosto_total());
+					tvCostoTotal.setText(new StringBuilder().append(nuevoPedido.getCosto_total()).append(" Bs."));
+					tvCostoTotal.setTag(nuevoPedido.getCosto_total());
 				}
 			}
 		}
@@ -503,7 +511,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		tvCIPersonal.setVisibility(View.GONE);
 		tvNombrePersonal.setText(new StringBuilder("Seleccione personal"));
 		lista_detalle_pedido = null;
-		nuevo_pedido = null;
+		nuevoPedido = null;
 		my_adapter = null;
 		lvListaProd.setVisibility(View.INVISIBLE);
 		tvAviso.setVisibility(View.VISIBLE);

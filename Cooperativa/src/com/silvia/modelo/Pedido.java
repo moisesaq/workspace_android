@@ -8,11 +8,11 @@ public class Pedido {
 	public String idpedido, idusuario, idcliente, idpersonal, direccion, nota;
 	public Date fecha_pedido, fecha_entrega;
 	public Time hora_pedido;
-	public double costo_total;
+	public double latitude, longitude, costo_total;
 	public int estado;
 	
 	public Pedido(String idpedido, String idusuario, String idcliente, Date fecha_pedido, Time hora_pedido, 
-						Date fecha_entrega, String idpersonal, String direccion, double costo_total, String nota, int estado){
+						Date fecha_entrega, String idpersonal, String direccion, double latitude, double longitude, double costo_total, String nota, int estado){
 		this.idpedido = idpedido;
 		this.idusuario = idusuario;
 		this.idcliente = idcliente;
@@ -21,6 +21,8 @@ public class Pedido {
 		this.fecha_entrega = fecha_entrega;
 		this.idpersonal = idpersonal;
 		this.direccion = direccion;
+		this.latitude = latitude;
+		this.longitude = longitude;
 		this.costo_total = costo_total;
 		this.nota = nota;
 		this.estado = estado;
@@ -114,4 +116,19 @@ public class Pedido {
 		this.estado = estado;
 	}
 
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
 }

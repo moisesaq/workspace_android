@@ -20,13 +20,10 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
-import android.content.DialogInterface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -47,14 +44,26 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 	private GoogleMap googleMap;
 	private ImageView ivSendLocationAddress;
 	MyServiceLocation serviceLocation;
+	
 	public LatLng latLng;
-	private EditText myEditText;
+	public double latitude, longitude;
+	private EditText editText;
+	private ImageView imageView;
 	private Activity activity;
+	private String txtAddress;
 	private Marker marker;
 	private MapFragment mf;
 	
-	public DialogMapSucre(EditText editText, Activity activity){
-		this.myEditText = editText;
+	public DialogMapSucre(EditText editText, ImageView imageView, Activity activity){
+		this.editText = editText;
+		this.imageView = imageView;
+		this.activity = activity;
+	}
+	
+	public DialogMapSucre(String txtAddress, double latitude, double longitude, Activity activity){
+		this.txtAddress = txtAddress;
+		this.latitude = latitude;
+		this.longitude = longitude;
 		this.activity = activity;
 	}
 	
@@ -69,13 +78,9 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 		tvDescription = (TextView)v.findViewById(R.id.tvDescriptionDialogMapSucre);
 		ivSendLocationAddress = (ImageView)v.findViewById(R.id.ivSendLocationAddressDialogMapSucre);
 		ivSendLocationAddress.setOnClickListener(this);
-//		dialog.setNeutralButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-//			
-//			@Override
-//			public void onClick(DialogInterface dialog, int which) {
-//				dialog.dismiss();	
-//			}
-//		});
+		if(editText==null){
+			addMarkerCustom(this.txtAddress, this.latitude, this.longitude);
+		}
 		dialog.setView(v);
 		return dialog.create();
 	}
@@ -113,12 +118,31 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 		}
 	}
 	
+	public void addMarkerCustom(String txtAddress, double latitude3, double longitude3){
+		if(marker!=null){
+			marker.remove();	
+		}
+		MarkerOptions markerOptions = new MarkerOptions();
+		markerOptions.title(txtAddress);
+		markerOptions.snippet("Sucre, Bolivia");
+		//markerOptions.snippet(latitude3+", "+longitude3);
+		LatLng currentLatLng = new LatLng(latitude3, longitude3);
+		markerOptions.position(currentLatLng);
+		marker = googleMap.addMarker(markerOptions);
+		tvDescription.setText("Direccion de entrega: "+txtAddress);
+		//tvDescription.setTypeface(Bold);
+		etAddress.setVisibility(View.GONE);
+		ivSendLocationAddress.setVisibility(View.GONE);
+		CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(currentLatLng, 16);
+		googleMap.moveCamera(cameraUpdate);
+	}
+	
 	@Override
-	public void onMapLongClick(LatLng latLng) {
+	public void onMapLongClick(LatLng latLng2) {
 		Geocoder geocoder = new Geocoder(getActivity());
 		List<Address> list = null;
 		try {
-			list = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
+			list = geocoder.getFromLocation(latLng2.latitude, latLng2.longitude, 1);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -127,16 +151,19 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 			if(marker!=null){
 				marker.remove();	
 			}
-			MarkerOptions markerOoptions = new MarkerOptions();
+			MarkerOptions markerOptions = new MarkerOptions();
 			if(address.getAddressLine(0)!=null){
 				etAddress.setText(address.getAddressLine(0));
-				markerOoptions.title(address.getAddressLine(0));
+				markerOptions.title(address.getAddressLine(0));
 			}else{
 				etAddress.setText(address.getLocality());
-				markerOoptions.title(address.getLocality());
+				markerOptions.title(address.getLocality());
 			}
-			markerOoptions.position(latLng);
-			marker = googleMap.addMarker(markerOoptions);
+			markerOptions.snippet(latLng2.latitude+", "+latLng2.longitude);
+			markerOptions.position(latLng2);
+			editText.setTag(latLng2.latitude);
+			imageView.setTag(latLng2.longitude);
+			marker = googleMap.addMarker(markerOptions);
 			
 			String description = "";
 			String[] data = {address.getAdminArea(), address.getLocality(), address.getCountryName(), address.getCountryCode()};
@@ -147,6 +174,7 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 						description += ", ";
 				}
 			}
+			tvDescription.setVisibility(View.VISIBLE);
 			tvDescription.setText(description);
 		}
 	}
@@ -155,8 +183,8 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 	public void onClick(View v) {
 		if(v.getId()==ivSendLocationAddress.getId()){
 			if(marker!=null){
-				myEditText.setText(etAddress.getText().toString());
-				myEditText.setTag(marker.getPosition());
+				editText.setText(etAddress.getText().toString());
+				this.dismiss();
 			}else{
 				Toast.makeText(getActivity(), "Primero debes seleccionar la ubicacion", Toast.LENGTH_SHORT).show();
 			}
@@ -170,6 +198,5 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 			activity.getFragmentManager().beginTransaction().remove(mf).commit();
 		}
 	}
-	
 	
 }

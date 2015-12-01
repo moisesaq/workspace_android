@@ -217,18 +217,18 @@ public class DialogAgregarProducto extends DialogFragment implements OnItemClick
 			int cantidad = Integer.parseInt(txtCantidad);
 			double costo = Double.valueOf(etCosto.getText().toString().trim());
 			if(TIPO_VENTA==Variables.VENTA_DIRECTA){
-				detalleV = new DetalleVenta(generarIdDetalleVenta(), registrar_venta.nueva_venta.getIdventa(), producto.getIdprod(), 
+				detalleV = new DetalleVenta(generarIdDetalleVenta(), registrar_venta.nuevaVenta.getIdventa(), producto.getIdprod(), 
 												cantidad, Variables.COSTO_ENTREGA_DEFAULT, costo);
-				double costo_total_anterior = registrar_venta.nueva_venta.getCosto_total();
-				registrar_venta.nueva_venta.setCosto_total(costo_total_anterior+costo);
+				double costo_total_anterior = registrar_venta.nuevaVenta.getCosto_total();
+				registrar_venta.nuevaVenta.setCosto_total(costo_total_anterior+costo);
 			}else if(TIPO_VENTA==Variables.VENTA_A_DOMICILIO){
 				String txtCostoEntrega = etCostoEntrega.getText().toString().trim();
 				if(!txtCostoEntrega.equals("")){
 					double costo_entrega = Double.valueOf(txtCostoEntrega);
-					detalleV = new DetalleVenta(generarIdDetalleVenta(), registrar_venta.nueva_venta.getIdventa(), producto.getIdprod(), 
+					detalleV = new DetalleVenta(generarIdDetalleVenta(), registrar_venta.nuevaVenta.getIdventa(), producto.getIdprod(), 
 													cantidad, costo_entrega, costo);
-					double costo_total_anterior = registrar_venta.nueva_venta.getCosto_total();
-					registrar_venta.nueva_venta.setCosto_total(costo_total_anterior+costo);
+					double costo_total_anterior = registrar_venta.nuevaVenta.getCosto_total();
+					registrar_venta.nuevaVenta.setCosto_total(costo_total_anterior+costo);
 				}else{
 					Toast.makeText(getActivity(), "Introduzca costo de entrega", Toast.LENGTH_SHORT).show();
 				}
@@ -238,8 +238,8 @@ public class DialogAgregarProducto extends DialogFragment implements OnItemClick
 		}
 		
 		if(detalleV!=null){
-			registrar_venta.my_adapter.add(detalleV);
-			registrar_venta.my_adapter.notifyDataSetChanged();
+			registrar_venta.myAdapter.add(detalleV);
+			registrar_venta.myAdapter.notifyDataSetChanged();
 			if(registrar_venta.lvListaProd.getVisibility()==View.INVISIBLE){
 				registrar_venta.lvListaProd.setVisibility(View.VISIBLE);
 			}
@@ -249,8 +249,8 @@ public class DialogAgregarProducto extends DialogFragment implements OnItemClick
 			if(registrar_venta.lyVistaCostoTotal.getVisibility()==View.GONE){
 				registrar_venta.lyVistaCostoTotal.setVisibility(View.VISIBLE);
 			}
-			registrar_venta.tvCostoTotal.setText(new StringBuilder().append(registrar_venta.nueva_venta.getCosto_total()).append(" Bs."));
-			registrar_venta.tvCostoTotal.setTag(registrar_venta.nueva_venta.getCosto_total());
+			registrar_venta.tvCostoTotal.setText(new StringBuilder().append(registrar_venta.nuevaVenta.getCosto_total()).append(" Bs."));
+			registrar_venta.tvCostoTotal.setTag(registrar_venta.nuevaVenta.getCosto_total());
 			limpiarCampos();
 			Toast.makeText(getActivity(), "Producto agregado a la lista de ventas", Toast.LENGTH_SHORT).show();
 		}		

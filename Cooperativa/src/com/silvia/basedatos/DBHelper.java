@@ -83,6 +83,8 @@ public class DBHelper extends SQLiteOpenHelper{
 														    "hora_venta Time not null,"+
 														    "idpersonal Text not null,"+
 														    "direccion Text,"+
+														    "latitude Double,"+
+														    "longitude Double,"+
 														    "costo_total Double not null,"+
 														    "nota Text,"+
 														    "FOREIGN KEY (idusuario) REFERENCES usuario(idusuario),"+
@@ -108,6 +110,8 @@ public class DBHelper extends SQLiteOpenHelper{
 														    "fecha_entrega Date not null,"+
 														    "idpersonal Text not null,"+
 														    "direccion Text,"+
+														    "latitude Double,"+
+														    "longitude Double,"+
 														    "costo_total Double not null,"+
 														    "nota Text,"+
 														    "estado int,"+
@@ -155,28 +159,30 @@ public class DBHelper extends SQLiteOpenHelper{
 	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL("DROP TABLE IF EXISTS cargo");
-		db.execSQL(TABLE_CARGO);
-		db.execSQL("DROP TABLE IF EXISTS maquinaria");
-		db.execSQL(TABLE_MAQUINARIA);
-		db.execSQL("DROP TABLE IF EXISTS personal");
-		db.execSQL(TABLE_PERSONAL);
-		db.execSQL("DROP TABLE IF EXISTS usuario");
-		db.execSQL(TABLE_USUARIO);
-		db.execSQL("DROP TABLE IF EXISTS cliente");
-		db.execSQL(TABLE_CLIENTE);
-		db.execSQL("DROP TABLE IF EXISTS producto");
-		db.execSQL(TABLE_PRODUCTO);
-		db.execSQL("DROP TABLE IF EXISTS venta");
-		db.execSQL(TABLE_VENTA);
-		db.execSQL("DROP TABLE IF EXISTS detalle_venta");
-		db.execSQL(TABLE_DETALLE_VENTA);
-		db.execSQL("DROP TABLE IF EXISTS cooperativa");
-		db.execSQL(TABLE_COOPERATIVA);
-		db.execSQL("DROP TABLE IF EXISTS pedido");
-		db.execSQL(TABLE_PEDIDO);
-		db.execSQL("DROP TABLE IF EXISTS detalle_pedido");
-		db.execSQL(TABLE_DETALLE_PEDIDO);
+		if(newVersion>oldVersion){
+			db.execSQL("DROP TABLE IF EXISTS cargo");
+			db.execSQL(TABLE_CARGO);
+			db.execSQL("DROP TABLE IF EXISTS maquinaria");
+			db.execSQL(TABLE_MAQUINARIA);
+			db.execSQL("DROP TABLE IF EXISTS personal");
+			db.execSQL(TABLE_PERSONAL);
+			db.execSQL("DROP TABLE IF EXISTS usuario");
+			db.execSQL(TABLE_USUARIO);
+			db.execSQL("DROP TABLE IF EXISTS cliente");
+			db.execSQL(TABLE_CLIENTE);
+			db.execSQL("DROP TABLE IF EXISTS producto");
+			db.execSQL(TABLE_PRODUCTO);
+			db.execSQL("DROP TABLE IF EXISTS venta");
+			db.execSQL(TABLE_VENTA);
+			db.execSQL("DROP TABLE IF EXISTS detalle_venta");
+			db.execSQL(TABLE_DETALLE_VENTA);
+			db.execSQL("DROP TABLE IF EXISTS cooperativa");
+			db.execSQL(TABLE_COOPERATIVA);
+			db.execSQL("DROP TABLE IF EXISTS pedido");
+			db.execSQL(TABLE_PEDIDO);
+			db.execSQL("DROP TABLE IF EXISTS detalle_pedido");
+			db.execSQL(TABLE_DETALLE_PEDIDO);
+		}
 	}
 
 }

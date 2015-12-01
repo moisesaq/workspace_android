@@ -632,9 +632,11 @@ public class DBDuraznillo {
 	//---------------------------------------------MANIPULACION TABLA VENTA--------------------------------------------------------
 	
 	public boolean insertarVenta(Venta v){
-		String query = "INSERT INTO venta(idventa, tipo_venta, idusuario, idcliente, fecha_venta, hora_venta, idpersonal, direccion, costo_total, nota) " +
-				"VALUES('"+v.getIdventa()+"',"+v.getTipo_venta()+",'"+v.getIdusuario()+"','"+v.getIdcliente()+"','"+v.getFecha_venta()+"'," +
-				"'"+v.getHora_venta()+"','"+v.getIdpersonal()+"','"+v.getDireccion()+"',"+v.getCosto_total()+",'"+v.getNota()+"')";
+		String query = "INSERT INTO venta(idventa, tipo_venta, idusuario, idcliente, fecha_venta, hora_venta, idpersonal, " +
+				"direccion, latitude, longitude, costo_total, nota) " +
+				"VALUES('"+v.getIdventa()+"',"+v.getTipo_venta()+",'"+v.getIdusuario()+"','"+v.getIdcliente()+"','"+v.getFecha_venta()+"','" +
+					v.getHora_venta()+"','"+v.getIdpersonal()+"','"+v.getDireccion()+"',"+v.getLatitude()+","+v.getLongitude()+", "+
+					v.getCosto_total()+",'"+v.getNota()+"')";
 		dbSQlite.execSQL(query);
 		return verificarVenta(v);
 	}
@@ -656,7 +658,8 @@ public class DBDuraznillo {
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				Venta venta = new Venta(c.getString(0), c.getInt(1), c.getString(2), c.getString(3), Date.valueOf(c.getString(4)), 
-											Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9));
+											Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+											c.getDouble(10), c.getString(11));
 				lista_venta.add(venta);
 			}
 		}
@@ -669,7 +672,8 @@ public class DBDuraznillo {
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				Venta venta = new Venta(c.getString(0), c.getInt(1), c.getString(2), c.getString(3), Date.valueOf(c.getString(4)), 
-									Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9));
+											Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+											c.getDouble(10), c.getString(11));
 				lista.add(venta);
 			}
 		}
@@ -682,7 +686,8 @@ public class DBDuraznillo {
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				Venta venta = new Venta(c.getString(0), c.getInt(1), c.getString(2), c.getString(3), Date.valueOf(c.getString(4)), 
-						Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9));
+											Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+											c.getDouble(10), c.getString(11));
 				lista.add(venta);
 			}
 		}
@@ -696,7 +701,8 @@ public class DBDuraznillo {
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				Venta venta = new Venta(c.getString(0), c.getInt(1), c.getString(2), c.getString(3), Date.valueOf(c.getString(4)), 
-						Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9));
+									Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+									c.getDouble(10), c.getString(11));
 				lista.add(venta);
 			}
 		}
@@ -709,7 +715,8 @@ public class DBDuraznillo {
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				Venta venta = new Venta(c.getString(0), c.getInt(1), c.getString(2), c.getString(3), Date.valueOf(c.getString(4)), 
-						Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9));
+						Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+						c.getDouble(10), c.getString(11));
 				lista.add(venta);
 			}
 		}
@@ -722,7 +729,8 @@ public class DBDuraznillo {
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 				Venta venta = new Venta(c.getString(0), c.getInt(1), c.getString(2), c.getString(3), Date.valueOf(c.getString(4)), 
-						Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9));
+						Time.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+						c.getDouble(10), c.getString(11));
 				lista.add(venta);
 			}
 		}
@@ -765,16 +773,18 @@ public class DBDuraznillo {
 	//---------------------------------------------MANIPULACION TABLA PEDIDO--------------------------------------------------------
 	
 		public boolean insertarPedido(Pedido p){
-			String query = "INSERT INTO pedido(idpedido, idusuario, idcliente, fecha_pedido, hora_pedido, fecha_entrega, idpersonal, direccion, costo_total, " +
-					"nota, estado) "+
-					"VALUES('"+p.getIdpedido()+"','"+p.getIdusuario()+"','"+p.getIdcliente()+"','"+p.getFecha_pedido()+"','"+p.getHora_pedido()+"'," +
-					"'"+p.getFecha_entrega()+"','"+p.getIdpersonal()+"','"+p.getDireccion()+"',"+p.getCosto_total()+",'"+p.getNota()+"',"+p.getEstado()+")";
+			String query = "INSERT INTO pedido(idpedido, idusuario, idcliente, fecha_pedido, hora_pedido, fecha_entrega, idpersonal, " +
+					"direccion, latitude, longitude, costo_total, nota, estado) "+
+					"VALUES('"+p.getIdpedido()+"','"+p.getIdusuario()+"','"+p.getIdcliente()+"','"+p.getFecha_pedido()+"','"+p.getHora_pedido()+"','" +
+						p.getFecha_entrega()+"','"+p.getIdpersonal()+"','"+p.getDireccion()+"',"+p.getLatitude()+", "+p.getLongitude()+", "+
+						p.getCosto_total()+",'"+p.getNota()+"',"+p.getEstado()+")";
 			dbSQlite.execSQL(query);
 			return verificarPedido(p);
 		}
 		
 		public boolean modificarDatosPedido(Pedido p){
 			String query = "UPDATE pedido SET fecha_entrega='"+p.getFecha_entrega()+"', idpersonal='"+p.getIdpersonal()+"', direccion='"+p.getDireccion()+"', " +
+								"latitude="+p.getLatitude()+", longitude="+p.getLongitude()+", "+
 								"costo_total="+p.getCosto_total()+", nota='"+p.getNota()+"', estado="+p.getEstado()+" WHERE idpedido='"+p.getIdpedido()+"'";
 			dbSQlite.execSQL(query);
 			return true;
@@ -808,7 +818,8 @@ public class DBDuraznillo {
 			if(c!=null){
 				for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 					Pedido pedido= new Pedido(c.getString(0), c.getString(1), c.getString(2), Date.valueOf(c.getString(3)), Time.valueOf(c.getString(4)), 
-												Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9), c.getInt(10));
+												Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+												c.getDouble(10), c.getString(11), c.getInt(12));
 					lista_pedido.add(pedido);
 				}
 			}
@@ -821,7 +832,8 @@ public class DBDuraznillo {
 			if(c!=null){
 				for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 					Pedido pedido= new Pedido(c.getString(0), c.getString(1), c.getString(2), Date.valueOf(c.getString(3)), Time.valueOf(c.getString(4)), 
-							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9), c.getInt(10));
+							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+							c.getDouble(10), c.getString(11), c.getInt(12));
 					lista.add(pedido);
 				}
 			}
@@ -834,7 +846,8 @@ public class DBDuraznillo {
 			if(c!=null){
 				for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 					Pedido pedido= new Pedido(c.getString(0), c.getString(1), c.getString(2), Date.valueOf(c.getString(3)), Time.valueOf(c.getString(4)), 
-							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9), c.getInt(10));
+							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+							c.getDouble(10), c.getString(11), c.getInt(12));
 					lista.add(pedido);
 				}
 			}
@@ -848,7 +861,8 @@ public class DBDuraznillo {
 			if(c!=null){
 				for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 					Pedido pedido= new Pedido(c.getString(0), c.getString(1), c.getString(2), Date.valueOf(c.getString(3)), Time.valueOf(c.getString(4)), 
-							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9), c.getInt(10));
+							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+							c.getDouble(10), c.getString(11), c.getInt(12));
 					lista.add(pedido);
 				}
 			}
@@ -861,7 +875,8 @@ public class DBDuraznillo {
 			if(c!=null){
 				for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
 					Pedido pedido= new Pedido(c.getString(0), c.getString(1), c.getString(2), Date.valueOf(c.getString(3)), Time.valueOf(c.getString(4)), 
-							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getString(9), c.getInt(10));
+							Date.valueOf(c.getString(5)), c.getString(6), c.getString(7), c.getDouble(8), c.getDouble(9), 
+							c.getDouble(10), c.getString(11), c.getInt(12));
 					lista.add(pedido);
 				}
 			}
