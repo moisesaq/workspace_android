@@ -33,6 +33,10 @@ public class DialogAsignarPropietario extends DialogFragment implements OnItemCl
 	View v;
 	NuevoVehiculo nuevo_vehiculo;
 	String idparqueo;
+	public DialogAsignarPropietario(){
+		
+	}
+	
 	public DialogAsignarPropietario(NuevoVehiculo nuevo_vehiculo, String idparqueo){
 		this.nuevo_vehiculo = nuevo_vehiculo;
 		this.idparqueo = idparqueo;

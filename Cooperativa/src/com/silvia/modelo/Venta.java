@@ -9,10 +9,10 @@ public class Venta {
 	public int tipo_venta;
 	public Date fecha_venta;
 	public Time hora_venta;
-	public double costo_total;
+	public double latitude, longitude, costo_total;
 	
 	public Venta(String idventa, int tipo_venta, String idusuario, String idcliente, Date fecha_venta, 
-								Time hora_venta, String idpersonal, String direccion, double costo_total, String nota){
+								Time hora_venta, String idpersonal, String direccion, double latitude, double longitude, double costo_total, String nota){
 		this.idventa = idventa;
 		this.tipo_venta = tipo_venta;
 		this.idusuario = idusuario;
@@ -21,6 +21,8 @@ public class Venta {
 		this.hora_venta = hora_venta;
 		this.idpersonal = idpersonal;
 		this.direccion = direccion;
+		this.latitude = latitude;
+		this.longitude = longitude;
 		this.costo_total = costo_total;
 		this.nota = nota;
 	}
@@ -107,5 +109,21 @@ public class Venta {
 
 	public String toString(){
 		return this.idcliente+"-"+this.costo_total;
+	}
+
+	public double getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
 	}
 }

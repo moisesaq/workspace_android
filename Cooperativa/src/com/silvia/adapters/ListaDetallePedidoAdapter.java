@@ -151,8 +151,8 @@ public class ListaDetallePedidoAdapter extends ArrayAdapter<DetallePedido> imple
 			return true;
 
 		case R.id.action_eliminar_detalle_venta:
-			double costo_reducido = reg_pedido.nuevo_pedido.getCosto_total()-detalle_seleccionado.getCosto();
-			reg_pedido.nuevo_pedido.setCosto_total(costo_reducido);
+			double costo_reducido = reg_pedido.nuevoPedido.getCosto_total()-detalle_seleccionado.getCosto();
+			reg_pedido.nuevoPedido.setCosto_total(costo_reducido);
 			reg_pedido.tvCostoTotal.setText(new StringBuilder().append(costo_reducido).append(" Bs."));
 			this.remove(detalle_seleccionado);
 			this.notifyDataSetChanged();
@@ -241,16 +241,16 @@ public class ListaDetallePedidoAdapter extends ArrayAdapter<DetallePedido> imple
 				String txtCosto =etCosto.getText().toString().trim();
 				String txtCostoEntrega = etCostoEntrega.getText().toString().trim();
 				if(!txtCosto.equals("") && !txtCantidad.equals("") && !txtCostoEntrega.equals("")){
-					double costo_anterior_pedido = reg_pedido.nuevo_pedido.getCosto_total() - detalle_seleccionado.getCosto();
+					double costo_anterior_pedido = reg_pedido.nuevoPedido.getCosto_total() - detalle_seleccionado.getCosto();
 					int cant = Integer.valueOf(txtCantidad);
 					double costo_entrega = Double.parseDouble(txtCostoEntrega);
 					double costo = Double.parseDouble(txtCosto);
 					detalle_seleccionado.setCantidad(cant);
 					detalle_seleccionado.setCosto_entrega(costo_entrega);
 					detalle_seleccionado.setCosto(costo);
-					reg_pedido.nuevo_pedido.setCosto_total(costo_anterior_pedido+costo);
-					reg_pedido.tvCostoTotal.setText(new StringBuilder().append(reg_pedido.nuevo_pedido.getCosto_total()).append(" Bs."));
-					reg_pedido.tvCostoTotal.setTag(reg_pedido.nuevo_pedido.getCosto_total());
+					reg_pedido.nuevoPedido.setCosto_total(costo_anterior_pedido+costo);
+					reg_pedido.tvCostoTotal.setText(new StringBuilder().append(reg_pedido.nuevoPedido.getCosto_total()).append(" Bs."));
+					reg_pedido.tvCostoTotal.setTag(reg_pedido.nuevoPedido.getCosto_total());
 					ListaDetallePedidoAdapter.super.notifyDataSetChanged();
 					Toast.makeText(activity, "Editado", Toast.LENGTH_SHORT).show();
 				}else{

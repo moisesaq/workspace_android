@@ -28,6 +28,7 @@ public class Variables {
 	public static final int ACCION_CARGAR_DETALLE_CLIENTE = 9;
 	public static final int ACCION_CARGAR_DETALLE_PERSONAL = 10;
 	public static final int ACCION_CARGAR_LISTA_PEDIDO = 11;
+	public static final int ACCION_CARGAR_BACKUP = 12;
 	
 	//static para manejo de fragment nuevo maquinaria
 	public static final int ACCION_NUEVO_MAQ = 1;
@@ -83,6 +84,12 @@ public class Variables {
 	
 	public static final int PEDIDO_PENDIENTE = 0;
 	public static final int PEDIDO_ENTREGADO = 1;
+	
+	public static final double COSTO_TOTAL_DEFAULT = 0;
+	public static final double LATITUDE_DEFAULT = 0;
+	public static final double LONGITUDE_DEFAULT = 0;
+	
+	public static final String RUTA_SERVER = "http://10.0.3.2/cooperativa/";
 	
 	public static boolean isLetter(Character c){
 		if(Character.isLetter(c)){

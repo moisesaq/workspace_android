@@ -185,10 +185,10 @@ public class DialogAgregarProdPedido extends DialogFragment implements OnItemCli
 				double costo = Double.valueOf(etCosto.getText().toString().trim());
 				double costo_entrega = Double.valueOf(txtCostoEntrega);
 				
-				detalleP = new DetallePedido(generarIdDetallePedido(), registrar_pedido.nuevo_pedido.getIdpedido(), producto.getIdprod(), 
+				detalleP = new DetallePedido(generarIdDetallePedido(), registrar_pedido.nuevoPedido.getIdpedido(), producto.getIdprod(), 
 												cantidad, costo_entrega, costo);
-				double costo_total_anterior = registrar_pedido.nuevo_pedido.getCosto_total();
-				registrar_pedido.nuevo_pedido.setCosto_total(costo_total_anterior+costo);
+				double costo_total_anterior = registrar_pedido.nuevoPedido.getCosto_total();
+				registrar_pedido.nuevoPedido.setCosto_total(costo_total_anterior+costo);
 			}else{
 				Toast.makeText(getActivity(), "Introduzca costo de entrega", Toast.LENGTH_SHORT).show();
 			}
@@ -208,8 +208,8 @@ public class DialogAgregarProdPedido extends DialogFragment implements OnItemCli
 			if(registrar_pedido.lyVistaCostoTotal.getVisibility()==View.GONE){
 				registrar_pedido.lyVistaCostoTotal.setVisibility(View.VISIBLE);
 			}
-			registrar_pedido.tvCostoTotal.setText(new StringBuilder().append(registrar_pedido.nuevo_pedido.getCosto_total()).append(" Bs."));
-			registrar_pedido.tvCostoTotal.setTag(registrar_pedido.nuevo_pedido.getCosto_total());
+			registrar_pedido.tvCostoTotal.setText(new StringBuilder().append(registrar_pedido.nuevoPedido.getCosto_total()).append(" Bs."));
+			registrar_pedido.tvCostoTotal.setTag(registrar_pedido.nuevoPedido.getCosto_total());
 			Toast.makeText(getActivity(), "Producto agregado a la lista de pedidos", Toast.LENGTH_SHORT).show();
 			limpiarCampos();
 			etCantidad.requestFocus();

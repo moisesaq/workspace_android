@@ -20,7 +20,6 @@ import com.silvia.modelo.Usuario;
 import com.silvia.modelo.Venta;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -48,12 +47,12 @@ import android.widget.Toast;
 public class DialogDetallePedido extends DialogFragment implements android.view.View.OnClickListener{
 
 	public ScrollView scrollViewParent;
-	public ImageView ivImageCliente, ivImagePersonal, ivImageMaq;
+	public ImageView ivImageCliente, ivImagePersonal, ivImageMaq, ivVerMapa, ivSeleccionarGM;
 	public TextView tvEstado, tvNombreCliente, tvCICliente, tvAtendidoPor, tvDireccion, tvNombrePersonal, tvCIPersonal, tvFechaPedido, 
 						tvHoraPedido, tvFechaEntrega, tvCostoTotal, tvNota, tvPlacaMaq, tvCapacidadMaq;
 	public ListView lvDetallePedido;
-	public ImageButton ibtnConfirmarEntrega, ibtnEditarFechaEntrega, ibtnEditarDir, ibtnEditarPersonal,ibtnEditarNota;
-	public Button btnVerPdf, btnAgregarProd;
+	public ImageButton ibtnConfirmarEntrega, ibtnEditarFechaEntrega, ibtnEditarPersonal,ibtnEditarNota, ibtnEditarDir;
+	public Button btnVerPdf, btnSeleccionarProd;
 	public EditText etEditarNota, etEditarDir;
 	public View v;
 	
@@ -61,7 +60,6 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 	public Cliente cliente;
 	public Personal personal;
 	public List<DetallePedido> lista_detalle;
-	public OnDetallePedidoClickListener listener;
 	public ListaPedidos lista_pedidos;
 	public ListaEditarDetallePedidoAdapter my_adapter;
 	
@@ -112,9 +110,13 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 		tvFechaEntrega = (TextView)v.findViewById(R.id.tvFechaEntregaDetallePedido);
 		ibtnEditarFechaEntrega = (ImageButton)v.findViewById(R.id.ibtnEditarFechaEntregaDetallePedido);
 		ibtnEditarFechaEntrega.setOnClickListener(this);
+		ivVerMapa = (ImageView)v.findViewById(R.id.ivVerMapaDetallePedido);
+		ivVerMapa.setOnClickListener(this);
 		tvDireccion = (TextView)v.findViewById(R.id.tvDireccionDetallePedido);
 		ibtnEditarDir = (ImageButton)v.findViewById(R.id.ibtnEditarDirEntregaDetallePedido);
 		ibtnEditarDir.setOnClickListener(this);
+		ivSeleccionarGM = (ImageView)v.findViewById(R.id.ivSeleccionarGoogleMapsDetallePedido);
+		ivSeleccionarGM.setOnClickListener(this);
 		ibtnEditarPersonal = (ImageButton)v.findViewById(R.id.ibtnEditarPersonalEntregaDetallePedido);
 		ibtnEditarPersonal.setOnClickListener(this);
 		ivImagePersonal = (ImageView)v.findViewById(R.id.ivImagePersonalDetallePedido);
@@ -128,8 +130,8 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 		ibtnEditarNota.setOnClickListener(this);
 		tvNota = (TextView)v.findViewById(R.id.tvNotaDetallePedido);
 		etEditarNota = (EditText)v.findViewById(R.id.etEditarNotaPedido);
-		btnAgregarProd = (Button)v.findViewById(R.id.btnSeleccionarProdDetallePedido);
-		btnAgregarProd.setOnClickListener(this);
+		btnSeleccionarProd = (Button)v.findViewById(R.id.btnSeleccionarProdDetallePedido);
+		btnSeleccionarProd.setOnClickListener(this);
 		lvDetallePedido = (ListView)v.findViewById(R.id.lvListaDetallePedido);
 		lvDetallePedido.setOnTouchListener(new OnTouchListener() {
 			@Override
@@ -150,7 +152,7 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 			ibtnEditarFechaEntrega.setVisibility(View.VISIBLE);
 			ibtnEditarDir.setVisibility(View.VISIBLE);
 			ibtnEditarPersonal.setVisibility(View.VISIBLE);
-			btnAgregarProd.setVisibility(View.VISIBLE);
+			btnSeleccionarProd.setVisibility(View.VISIBLE);
 			dialog.setNegativeButton(R.string.eliminar, new OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
@@ -237,6 +239,9 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 			tvAtendidoPor.setText(new StringBuilder("ATENDIDO POR: ").append(usuario.getUsuario()));
 		}
 		
+		if(pedido.getLatitude()==Variables.LATITUDE_DEFAULT){
+			ivVerMapa.setVisibility(View.GONE);
+		}
 		tvDireccion.setText(new StringBuilder(pedido.getDireccion()));
 		personal = getPersonal(pedido.getIdpersonal());
 		if(!personal.getImagen().equals(Variables.SIN_ESPECIFICAR)){
@@ -353,38 +358,40 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 		return usuario;
 	}
 	
-	public interface OnDetallePedidoClickListener{
-		public void onEditarDetallePedidoClick(int accion);
-	}
-	
-	@Override
-	public void onAttach(Activity activity){
-		super.onAttach(activity);
-		try{
-			listener = (OnDetallePedidoClickListener)activity;
-		}catch(ClassCastException e){
-			throw new ClassCastException(activity.toString()+" implemente metodo de OnDetallePedidoClickListener");
-		}
-	}
-
 	@Override
 	public void onClick(View v) {
-		if(ibtnConfirmarEntrega.getId()==v.getId()){
-			confirmarEntregaDePedido();
-		}else if(ibtnEditarNota.getId()==v.getId()){
-			inicializarEdicionNota();
-		}else if(ibtnEditarDir.getId()==v.getId()){
-			inicializarEdicionDireccion();
-		}else if(ibtnEditarPersonal.getId()==v.getId()){
-			inicializarEdicionPersonalDeEntrega();
-		}else if(btnAgregarProd.getId()==v.getId()){
-			DialogAgregarProdDetallePedido dAProd = new DialogAgregarProdDetallePedido(this);
-			dAProd.show(getFragmentManager(), "tagAProd");
-		}else if (btnVerPdf.getId()==v.getId()) {
-			mostrarInfoDetalleVentaPdf();
-		}else if(ibtnEditarFechaEntrega.getId()==v.getId()){
-			DialogFecha df = new DialogFecha(tvFechaEntrega);
-			df.show(getFragmentManager(), "tagFE");
+		switch (v.getId()) {
+			case R.id.ibtnConfirmarEntregaDetallePedido:
+				confirmarEntregaDePedido();
+				break;
+			case R.id.ibtnEditarFechaEntregaDetallePedido:
+				DialogFecha df = new DialogFecha(tvFechaEntrega);
+				df.show(getFragmentManager(), "tagFE");
+				break;
+			case R.id.ivVerMapaDetallePedido:
+				DialogMapSucre dMapSucre = new DialogMapSucre(this.pedido.getDireccion(), pedido.getLatitude(), pedido.getLongitude(), getActivity());
+				dMapSucre.show(getFragmentManager(), "tagDMS");
+				break;
+			case R.id.ibtnEditarDirEntregaDetallePedido:
+				inicializarEdicionDireccion();
+				break;
+			case R.id.ivSeleccionarGoogleMapsDetallePedido:
+				DialogMapSucre dialogMapSucre = new DialogMapSucre(etEditarDir, ivSeleccionarGM, getActivity());
+				dialogMapSucre.show(getFragmentManager(), "tagDialogMapSucre");
+				break;
+			case R.id.ibtnEditarPersonalEntregaDetallePedido:
+				inicializarEdicionPersonalDeEntrega();
+				break;
+			case R.id.btnSeleccionarProdDetallePedido:
+				DialogAgregarProdDetallePedido dAProd = new DialogAgregarProdDetallePedido(this);
+				dAProd.show(getFragmentManager(), "tagAProd");
+				break;
+			case R.id.btnVerPdfDetallePedido:
+				mostrarInfoDetalleVentaPdf();
+				break;
+			case R.id.ibtnEditarNotaDetallePedido:
+				inicializarEdicionNota();
+				break;
 		}
 	}
 	
@@ -400,21 +407,32 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 			etEditarDir.setVisibility(View.VISIBLE);
 			etEditarDir.setText(pedido.getDireccion());
 			etEditarDir.requestFocus();
-			Toast.makeText(getActivity(), "Editar direccion de entrega", Toast.LENGTH_SHORT).show();
+			ivSeleccionarGM.setVisibility(View.VISIBLE);
+			Toast.makeText(getActivity(), "Editar direccion de entrega "+pedido.getLatitude()+", "+pedido.getLongitude(), Toast.LENGTH_LONG).show();
 		}else{
 			String txtDir = etEditarDir.getText().toString();
-			if(txtDir.length()<=5){
+			if(txtDir.length()<=4){
 				etEditarDir.setError("Direccion debe tener minimo 5 caracteres");
 				etEditarDir.requestFocus();
 			}else if(!txtDir.equals(pedido.getDireccion())){
 				pedido.setDireccion(txtDir);
+				if(etEditarDir.getTag()!=null && ivSeleccionarGM.getTag()!=null){
+					double latitude = (Double)etEditarDir.getTag();
+					double longitude = (Double)ivSeleccionarGM.getTag();
+					this.pedido.setLatitude(latitude);
+					this.pedido.setLongitude(longitude);
+				}
 				if(editarDatosPedido(pedido)){
 					Toast.makeText(getActivity(), "Direccion editado", Toast.LENGTH_SHORT).show();
 					tvDireccion.setText(txtDir);
+					if(pedido.getLatitude()!=Variables.LATITUDE_DEFAULT){
+						ivVerMapa.setVisibility(View.VISIBLE);
+					}
 				}
 			}
 			ibtnEditarDir.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_edit_black_24dp));
 			etEditarDir.setVisibility(View.GONE);
+			ivSeleccionarGM.setVisibility(View.GONE);
 		}
 	}
 
@@ -542,7 +560,7 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 					ibtnEditarFechaEntrega.setVisibility(View.GONE);
 					ibtnEditarDir.setVisibility(View.GONE);
 					ibtnEditarPersonal.setVisibility(View.GONE);
-					btnAgregarProd.setVisibility(View.GONE);
+					btnSeleccionarProd.setVisibility(View.GONE);
 					ibtnConfirmarEntrega.setVisibility(View.GONE);
 					lista_pedidos.my_adapter.notifyDataSetChanged();
 				}
@@ -574,8 +592,8 @@ public class DialogDetallePedido extends DialogFragment implements android.view.
 			
 			if(lista_dp.size()!=0 && lista_dp!=null){
 				Venta venta = new Venta(generarIdVenta(), Variables.VENTA_A_DOMICILIO, pedido.getIdusuario(), pedido.getIdcliente(), 
-						Variables.getFechaActual(), Variables.getHoraActual(), pedido.getIdpersonal(), pedido.getDireccion(), 
-						pedido.getCosto_total(), pedido.getNota());
+										Variables.getFechaActual(), Variables.getHoraActual(), pedido.getIdpersonal(), pedido.getDireccion(), 
+											pedido.getLatitude(), pedido.getLongitude(), pedido.getCosto_total(), pedido.getNota());
 				if(db.insertarVenta(venta)){
 					DetalleVenta dv = null;
 					for (int i = 0; i < lista_dp.size(); i++) {

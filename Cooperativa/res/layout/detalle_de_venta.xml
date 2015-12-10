@@ -29,8 +29,8 @@
 
             <ImageView
                 android:id="@+id/ivImageClienteDetalleVenta"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/custom_imageview"
                 android:padding="3dp"
                 android:scaleType="centerCrop"
@@ -109,7 +109,7 @@
             android:layout_marginTop="1dp"
             android:visibility="gone" >
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -117,9 +117,10 @@
                 <TextView
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
-	                android:text="Direccion de entrega: "
+	                android:text="Entregado en: "
 	                android:textStyle="bold"
 	                android:textSize="@dimen/letter_small"
+	                android:layout_gravity="center_vertical"
                	 	android:textAppearance="?android:attr/textAppearanceSmallPopupMenu" />
                 
                 <TextView
@@ -127,10 +128,21 @@
 	                android:layout_width="wrap_content"
 	                android:layout_height="wrap_content"
 	                android:text="Av. Jaime Mendoza 120"
-	                android:layout_marginLeft="5dp"
+	                android:layout_marginLeft="35pt"
+	                android:layout_gravity="center_vertical"
 	                android:textSize="@dimen/letter_normal"
                 	android:textAppearance="?android:attr/textAppearanceSmallPopupMenu"/>
-            </LinearLayout>
+                
+                <ImageView
+                    android:id="@+id/ivVerMapaDetalleVenta"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/custom_view_button"
+                    android:src="@drawable/ic_location_on_black_24dp"
+                    android:visibility="visible"/>
+            </FrameLayout>
             
 
             <TextView
@@ -149,8 +161,8 @@
 
                 <ImageView
                     android:id="@+id/ivImagePersonalDetalleVenta"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/custom_imageview"
                     android:padding="3dp"
                     android:scaleType="centerCrop"

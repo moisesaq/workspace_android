@@ -1,5 +1,6 @@
 package com.silvia.cooperativa;
 
+import com.silvia.fragmentos.Backup;
 import com.silvia.fragmentos.ListaPedidos;
 import com.silvia.fragmentos.ListaPedidos.OnListaPedidosClickListener;
 import com.silvia.fragmentos.MapSucre;
@@ -14,7 +15,6 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class CuartoActivity extends Activity implements OnListaPedidosClickListener, OnRegistrarPedidoClickListener, OnMapSucreClickListener{
 
@@ -36,6 +36,9 @@ public class CuartoActivity extends Activity implements OnListaPedidosClickListe
 				ListaPedidos listaPedidos = new ListaPedidos();
 				listaPedidos.setArguments(msjIDUsuario);
 				cargarFragmento(listaPedidos, "tagListaPedidos");
+				break;
+			case Variables.ACCION_CARGAR_BACKUP:
+				cargarFragmento(new Backup(), "tagBackup");
 				break;
 		}
 	}
