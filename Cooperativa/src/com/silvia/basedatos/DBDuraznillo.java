@@ -146,6 +146,19 @@ public class DBDuraznillo {
 		return lista_cargo;
 	}
 	
+	public List<Cargo> getAllCargos(){
+		List<Cargo> lista_cargo = new ArrayList<Cargo>();
+		String query = "SELECT * FROM cargo";
+		Cursor c = dbSQlite.rawQuery(query, null);
+		if(c!=null){
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+				Cargo cargo = new Cargo(c.getString(0), c.getString(1), c.getDouble(2), c.getString(3), c.getInt(4));
+				lista_cargo.add(cargo);
+			}
+		}
+		return lista_cargo;
+	}
+	
 	//----------------------------------------------MANIPULACION TABLA MAQUINARIA-------------------------------------------------
 	
 	public boolean insertarMaquinaria(Maquinaria m){
@@ -211,6 +224,20 @@ public class DBDuraznillo {
 	public List<Maquinaria> getTodosLasMaquinarias(){
 		List<Maquinaria> lista_maquinaria = new ArrayList<Maquinaria>();
 		String query = "SELECT * FROM maquinaria WHERE estado="+Variables.NO_ELIMINADO+" AND idmaquinaria!='"+Variables.ID_MAQ_DEFAULT+"'";
+		Cursor c = dbSQlite.rawQuery(query, null);
+		if(c!=null){
+			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
+				Maquinaria maq = new Maquinaria(c.getString(0), c.getString(1), c.getString(2), c.getDouble(3),c.getString(4), 
+													c.getString(5), c.getString(6), c.getInt(7));
+				lista_maquinaria.add(maq);
+			}
+		}
+		return lista_maquinaria;
+	}
+	
+	public List<Maquinaria> getAllMaquinarias(){
+		List<Maquinaria> lista_maquinaria = new ArrayList<Maquinaria>();
+		String query = "SELECT * FROM maquinaria";
 		Cursor c = dbSQlite.rawQuery(query, null);
 		if(c!=null){
 			for(c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
@@ -335,6 +362,20 @@ public class DBDuraznillo {
 		return lista_per;
 	}
 	
+	public List<Personal> getAllPersonales(){
+		List<Personal> lista_per = new ArrayList<Personal>();
+		String query = "SELECT * FROM personal";
+		Cursor c = dbSQlite.rawQuery(query, null);
+		if(c!=null){
+			for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+				Personal per = new Personal(c.getString(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getInt(5), 
+											c.getString(6), Date.valueOf(c.getString(7)), Date.valueOf(c.getString(8)), c.getString(9), c.getInt(10), 
+											c.getString(11), c.getString(12));
+				lista_per.add(per);
+			}
+		}
+		return lista_per;
+	}
 	//-----------------------------------------------MANIPULACION TABLA USUARIO------------------------------------------------
 	
 	public boolean insertarUsuario(Usuario u){

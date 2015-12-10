@@ -33,10 +33,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 @SuppressLint("ValidFragment")
-public class DialogDetalleVenta extends DialogFragment{
+public class DialogDetalleVenta extends DialogFragment implements android.view.View.OnClickListener{
 
 	public LinearLayout lyVistaNota;
-	public ImageView ivImageCliente, ivImagePersonal;
+	public ImageView ivImageCliente, ivImagePersonal, ivVerMapa;
 	public TextView tvNombreCliente, tvCICliente, tvTipoVenta, tvDireccion, tvNombrePersonal, tvCIPersonal, tvFechaVenta, tvHoraVenta, tvCostoTotal, tvNota;
 	public LinearLayout lyPersonal;
 	public ListView lvDetalleVenta;
@@ -79,6 +79,8 @@ public class DialogDetalleVenta extends DialogFragment{
 		tvTipoVenta = (TextView)v.findViewById(R.id.tvTipoVentaDetalleVenta);
 		lyPersonal = (LinearLayout)v.findViewById(R.id.lyPersonalDetalleVenta);
 		tvDireccion = (TextView)v.findViewById(R.id.tvDireccionDetalleVenta);
+		ivVerMapa = (ImageView)v.findViewById(R.id.ivVerMapaDetalleVenta);
+		ivVerMapa.setOnClickListener(this);
 		ivImagePersonal = (ImageView)v.findViewById(R.id.ivImagePersonalDetalleVenta);
 		tvNombrePersonal = (TextView)v.findViewById(R.id.tvNombrePersonalDetalleVenta);
 		tvCIPersonal = (TextView)v.findViewById(R.id.tvCIPersonalDetalleVenta);
@@ -116,6 +118,14 @@ public class DialogDetalleVenta extends DialogFragment{
 		});
 		
 		return dialog.create();
+	}
+	
+	@Override
+	public void onClick(View v){
+		if(v.getId()==ivVerMapa.getId()){
+			DialogMapSucre dialogMap = new DialogMapSucre(venta.getDireccion(), venta.getLatitude(), venta.getLongitude(), getActivity());
+			dialogMap.show(getFragmentManager(), "tagDMap");
+		}
 	}
 	
 	public void mostrarInfoDetalleVentaPdf(){

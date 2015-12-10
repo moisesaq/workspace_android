@@ -76,6 +76,7 @@ public class MiMenu extends Fragment implements OnItemClickListener{
 		miMenu.add(new ItemMiMenu(5, R.drawable.ic_ocupation_128, "Cargos", "Permite ver, editar y registrar cargos"));
 		miMenu.add(new ItemMiMenu(6, R.drawable.ic_excavator_128, "Maquinarias", "Permite ver y registrar cargo"));
 		miMenu.add(new ItemMiMenu(101, R.drawable.ic_icon_coop_256, "Datos Cooperativa", "Permite ver y editar los datos generales de la cooperativa"));
+		miMenu.add(new ItemMiMenu(10, R.drawable.ic_backup_128, "Backup", "Permite sacar BACKUP de todos los datos"));
 		miMenu.add(new ItemMiMenu(8, R.drawable.ic_close_white_36dp, "Cerrar Sesión", "Cierra sesión del usuario actual"));
 	}
 
@@ -153,7 +154,13 @@ public class MiMenu extends Fragment implements OnItemClickListener{
 				intentPedidos.putExtras(msjPedidos);
 				startActivity(intentPedidos);
 				break;
-					
+			case 10:
+				Bundle msjBackup = new Bundle();
+				Intent intentBackup = new Intent(getActivity(), CuartoActivity.class);
+				msjBackup.putInt("accion", Variables.ACCION_CARGAR_BACKUP);
+				intentBackup.putExtras(msjBackup);
+				startActivity(intentBackup);
+				break;
 		}
 	}
 

@@ -35,7 +35,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.model.LatLng;
 import com.silvia.adapters.ListaDetallePedidoAdapter;
 import com.silvia.basedatos.DBDuraznillo;
 import com.silvia.cooperativa.R;
@@ -110,7 +109,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		ivFechaEntrega = (ImageView)v.findViewById(R.id.ivFechaEntregaPedido);
 		ivFechaEntrega.setOnClickListener(this);
 		etDireccionEntrega = (EditText)v.findViewById(R.id.etDireccionEntregaPedido);
-		ivSeeGoogleMaps = (ImageView)v.findViewById(R.id.ivSeeGoogleMaps);
+		ivSeeGoogleMaps = (ImageView)v.findViewById(R.id.ivSeeGoogleMapsPedido);
 		ivSeeGoogleMaps.setOnClickListener(this);
 		ivImagePersonal = (ImageView)v.findViewById(R.id.ivSeleccionarPersonalPedido);
 		ivImagePersonal.setOnClickListener(this);
@@ -214,7 +213,7 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 				DialogFecha df = new DialogFecha(tvFechaEntrega);
 				df.show(getFragmentManager(), "tagDFE");
 				break;
-			case R.id.ivSeeGoogleMaps:
+			case R.id.ivSeeGoogleMapsPedido:
 				//callback.selectAddressOnMap();
 				DialogMapSucre dialogMap = new DialogMapSucre(etDireccionEntrega, ivSeeGoogleMaps, getActivity());
 				dialogMap.show(getFragmentManager(), "tagDMS");
@@ -518,6 +517,9 @@ public class RegistrarPedido extends Fragment implements OnClickListener{
 		tvCostoTotal.setTag(null);
 		lyVistaCostoTotal.setVisibility(View.GONE);
 		etNota.getText().clear();
+		etDireccionEntrega.getText().clear();
+		etDireccionEntrega.setTag(null);
+		ivSeeGoogleMaps.setTag(null);
 	}
 	
 	public interface OnRegistrarPedidoClickListener{

@@ -167,10 +167,11 @@ public class DialogAutenticacion extends DialogFragment implements OnClickListen
 								Usuario usuario = new Usuario(Variables.ID_USER_ADMIN, nombre_usuario, clave, Variables.NO_ELIMINADO, personal.getIdpersonal());
 								if(db.insertarUsuario(usuario)){
 									Toast.makeText(getActivity(), "Administrador registrado exitosamente", Toast.LENGTH_SHORT).show();
-									mostrarRecomendacion();
 									setIDUsuarioShare(usuario.getIdusuario());
 									main_activity.inicializarTabs();
-									dismiss();
+									this.dismiss();
+									mostrarRecomendacion();
+									
 								}else{
 									Toast.makeText(getActivity(), "No se pudo registrar administrador", Toast.LENGTH_SHORT).show();
 								}

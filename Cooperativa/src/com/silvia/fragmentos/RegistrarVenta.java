@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import com.google.android.gms.maps.model.LatLng;
 import com.silvia.adapters.ListaDetalleVentaAdapter;
 import com.silvia.basedatos.DBDuraznillo;
 import com.silvia.cooperativa.PDFCustomManager;
@@ -16,6 +15,7 @@ import com.silvia.cooperativa.Variables;
 import com.silvia.dialogos.DialogAgregarProducto;
 import com.silvia.dialogos.DialogAsignarPersonalEntrega;
 import com.silvia.dialogos.DialogEnviarInformeVentas;
+import com.silvia.dialogos.DialogMapSucre;
 import com.silvia.modelo.Cliente;
 import com.silvia.modelo.DetalleVenta;
 import com.silvia.modelo.Personal;
@@ -55,11 +55,11 @@ public class RegistrarVenta extends Fragment implements OnClickListener, OnItemS
 	public ScrollView scrollParent;
 	public Spinner spTipoVenta;
 	public AutoCompleteTextView actvCICliente;
-	public ImageView ivImagePersonal, ivImageMaq, ivImageCliente;
+	public ImageView ivSelectPersonal, ivImageMaq, ivImageCliente, ivSeeGoogleMap;
 	public EditText etDireccionEntrega, etNota;
 	public TextView tvFechaVenta, tvHoraVenta, tvCIPersonal, tvNombrePersonal, tvPlacaMaq, tvCapacidadMaq, tvAviso, tvCostoTotal, tvNombreCliente;
 	public ListView lvListaProd;
-	public Button btnAgregarProd, btnRegistrar, btnCancelar;
+	public Button btnSeleccionarProd, btnRegistrar, btnCancelar;
 	public LinearLayout lyVistaPersonalDeEntrega, lyVistaMaq, lyVistaCostoTotal;
 	
 	public int TIPO_VENTA;
@@ -105,16 +105,18 @@ public class RegistrarVenta extends Fragment implements OnClickListener, OnItemS
 		tvHoraVenta.setText(new StringBuilder("Hrs. ").append(Variables.getHoraActual().toString()));
 		lyVistaPersonalDeEntrega = (LinearLayout)v.findViewById(R.id.lyVistaPersonalDeEntregaVenta);
 		etDireccionEntrega = (EditText)v.findViewById(R.id.etDireccionEntregaVenta);
-		ivImagePersonal = (ImageView)v.findViewById(R.id.ivSeleccionarPersonalVenta);
-		ivImagePersonal.setOnClickListener(this);
+		ivSeeGoogleMap = (ImageView)v.findViewById(R.id.ivSeeGoogleMapsVenta);
+		ivSeeGoogleMap.setOnClickListener(this);
+		ivSelectPersonal = (ImageView)v.findViewById(R.id.ivSeleccionarPersonalVenta);
+		ivSelectPersonal.setOnClickListener(this);
 		tvCIPersonal = (TextView)v.findViewById(R.id.tvCIPersonalVenta);
 		tvNombrePersonal = (TextView)v.findViewById(R.id.tvNombrePersonalVenta);
 		lyVistaMaq = (LinearLayout)v.findViewById(R.id.lyVistaMaqVenta);
 		ivImageMaq = (ImageView)v.findViewById(R.id.ivImagenMaqVenta);
 		tvPlacaMaq = (TextView)v.findViewById(R.id.tvPlacaMaqVenta);
 		tvCapacidadMaq = (TextView)v.findViewById(R.id.tvCapacidadMaqVenta);
-		btnAgregarProd = (Button)v.findViewById(R.id.btnSeleccionarProdVenta);
-		btnAgregarProd.setOnClickListener(this);
+		btnSeleccionarProd = (Button)v.findViewById(R.id.btnSeleccionarProdVenta);
+		btnSeleccionarProd.setOnClickListener(this);
 		lvListaProd = (ListView)v.findViewById(R.id.lvListaProdVenta);
 		lvListaProd.setOnTouchListener(new  OnTouchListener() {
 			@Override
@@ -178,40 +180,49 @@ public class RegistrarVenta extends Fragment implements OnClickListener, OnItemS
 
 	@Override
 	public void onClick(View v){
-		if(v.getId()==btnAgregarProd.getId()){
-			Date fecha = Variables.getFechaActual();
-			Time hora = Variables.getHoraActual();
-			tvFechaVenta.setText(Variables.FORMAT_FECHA_3.format(fecha));
-			tvHoraVenta.setText(new StringBuilder("Hrs. ").append(hora));
-			if(nuevaVenta==null){
-				Toast.makeText(getActivity(), "Iniciando nueva venta", Toast.LENGTH_SHORT).show();
-				lista_detalle_venta = new ArrayList<DetalleVenta>();
-				nuevaVenta = new Venta(generarIdVenta(), TIPO_VENTA, idusuario, Variables.ID_CLIENTE_DEFAULT, fecha, hora, 
-									Variables.ID_USER_ADMIN, Variables.SIN_ESPECIFICAR, Variables.LATITUDE_DEFAULT, Variables.LONGITUDE_DEFAULT, 
-									Variables.COSTO_TOTAL_DEFAULT, Variables.SIN_ESPECIFICAR);
-				myAdapter = new ListaDetalleVentaAdapter(getActivity(), lista_detalle_venta, this, Variables.PROV_VENTA);
-				lvListaProd.setAdapter(myAdapter);
-			}
-			DialogAgregarProducto dAgregar = new DialogAgregarProducto(this);
-			dAgregar.show(getFragmentManager(), "tagDAgregarProd");
-		}else if (v.getId()==ivImagePersonal.getId()) {
-			DialogAsignarPersonalEntrega dAsignar = new DialogAsignarPersonalEntrega(ivImagePersonal, tvCIPersonal, tvNombrePersonal, 
-																lyVistaMaq, ivImageMaq, tvPlacaMaq, tvCapacidadMaq);
-			dAsignar.show(getFragmentManager(), "tagDAsignarPersonal");
-		}else if (v.getId()==btnRegistrar.getId()) {
-			if(this.nuevaVenta!=null && this.tvCostoTotal.getTag()!=null){
-				String ci_cliente = actvCICliente.getText().toString().trim();
-				if(!ci_cliente.equals("")){
-					iniciarValidacionParaRegistroVenta(ci_cliente);
-				}else{
-					actvCICliente.requestFocus();
-					actvCICliente.setError("Introduzca CI del cliente");
+		switch (v.getId()) {
+			case R.id.btnSeleccionarProdVenta:
+				Date fecha = Variables.getFechaActual();
+				Time hora = Variables.getHoraActual();
+				tvFechaVenta.setText(Variables.FORMAT_FECHA_3.format(fecha));
+				tvHoraVenta.setText(new StringBuilder("Hrs. ").append(hora));
+				if(nuevaVenta==null){
+					Toast.makeText(getActivity(), "Iniciando nueva venta", Toast.LENGTH_SHORT).show();
+					lista_detalle_venta = new ArrayList<DetalleVenta>();
+					nuevaVenta = new Venta(generarIdVenta(), TIPO_VENTA, idusuario, Variables.ID_CLIENTE_DEFAULT, fecha, hora, 
+										Variables.ID_USER_ADMIN, Variables.SIN_ESPECIFICAR, Variables.LATITUDE_DEFAULT, Variables.LONGITUDE_DEFAULT, 
+										Variables.COSTO_TOTAL_DEFAULT, Variables.SIN_ESPECIFICAR);
+					myAdapter = new ListaDetalleVentaAdapter(getActivity(), lista_detalle_venta, this, Variables.PROV_VENTA);
+					lvListaProd.setAdapter(myAdapter);
 				}
-			}else{
-				Toast.makeText(getActivity(), "Faltan datos para la venta, llene correctamente por favor", Toast.LENGTH_LONG).show();
-			}
-		}else if(v.getId()==btnCancelar.getId()){
-			limpiarCampos();
+				DialogAgregarProducto dAgregar = new DialogAgregarProducto(this);
+				dAgregar.show(getFragmentManager(), "tagDAgregarProd");
+				break;
+			case R.id.ivSeleccionarPersonalVenta:
+				DialogAsignarPersonalEntrega dAsignar = new DialogAsignarPersonalEntrega(ivSelectPersonal, tvCIPersonal, tvNombrePersonal, 
+						lyVistaMaq, ivImageMaq, tvPlacaMaq, tvCapacidadMaq);
+				dAsignar.show(getFragmentManager(), "tagDAsignarPersonal");
+				break;
+			case R.id.btnRegistrarVenta:
+				if(this.nuevaVenta!=null && this.tvCostoTotal.getTag()!=null){
+					String ci_cliente = actvCICliente.getText().toString().trim();
+					if(!ci_cliente.equals("")){
+						iniciarValidacionParaRegistroVenta(ci_cliente);
+					}else{
+						actvCICliente.requestFocus();
+						actvCICliente.setError("Introduzca CI del cliente");
+					}
+				}else{
+					Toast.makeText(getActivity(), "Faltan datos para la venta, llene correctamente por favor", Toast.LENGTH_LONG).show();
+				}
+				break;
+			case R.id.btnCancelarVenta:
+				limpiarCampos();
+				break;
+			case R.id.ivSeeGoogleMapsVenta:
+				DialogMapSucre dialogMapSucre = new DialogMapSucre(etDireccionEntrega, ivSeeGoogleMap, getActivity());
+				dialogMapSucre.show(getFragmentManager(), "tagDGoogleMap");
+				break;
 		}
 	}
 	
@@ -236,11 +247,12 @@ public class RegistrarVenta extends Fragment implements OnClickListener, OnItemS
 					String direccionEntrega = etDireccionEntrega.getText().toString();
 					if(!direccionEntrega.equals("")){
 						if(etDireccionEntrega.getTag()!=null){
-							LatLng latLng = (LatLng)etDireccionEntrega.getTag();
-							nuevaVenta.setLatitude(latLng.latitude);
-							nuevaVenta.setLongitude(latLng.longitude);
+							double lat = (Double)etDireccionEntrega.getTag();
+							double lng = (Double)ivSeeGoogleMap.getTag();
+							nuevaVenta.setLatitude(lat);
+							nuevaVenta.setLongitude(lng);
 						}
-						//TODO ACA HAY QUE DAR UN CHEKEO
+						
 						this.personal = (Personal)tvNombrePersonal.getTag();
 						nuevaVenta.setTipo_venta(TIPO_VENTA);
 						nuevaVenta.setHora_venta(hora);
@@ -526,6 +538,9 @@ public class RegistrarVenta extends Fragment implements OnClickListener, OnItemS
 		tvAviso.setVisibility(View.VISIBLE);
 		tvCostoTotal.setTag(null);
 		lyVistaCostoTotal.setVisibility(View.GONE);
+		etDireccionEntrega.getText().clear();
+		etDireccionEntrega.setTag(null);
+		ivSeeGoogleMap.setTag(null);
 	}
 	
 }

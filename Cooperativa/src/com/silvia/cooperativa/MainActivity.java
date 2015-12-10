@@ -10,12 +10,12 @@ import com.silvia.modelo.Cliente;
 import android.os.Bundle;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.app.FragmentActivity;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.Menu;
@@ -24,7 +24,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 import android.widget.SearchView.OnQueryTextListener;
 
-public class MainActivity extends FragmentActivity{
+public class MainActivity extends Activity{
 
 	public String idusuario;
 	private SearchView mySearchView;

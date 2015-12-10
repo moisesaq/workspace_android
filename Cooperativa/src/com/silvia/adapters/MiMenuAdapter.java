@@ -63,14 +63,14 @@ public class MiMenuAdapter extends ArrayAdapter<ItemMiMenu>{
 				}
 			}else{
 				holder.ivImage.setImageResource(R.drawable.ic_supervisor_account_white_48dp);
-				holder.ivImage.setPadding(5, 5, 5, 5);
+				holder.ivImage.setPadding(10, 10, 10, 10);
 			}
 		}else if(miMenu.getIdmenu()==101){
 			holder.ivImage.setImageResource(miMenu.getIcono());
 			holder.ivImage.setPadding(0, 0, 0, 0);
 		}else{
 			holder.ivImage.setImageResource(miMenu.getIcono());
-			holder.ivImage.setPadding(5, 5, 5, 5);
+			holder.ivImage.setPadding(10, 10, 10, 10);
 		}
 		holder.tvTitulo.setText(miMenu.getTitulo());
 		holder.tvDescripcion.setText(miMenu.getDescripcion());

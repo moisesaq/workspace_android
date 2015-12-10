@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.FragmentManager;
+import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -53,6 +54,7 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 	private String txtAddress;
 	private Marker marker;
 	private MapFragment mf;
+	private boolean isEnabledMap;
 	
 	public DialogMapSucre(EditText editText, ImageView imageView, Activity activity){
 		this.editText = editText;
@@ -78,10 +80,14 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 		tvDescription = (TextView)v.findViewById(R.id.tvDescriptionDialogMapSucre);
 		ivSendLocationAddress = (ImageView)v.findViewById(R.id.ivSendLocationAddressDialogMapSucre);
 		ivSendLocationAddress.setOnClickListener(this);
+		dialog.setView(v);
 		if(editText==null){
 			addMarkerCustom(this.txtAddress, this.latitude, this.longitude);
+			isEnabledMap = false;
+		}else{
+			isEnabledMap = true;
 		}
-		dialog.setView(v);
+		
 		return dialog.create();
 	}
 
@@ -130,7 +136,7 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 		markerOptions.position(currentLatLng);
 		marker = googleMap.addMarker(markerOptions);
 		tvDescription.setText("Direccion de entrega: "+txtAddress);
-		//tvDescription.setTypeface(Bold);
+		tvDescription.setTypeface(Typeface.DEFAULT_BOLD);
 		etAddress.setVisibility(View.GONE);
 		ivSendLocationAddress.setVisibility(View.GONE);
 		CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(currentLatLng, 16);
@@ -139,43 +145,45 @@ public class DialogMapSucre extends DialogFragment implements OnMapLongClickList
 	
 	@Override
 	public void onMapLongClick(LatLng latLng2) {
-		Geocoder geocoder = new Geocoder(getActivity());
-		List<Address> list = null;
-		try {
-			list = geocoder.getFromLocation(latLng2.latitude, latLng2.longitude, 1);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		if(list!=null){
-			Address address = list.get(0);
-			if(marker!=null){
-				marker.remove();	
+		if(isEnabledMap){
+			Geocoder geocoder = new Geocoder(getActivity());
+			List<Address> list = null;
+			try {
+				list = geocoder.getFromLocation(latLng2.latitude, latLng2.longitude, 1);
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-			MarkerOptions markerOptions = new MarkerOptions();
-			if(address.getAddressLine(0)!=null){
-				etAddress.setText(address.getAddressLine(0));
-				markerOptions.title(address.getAddressLine(0));
-			}else{
-				etAddress.setText(address.getLocality());
-				markerOptions.title(address.getLocality());
-			}
-			markerOptions.snippet(latLng2.latitude+", "+latLng2.longitude);
-			markerOptions.position(latLng2);
-			editText.setTag(latLng2.latitude);
-			imageView.setTag(latLng2.longitude);
-			marker = googleMap.addMarker(markerOptions);
-			
-			String description = "";
-			String[] data = {address.getAdminArea(), address.getLocality(), address.getCountryName(), address.getCountryCode()};
-			for (int i = 0; i < data.length; i++) {
-				if(data[i]!=null){
-					description += data[i];
-					if((i+1)!=data.length)
-						description += ", ";
+			if(list!=null){
+				Address address = list.get(0);
+				if(marker!=null){
+					marker.remove();	
 				}
+				MarkerOptions markerOptions = new MarkerOptions();
+				if(address.getAddressLine(0)!=null){
+					etAddress.setText(address.getAddressLine(0));
+					markerOptions.title(address.getAddressLine(0));
+				}else{
+					etAddress.setText(address.getLocality());
+					markerOptions.title(address.getLocality());
+				}
+				markerOptions.snippet(latLng2.latitude+", "+latLng2.longitude);
+				markerOptions.position(latLng2);
+				editText.setTag(latLng2.latitude);
+				imageView.setTag(latLng2.longitude);
+				marker = googleMap.addMarker(markerOptions);
+				
+				String description = "";
+				String[] data = {address.getAdminArea(), address.getLocality(), address.getCountryName(), address.getCountryCode()};
+				for (int i = 0; i < data.length; i++) {
+					if(data[i]!=null){
+						description += data[i];
+						if((i+1)!=data.length)
+							description += ", ";
+					}
+				}
+				tvDescription.setVisibility(View.VISIBLE);
+				tvDescription.setText(description);
 			}
-			tvDescription.setVisibility(View.VISIBLE);
-			tvDescription.setText(description);
 		}
 	}
 	
