@@ -22,16 +22,30 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
+        public static final int tab_bg_selected=0x7f020001;
+        public static final int tab_bg_selector=0x7f020002;
+        public static final int tab_bg_unselected=0x7f020003;
+        public static final int tab_focused=0x7f020004;
+        public static final int tab_indicator=0x7f020005;
+        public static final int tab_pressed=0x7f020006;
+        public static final int tab_selected=0x7f020007;
+        public static final int tab_text_selector=0x7f020008;
+        public static final int tab_unselected=0x7f020009;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f080000;
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f080007;
+        public static final int imageView=0x7f080004;
         public static final int tab1=0x7f080002;
         public static final int tab2=0x7f080003;
         public static final int tabhost=0x7f080001;
+        public static final int tabsText=0x7f080006;
+        public static final int textView=0x7f080005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int tab_layout=0x7f030001;
+        public static final int tabs_bg=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;
