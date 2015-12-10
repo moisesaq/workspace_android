@@ -22,7 +22,6 @@ import com.moisse.others.HttpClientCustom;
 import com.moisse.others.MyVar;
 import com.moisse.others.UploadImage;
 
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
@@ -61,7 +60,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@SuppressLint("ValidFragment")
+
 public class NuevoParqueo extends Fragment implements OnClickListener, OnFocusChangeListener, OnCheckedChangeListener{
 	
 	ImageView ivLogo_parqueo;
