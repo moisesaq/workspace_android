@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="tab1">TAB 1</string>
     <string name="tab2">TAB 2</string>
+    <string name="anim_traslacion">Animacion traslacion</string>
 
 </resources>

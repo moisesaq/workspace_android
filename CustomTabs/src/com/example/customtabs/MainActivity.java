@@ -7,15 +7,27 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.SlidingDrawer;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener{
 
 	public TabHost tabs;
+	private SlidingDrawer sd;
+	private Button btnViewDetails, btnDetails2;
+	private LinearLayout lyDetails;
+	public Animation traslacion, rebote1, rebote2;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -26,6 +38,13 @@ public class MainActivity extends Activity {
 		tabs.setup();
 		setNewTab(this, tabs, "tab1", R.string.tab1, R.drawable.ic_adjust_white_18dp, R.id.tab1);
 		setNewTab(this, tabs, "tab2", R.string.tab2, R.drawable.ic_assistant_photo_white_18dp, R.id.tab2);
+		btnViewDetails = (Button)findViewById(R.id.btnViewDetails);
+		btnViewDetails.setOnClickListener(this);
+		sd = (SlidingDrawer)findViewById(R.id.slidingDrawer1);
+		
+		btnDetails2 = (Button)findViewById(R.id.btnViewDetails2);
+		btnDetails2.setOnClickListener(this);
+		lyDetails = (LinearLayout)findViewById(R.id.lyDetails);
 		
 //		TabHost.TabSpec spec1 = tabs.newTabSpec("Tab 1");
 //		spec1.setContent(R.id.tab1);
@@ -62,6 +81,49 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch (item.getItemId()) {
+		case R.id.action_animate_traslation:
+			lyDetails.setVisibility(View.VISIBLE);
+			startAnimation();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
+	public void startAnimation(){
+		traslacion = AnimationUtils.loadAnimation(this, R.anim.traslacion_derecha);
+		traslacion.setFillAfter(false);
+		lyDetails.startAnimation(traslacion);
+//		rebote1 = AnimationUtils.loadAnimation(this, R.anim.rebote_izq);
+//		rebote1.setFillAfter(false);
+//		lyDetails.startAnimation(rebote1);
+//		rebote2 = AnimationUtils.loadAnimation(this, R.anim.rebote_derecha);
+//		rebote2.setFillAfter(false);
+//		lyDetails.startAnimation(rebote2);
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btnViewDetails:
+			if(sd.isOpened()){
+				sd.animateClose();
+			}else{
+				sd.animateOpen();
+			}
+			break;
+		case R.id.btnViewDetails2:
+			if(lyDetails.getVisibility()==View.VISIBLE){
+				lyDetails.setVisibility(View.GONE);
+			}else{
+				lyDetails.setVisibility(View.VISIBLE);
+			}
+			break;
+		}
 	}
 
 }
