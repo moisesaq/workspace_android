@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_dark">
+
+    <GridView
+        android:id="@+id/gvParqueo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:columnWidth="250dp"
+        android:numColumns="3"
+        android:scrollbars="horizontal" 
+        android:verticalSpacing="15dp">
+
+    </GridView>
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawerRegister"
+        android:layout_width="fill_parent"
+        android:layout_height="380dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:text="---"
+            android:enabled="true"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/fondo3" >
+
+            <Button
+                android:id="@+id/btOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/etPlacaDato"
+                android:layout_alignBottom="@+id/etPlacaDato"
+                android:layout_toRightOf="@+id/etPlacaDato"
+                android:text="OK" 
+                android:textColor="@android:color/background_dark"/>
+
+            <DatePicker
+                android:id="@+id/datePickerEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/etPlacaDato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/timePickerEntrada"
+                android:layout_centerHorizontal="true"
+                android:ems="10" />
+
+            <TextView
+                android:id="@+id/tvNumCarril"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btOK"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="26dp"
+                android:text="Moises A"
+                android:textColor="@color/orange" />
+
+            <TimePicker
+                android:id="@+id/timePickerEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/datePickerEntrada"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

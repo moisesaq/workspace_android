@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/fondo1">
+
+    <ImageView
+        android:id="@+id/imgvImagenC"
+        android:layout_width="230dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/anonimo" />
+
+    <TextView
+        android:id="@+id/tvNombreCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvCelu"
+        android:layout_centerVertical="true"
+        android:text="Nombre"
+        android:textSize="23dp"
+        android:textColor="@android:color/background_dark"/>
+
+    <TextView
+        android:id="@+id/tvPlacaCoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvNombreCliente"
+        android:layout_below="@+id/imgvImagenC"
+        android:text="Placa del coche"
+        android:textSize="23dp"
+        android:textColor="@android:color/background_dark"/>
+
+    <TextView
+        android:id="@+id/tvCIdentidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvCelu"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:text="Carnet Identidad"
+        android:textSize="23dp"
+        android:textColor="@android:color/background_dark"/>
+
+    <TextView
+        android:id="@+id/tvApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvNombreCliente"
+        android:layout_below="@+id/tvNombreCliente"
+        android:layout_marginTop="14dp"
+        android:text="Apellido"
+        android:textColor="@android:color/background_dark"
+        android:textSize="23dp" />
+
+    <TextView
+        android:id="@+id/tvModeloCoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvApellido"
+        android:layout_below="@+id/tvApellido"
+        android:layout_marginTop="19dp"
+        android:text="Modelo del coche"
+        android:textColor="@android:color/background_dark"
+        android:textSize="23dp" />
+
+    <TextView
+        android:id="@+id/tvColorCoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvModeloCoche"
+        android:layout_below="@+id/tvModeloCoche"
+        android:layout_marginTop="14dp"
+        android:text="Color del coche"
+        android:textColor="@android:color/background_dark"
+        android:textSize="23dp" />
+
+    <TextView
+        android:id="@+id/tvCelu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvColorCoche"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Numero de celular"
+        android:textColor="@android:color/background_dark"
+        android:textSize="23dp" />
+
+    <Button
+        android:id="@+id/btEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Editar datos" />
+
+</RelativeLayout>

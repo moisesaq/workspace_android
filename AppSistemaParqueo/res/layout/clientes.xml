@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo4">
+
+    <TextView
+        android:id="@+id/tvNuevoCliente"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgvNuevocliente"
+        android:layout_below="@+id/imgvNuevocliente"
+        android:text="Nuevo cliente"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imgvListaclientes"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/imgvBuscacliente"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="34dp"
+        android:src="@drawable/listaclientes1" />
+
+    <ImageView
+        android:id="@+id/imgvBuscacliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/etBuscar"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/etBuscar"
+        android:src="@drawable/buscarcliente" />
+
+    <EditText
+        android:id="@+id/etBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="79dp"
+        android:ems="10"
+        android:hint="Placa del coche" />
+
+    <TextView
+        android:id="@+id/tvListaClientes"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imgvListaclientes"
+        android:layout_below="@+id/imgvListaclientes"
+        android:text="Lista clientes"
+        android:textColor="@android:color/background_light"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgvNuevocliente"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/tvListaClientes"
+        android:layout_below="@+id/tvListaClientes"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/nuevocliente1" />
+
+</RelativeLayout>

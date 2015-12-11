@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imgvOpc1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="42dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/salida" />
+
+            <ImageView
+                android:id="@+id/imgvOpc2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="42dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/entrada" />
+            <ImageView 
+                android:id="@+id/imgvOpc3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="42dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/coches"/>
+            
+            <ImageView
+                android:id="@+id/imgvOpc4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="42dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/cliente"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="Parqueo Don Ramon"
+        android:textColor="@color/orange"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawerSalida"
+        android:layout_width="fill_parent"
+        android:layout_height="380dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:text="Registrar salida" 
+            android:textSize="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/fondo3">
+
+            <ImageView
+                android:id="@+id/ivOkSalida"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/etPlacaSalida"
+                android:layout_toRightOf="@+id/etPlacaSalida"
+                android:src="@drawable/salida" />
+
+            <DatePicker
+                android:id="@+id/datePickerSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:id="@+id/etPlacaSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/timePickerSalida"
+                android:layout_alignLeft="@+id/datePickerSalida"
+                android:ems="10" />
+
+            <TimePicker
+                android:id="@+id/timePickerSalida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/datePickerSalida"
+                android:layout_centerHorizontal="true" />
+            
+        </RelativeLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

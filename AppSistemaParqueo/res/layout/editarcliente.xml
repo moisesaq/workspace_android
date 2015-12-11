@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo1" >
+
+    <EditText
+        android:id="@+id/etColorE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etModeloE"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Color" />
+
+    <EditText
+        android:id="@+id/etNombreE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etColorE"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Nombre" />
+
+    <EditText
+        android:id="@+id/etApellidosE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNombreE"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Apellidos" />
+
+    <EditText
+        android:id="@+id/etCelularE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etApellidosE"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Celular"
+        android:numeric="integer" />
+
+    <EditText
+        android:id="@+id/etCIE"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etCelularE"
+        android:layout_alignRight="@+id/etCelularE"
+        android:layout_below="@+id/etCelularE"
+        android:ems="10"
+        android:hint="CI"
+        android:numeric="integer" />
+
+    <EditText
+        android:id="@+id/etPlacaE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="38dp"
+        android:layout_toRightOf="@+id/imageClienteE"
+        android:ems="10"
+        android:hint="Placa" />
+
+    <ImageView
+        android:id="@+id/imageClienteE"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/etModeloE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etColorE"
+        android:layout_below="@+id/imageClienteE"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Modelo" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btEditarCliente"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etCIE"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/etPlacaE"
+        android:text="Editar" />
+
+    <Button
+        android:id="@+id/btEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btEditarCliente"
+        android:layout_alignBottom="@+id/btEditarCliente"
+        android:layout_alignLeft="@+id/etPlacaE"
+        android:layout_alignParentRight="true"
+        android:text="Eliminar" />
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawerImagesEditar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Imagenes"/>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <GridView
+                android:id="@+id/gvImagenesEditar"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:numColumns="3" >
+            </GridView>
+
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

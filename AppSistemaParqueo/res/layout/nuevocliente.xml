@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo1" >
+
+    <EditText
+        android:id="@+id/etColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etModelo"
+        android:layout_alignRight="@+id/etModelo"
+        android:layout_below="@+id/etModelo"
+        android:ems="10"
+        android:hint="Color" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etColor"
+        android:layout_alignRight="@+id/etColor"
+        android:layout_below="@+id/etColor"
+        android:ems="10"
+        android:hint="Nombre" />
+
+    <EditText
+        android:id="@+id/etApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etNombre"
+        android:layout_alignRight="@+id/etNombre"
+        android:layout_below="@+id/etNombre"
+        android:ems="10"
+        android:hint="Apellidos" />
+
+    <EditText
+        android:id="@+id/etCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etApellidos"
+        android:layout_alignRight="@+id/etApellidos"
+        android:layout_below="@+id/etApellidos"
+        android:ems="10"
+        android:hint="Celular"
+        android:numeric="integer" />
+
+    <EditText
+        android:id="@+id/etCI"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etCelular"
+        android:layout_alignRight="@+id/etCelular"
+        android:layout_below="@+id/etCelular"
+        android:ems="10"
+        android:hint="CI"
+        android:numeric="integer" />
+
+    <ImageView
+        android:id="@+id/imageCliente"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/etPlaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageCliente"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/imageCliente"
+        android:ems="10"
+        android:hint="Placa" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/etModelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageCliente"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Modelo" />
+
+    <Button
+        android:id="@+id/btGuardar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etCI"
+        android:layout_marginTop="18dp"
+        android:text="Guardar" />
+
+    <Button
+        android:id="@+id/btVerCliente"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btGuardar"
+        android:layout_alignBottom="@+id/btGuardar"
+        android:layout_alignParentRight="true"
+        android:enabled="false"
+        android:text="Ver Cliente" />
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawerImages"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Imagenes" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <GridView
+                android:id="@+id/gvImagenesClientes"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:numColumns="3" >
+            </GridView>
+
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

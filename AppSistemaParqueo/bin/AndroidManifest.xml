@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moises.appsistemaparqueo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.moises.appsistemaparqueo.SistemaParqueoActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.appsistemaparqueo.MenuPrincipal"
+            android:label="Menu principal" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".Clientes"
+            android:label="Clientes" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.CLIENTES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".NuevoCliente"
+            android:label="Registro de nuevo cliente" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.NUEVOCLIENTE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.appsistemaparqueo.DatosCliente"
+            android:label="Datos del cliente" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.DATOSCLIENTE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.appsistemaparqueo.ListaClientes"
+            android:label="Lista de clientes" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.LISTACLIENTES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.appsistemaparqueo.EntradaCoches"
+            android:label="Registro entrada de coches" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.ENTRADACOCHES"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.appsistemaparqueo.ReporteRegistros"
+            android:label="Reporte entradas y salidas" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.REPORTEREGISTROS"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.appsistemaparqueo.EditarCliente"
+            android:label="Editar datos del cliente" >
+            <intent-filter>
+                <action android:name="com.moises.appsistemaparqueo.EDITARCLIENTE"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+</manifest>
