@@ -1,1 +1,3 @@
 .metadata/*
+/appcompat/*
+/google-play-services_lib/*
