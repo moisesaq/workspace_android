@@ -7,10 +7,12 @@ import java.util.Locale;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.app.SearchManager;
@@ -19,6 +21,8 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.MenuItemCompat.OnActionExpandListener;
@@ -32,6 +36,8 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.Interpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +58,8 @@ public class MainActivity extends ActionBarActivity{
 	private GestureDetector myDetector;
 	private boolean isLongPress;
 	SearchView searchView;
+	public Marker markerSucre;
+	public final Handler handlerSucre = new Handler();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +131,7 @@ public class MainActivity extends ActionBarActivity{
 				googleMap.moveCamera(cameraUpdate);
 				return true;
 			case R.id.action_animar_mapa:
-				CameraUpdate camUpdate2 = CameraUpdateFactory.newLatLngZoom(latLng, 7);
+				CameraUpdate camUpdate2 = CameraUpdateFactory.newLatLngZoom(latLng, 10);
 				googleMap.animateCamera(camUpdate2);
 				return true;
 			case R.id.action_ver_3d:
@@ -137,9 +145,11 @@ public class MainActivity extends ActionBarActivity{
 				googleMap.animateCamera(camUpdate);
 				return true;
 			case R.id.action_position:
-				CameraPosition cam_pos = googleMap.getCameraPosition();
-				LatLng pos = cam_pos.target;
-				Toast.makeText(MainActivity.this, "Latitud: "+pos.latitude+" Longitud: "+pos.latitude, Toast.LENGTH_LONG).show();
+				setMarkerInSucre();
+				
+//				CameraPosition cam_pos = googleMap.getCameraPosition();
+//				LatLng pos = cam_pos.target;
+//				Toast.makeText(MainActivity.this, "Latitud: "+pos.latitude+" Longitud: "+pos.latitude, Toast.LENGTH_LONG).show();
 				return true;
 			case R.id.action_voice:
 				Toast.makeText(MainActivity.this, "Google Voice", Toast.LENGTH_LONG).show();
@@ -290,6 +300,85 @@ public class MainActivity extends ActionBarActivity{
 											.build();
 		googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 	}
+	
+	public void setMarkerInSucre(){
+		latLng = new LatLng(CURRENT_LATITUDE, CURRENT_LONGITUDE);
+		markerSucre = googleMap.addMarker(new MarkerOptions()
+							.position(latLng)
+							.title("Sucre")
+							.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
+		
+		CameraPosition cameraPosition = new CameraPosition.Builder()
+											.target(latLng)
+											.zoom(13)
+											.tilt(60)
+											.build();
+		googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+		Toast.makeText(MainActivity.this, "en 5 seg animacion", Toast.LENGTH_SHORT).show();
+		if(markerSucre!=null){
+			animateMarker();
+		}
+	}
+	
+	public void animateMarker(){
+        final long startTime = SystemClock.uptimeMillis();
+        final long duration = 2000;
+        final Interpolator interpolator = new BounceInterpolator();
+		Thread t = new Thread(){
+			public void run(){
+				try{
+					Thread.sleep(5000);
+				}catch(InterruptedException e){
+					e.printStackTrace();
+				}
+				handlerSucre.post(new Runnable() {
+					
+					@Override
+					public void run() {
+						long elapsed = SystemClock.uptimeMillis()-startTime;
+			            float t = Math.max(1-interpolator.getInterpolation((float)elapsed/duration), 0f);
+			            markerSucre.setAnchor(0.5f, 1.0f+1.2f*t);
+			            if(t>0.0){
+			            	Toast.makeText(MainActivity.this, "background", Toast.LENGTH_SHORT).show();
+			                handlerSucre.postDelayed(this, 16L);
+			            }
+					}
+				});
+			}
+		};
+		t.start();
+	}
+	
+	final Runnable proceso = new Runnable(){
+		public void run(){
+			Toast.makeText(MainActivity.this, "Esto es un hilo de background", Toast.LENGTH_SHORT).show();
+		}
+	};
+	
+	public class CustomMarkerAnimation implements Runnable{
+        final Handler handler = new Handler();
+        final long startTime = SystemClock.uptimeMillis();
+        final long duration = 2000;
+
+        Marker mMarker;
+        final Interpolator interpolator;
+
+        public CustomMarkerAnimation(Marker marker){
+            mMarker = marker;
+            interpolator = new BounceInterpolator();
+            handler.post(this);
+        }
+
+        @Override
+        public void run(){
+            long elapsed = SystemClock.uptimeMillis()-this.startTime;
+            float t = Math.max(1-this.interpolator.getInterpolation((float)elapsed/this.duration), 0f);
+            this.mMarker.setAnchor(0.5f, 1.0f+1.2f*t);
+            if(t>0.0){
+                this.handler.postDelayed(this, 16L);
+            }
+        }
+    }
 	
 	/*public abstract class DoubleClickListener implements OnClickListener{
 
