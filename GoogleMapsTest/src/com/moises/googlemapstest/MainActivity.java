@@ -7,6 +7,7 @@ import java.util.Locale;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -316,9 +317,34 @@ public class MainActivity extends ActionBarActivity{
 		googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 		Toast.makeText(MainActivity.this, "en 5 seg animacion", Toast.LENGTH_SHORT).show();
 		if(markerSucre!=null){
-			animateMarker();
+			googleMap.setOnMapClickListener(new OnMapClickListener() {
+				
+				@Override
+				public void onMapClick(LatLng arg0) {
+					markerSucre.showInfoWindow();
+					animateMarker(markerSucre);
+				}
+			});
 		}
 	}
+	
+	public void animateMarker(final Marker marker){
+        final Handler handler = new Handler();
+        final long startTime = SystemClock.uptimeMillis();
+        final long duration = 2000;
+        final Interpolator interpolator = new BounceInterpolator();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                long elapsed = SystemClock.uptimeMillis() - startTime;
+                float t = Math.max(1 - interpolator.getInterpolation((float) elapsed / duration), 0f);
+                marker.setAnchor(0.3f, 1.0f + 1.2f * t);
+                if (t > 0.0) {
+                    handler.postDelayed(this, 16L);
+                }
+            }
+        });
+    }
 	
 	public void animateMarker(){
         final long startTime = SystemClock.uptimeMillis();
