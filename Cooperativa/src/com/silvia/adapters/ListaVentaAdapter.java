@@ -1,5 +1,8 @@
 package com.silvia.adapters;
 
+import java.sql.Date;
+import java.sql.Time;
+import java.util.Calendar;
 import java.util.List;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -112,7 +115,8 @@ public class ListaVentaAdapter extends ArrayAdapter<Venta>{
 			holder.tvNombreCliente.setText(new StringBuilder().append(cliente.getNombre()).append(" ").append(cliente.getApellido()));
 		}
 		holder.tvCICliente.setText(cliente.getCi());
-		holder.tvFechaVenta.setText(new StringBuilder().append(Variables.FORMAT_FECHA_2.format(venta.getFecha_venta())));
+		//holder.tvFechaVenta.setText(new StringBuilder().append(Variables.FORMAT_FECHA_3.format(venta.getFecha_venta())));
+		holder.tvFechaVenta.setText(getTimeChat(venta.getFecha_venta(), venta.getHora_venta()));
 		holder.tvCostoTotal.setText(new StringBuilder().append(venta.getCosto_total()).append(" Bs."));
 		return view;
 	}
@@ -129,4 +133,46 @@ public class ListaVentaAdapter extends ArrayAdapter<Venta>{
 		}
 		return cliente;
 	}
+	
+	public String getTimeChat(Date date, Time time){
+		String result = "";
+//		String date = timeDate.substring(0, 10);
+//		String time = timeDate.substring(11);
+		//date = date.replace("-", "/");
+		java.util.Date dateUtil = new java.util.Date(date.getTime());
+		
+		Date fechaActual = new Date(Variables.getFechaActual().getTime());
+//		if(dateUtil.compareTo(fechaActual)>0){
+//			result = time.toString();
+//		}else if(dateUtil.compareTo(fechaActual)<0){
+//			result = Variables.FORMAT_FECHA_3.format(date);
+//		}
+		long diff = getDiferenciaDias(fechaActual, date);
+		if(diff==0){
+			result = time.toString();
+		}else{
+			if(diff<=7){
+				result = Variables.FORMAT_FECHA_5.format(date);
+			}else{
+				result = Variables.FORMAT_FECHA_2.format(date);
+			}
+		}
+			
+		
+		return date.toString()+" | "+result+" | "+diff;
+	}
+	
+	public long getDiferenciaDias(Date fechaActual, Date fechaUltimo){
+		return (fechaActual.getTime()-fechaUltimo.getTime())/(24*60*60*1000);
+	}
+	
+	public Date getFechaHaceUnaSemana(){
+		java.util.Date date = new java.util.Date();
+		int dias = -6;
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		calendar.add(Calendar.DAY_OF_YEAR, dias);
+		return new Date(calendar.getTime().getTime());
+	}
+	
 }

@@ -57,6 +57,7 @@ public class Variables {
 	public static final SimpleDateFormat FORMAT_FECHA_2 = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 	public static final SimpleDateFormat FORMAT_FECHA_3 = new SimpleDateFormat("EEEE, dd  MMMM yyyy", Locale.getDefault());
 	public static final SimpleDateFormat FORMAT_FECHA_4 = new SimpleDateFormat("MMMM 'de' yyyy", Locale.getDefault());
+	public static final SimpleDateFormat FORMAT_FECHA_5 = new SimpleDateFormat("EEEE", Locale.getDefault());
 	public static final Date FECHA_DEFAULT = Date.valueOf("1900-01-01");
 	
 	public static final String ID_CARGO_ADMIN = "cargo-1000";
@@ -150,8 +151,8 @@ public class Variables {
 	
 	public static Date getFechaActual(){
 		java.util.Date date = new java.util.Date();
-		Date fecha_actual = new Date(date.getTime());
-		return fecha_actual;
+		Date fechaActual = new Date(date.getTime());
+		return fechaActual;
 	}
 }
 

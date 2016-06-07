@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moises.broadcastreceiver"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.moises.broadcastreceiver.SplashScreen"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.moises.broadcastreceiver.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <receiver 
+            android:name="com.moises.broadcastreceiver.ContactReceiver"
+            android:exported="false">
+            <intent-filter >
+                <action android:name="com.moises.CONTACT_RECEIVER"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

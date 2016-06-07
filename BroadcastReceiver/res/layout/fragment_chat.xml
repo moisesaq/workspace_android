@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/white">
+
+    <ListView
+        android:id="@+id/lvChatContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/linearLayout"
+        android:background="@android:color/transparent"
+        android:divider="@drawable/custom_separator_listview"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grayChat"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/etWriteMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Escribe un mensaje"
+            android:background="@android:color/white"
+            android:padding="8dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@+id/flyContainerButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <FrameLayout
+            android:id="@+id/flyContainerButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="15dp">
+
+            <ImageButton
+                android:id="@+id/ibtnSendMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chat_send"
+                android:scaleType="centerCrop"
+                android:background="@drawable/button_custom"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/ibtnRecordMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_chat_radio"
+                android:visibility="visible"
+                android:scaleType="centerCrop"
+                android:background="@drawable/button_custom"
+            />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

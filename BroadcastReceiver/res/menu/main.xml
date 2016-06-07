@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item 
+        android:id="@+id/action_list_contact"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_format_list_numbered_grey600_18dp"
+        android:title="@string/list"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_chat"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_chat_white_36dp"
+        android:title="@string/chat"
+        android:visible="false"/>
+    
+    <item 
+        android:id="@+id/action_play_list"
+        android:orderInCategory="3"
+        android:showAsAction="never"
+        android:title="@string/play_list"
+        android:visible="true"/>
+
+</menu>
